@@ -1,51 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Required meta tags -->
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BazarTec</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&family=DM+Serif+Display&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <!--Header-->
-    <div class="container-fluid-lg mb-5">
-        <div class="row">
-            <div class="col-12">
+
+
+
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo"><img src="images/logo.png" width="60px" height="60px"></a>
+            <input type="checkbox" id="menu" />
+            <label for="menu"><img src="images/menu.png" class="menu-icono" alt=""></label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inico</a></li>
+                    <li><a href="#">*******</a></li>
+                    <li><a href="#">*******</a></li>
+                    <li><a href="#">*******</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <a href="#" class="logo"></a><img src="images/car.svg" id="img-carrito" alt="">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-content container">
+            <div class="swiper mySwiper-1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="header-info">
+                            <div class="header-txt">
+                                <h1>CONVERSE TENIS CASUAL UNISEX</h1>
+                                <div class="prices">
+                                    <p class="price-1">$1,600</p>
+                                    <p class="price-2">$1,300</p>
+                                </div>
+                                <a href="#" class="btn-1">Información</a>
+                            </div>
+                            <div class="header-img">
+                                <img src="images/teni1.jpeg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="header-info">
+                            <div class="header-txt">
+                                <h1>1 pieza de esfera triple Reloj cuarzo & 4 piezas Set joya</h1>
+                                <div class="prices">
+                                    <p class="price-1">$199</p>
+                                    <p class="price-2">$150</p>
+                                </div>
+                                <a href="#" class="btn-1">Información</a>
+                            </div>
+                            <div class="header-img">
+                                <img src="images/joyeria.jpeg" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="header-info">
+                            <div class="header-txt">
+                                <h1>Tenis Con Plataforma, Casual, Correr, Gama Alta, Cómodo M03 </h1>
+                                <div class="prices">
+                                    <p class="price-1">$199</p>
+                                    <p class="price-2">$150</p>
+                                </div>
+                                <a href="#" class="btn-1">Información</a>
+                            </div>
+                            <div class="header-img">
+                                <img src="images/teni2.jpeg" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <hr>
+
+    <section class="promos container" id="lista-1">
+        <h2>Calzado</h2>
+        <div class="categories">
+            <div class="categorie">
+                <div class="categorie-1">
+                    <h3>Zapatos deportivos <br>con última moda <br>para hombre</h3>
+                    <div class="prices">
+                        <p class="price-1">$199</p>
+                        <p class="precio">$150</p>
+                    </div>
+                    <a href="#" class="agregar-carrito btn-3" data-id="1">Agregar al carrito</a>
+                </div>
+                <div class="categorie-img">
+                    <a href="#"><img src="images/teni3.jpeg" alt=""></a>
+                </div>
+            </div>
+            <div class="categorie">
+                <div class="categorie-1">
+                    <h3>Tenis Deportivos, Transpirables Para Mujer</h3>
+                    <div class="prices">
+                        <p class="price-1">$199</p>
+                        <p class="precio">$150</p>
+                    </div>
+                    <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar al carrito</a>
+                </div>
+                <div class="categorie-img">
+                    <a href="#"><img src="images/teni4.jpeg" alt=""></a>
+                </div>
+            </div>
+            <div class="categorie">
+                <div class="categorie-1">
+                    <h3>Zapatilla Urbana<br> Mujer</h3>
+                    <div class="prices">
+                        <p class="price-1">$199</p>
+                        <p class="precio">$150</p>
+                    </div>
+                    <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar al carrito</a>
+                </div>
+                <div class="categorie-img">
+                    <a href="#"><img src="images/teni5.jpeg" alt=""></a>
+                </div>
+            </div>
+            <div class="categorie">
+                <div class="categorie-1">
+                    <h3>Zapatillas De Atletismo Casual</h3>
+                    <div class="prices">
+                        <p class="price-1">$199</p>
+                        <p class="precio">$150</p>
+                    </div>
+                    <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar al carrito</a>
+                </div>
+                <div class="categorie-img">
+                    <a href="#"><img src="images/teni6.jpeg" alt=""></a>
+                </div>
 
             </div>
         </div>
-    </div>
 
-    <div class="container">
+    </section>
 
-        <div class="row">
-            <div class="col">
-                <h1>CONTENIDO DE LA PAGINA</h1>
+
+    <hr>
+
+
+    <section class="product container" id="lista-2">
+        <h2>Joyería</h2>
+        <div class="swiper mySwiper-2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="product">
+                        <a href="#"><img src="images/joyeria1.jpeg" alt=""></a>
+                        <div class="product-txt">
+                            <h3>Conjunto De Reloj y collar</h3>
+                            <p>Calidad Premium</p>
+                            <p class="precio">$200</p>
+                            <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <a href="#"><img src="images/joyeria2.jpeg" alt=""></a>
+                        <div class="product-txt">
+                            <h3>Malla magnética versátil con reloj</h3>
+                            <p>Calidad Premium</p>
+                            <p class="precio">$200</p>
+                            <a href="#" class="agregar-carrito btn-3" data-id="6">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <a href="#"><img src="images/joyeria3.jpeg" alt=""></a>
+                        <div class="product-txt">
+                            <h3>3pcs/set, Reloj de cuarzo de negocios</h3>
+                            <p>Calidad Premium</p>
+                            <p class="precio">$200</p>
+                            <a href="#" class="agregar-carrito btn-3" data-id="7">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <a href="#"><img src="images/joyeria4.jpeg" alt=""></a>
+                        <div class="product-txt">
+                            <h3>Juego de 6 piezas de oro</h3>
+                            <p>Calidad Premium</p>
+                            <p class="precio">$200</p>
+                            <a href="#" class="agregar-carrito btn-3" data-id="8">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
-    </div>
 
-    <!--Main o contenido-->
+    </section>
 
-    <!--footer-->
-    <div class="container-fluid-lg py-5">
-        <footer class="bg-dark text-white text-center py-5 mt-5">
-            <div class="row">
-                <p>&copy; 2024 BazarTec</p>
+    <hr>
+
+    <section class="product container" id="lista-3">
+        <h2>Más Productos</h2>
+        <div class="swiper mySwiper-2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="product">
+                        <a href="#"><img src="images/product1.jpeg" alt=""></a>
+                        <div class="product-txt">
+                            <h3>Hot Wheels Basicos Varios</h3>
+                            <p>Calidad Premium</p>
+                            <p class="precio">$200</p>
+                            <a href="#" class="agregar-carrito btn-3" data-id="9">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <a href="#"><img src="images/product2.jpeg" alt=""></a>
+                        <div class="product-txt">
+                            <h3>Short Caballero De Playa</h3>
+                            <p>Calidad Premium</p>
+                            <p class="precio">$200</p>
+                            <a href="#" class="agregar-carrito btn-3" data-id="10">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <a href="#"><img src="images/product3.jpeg" alt=""></a>
+                        <div class="product-txt">
+                            <h3>Traje De Baño Una Pieza Con Aberturas</h3>
+                            <p>Calidad Premium</p>
+                            <p class="precio">$200</p>
+                            <a href="#" class="agregar-carrito btn-3" data-id="11">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product">
+                        <a href="#"><img src="images/product4.jpeg" alt=""></a>
+                        <div class="product-txt">
+                            <h3>Traje de baño de una pieza para niñas</h3>
+                            <p>Calidad Premium</p>
+                            <p class="precio">$200</p>
+                            <a href="#" class="agregar-carrito btn-3" data-id="12">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
-    </div>
-    </div>
-    </div>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+
+    <footer style="background-color: #3498db; color: #fff; padding: 20px; width: 100%; text-align: center;">
+        <p style="margin: 0;">&copy; 2024 BazarTec. Todos los derechos reservados. | <a href="#" style="color: #fff; text-decoration: none;">Política de privacidad</a> | <a href="#" style="color: #fff; text-decoration: none;">Términos y condiciones</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+
 </body>
 
 </html>
