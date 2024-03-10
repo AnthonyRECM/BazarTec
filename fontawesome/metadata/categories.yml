@@ -1787,7 +1787,6 @@ maps:
     - location-pin-lock
     - magnet
     - magnifying-glass
-    - magnifying-glass-location
     - magnifying-glass-minus
     - magnifying-glass-plus
     - map
@@ -1992,8 +1991,6 @@ medical-health:
     - crutch
     - disease
     - dna
-    - droplet
-    - droplet-slash
     - eye
     - eye-dropper
     - file-medical
@@ -2003,7 +2000,6 @@ medical-health:
     - flask
     - flask-vial
     - hand-dots
-    - hand-holding-droplet
     - hand-holding-medical
     - head-side-cough
     - head-side-cough-slash
@@ -2067,7 +2063,6 @@ medical-health:
     - teeth-open
     - thermometer
     - tooth
-    - truck-droplet
     - truck-medical
     - user-doctor
     - user-nurse
@@ -2204,7 +2199,6 @@ music-audio:
     - volume-low
     - volume-off
     - volume-xmark
-    - wave-square
   label: Music + Audio
 nature:
   icons:
@@ -2599,9 +2593,6 @@ social:
   label: Social
 spinners:
   icons:
-    - arrow-rotate-left
-    - arrow-rotate-right
-    - arrows-rotate
     - arrows-spin
     - asterisk
     - atom
@@ -2619,8 +2610,6 @@ spinners:
     - palette
     - ring
     - rotate
-    - rotate-left
-    - rotate-right
     - slash
     - snowflake
     - spinner

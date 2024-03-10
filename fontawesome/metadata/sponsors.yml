@@ -552,11 +552,6 @@ megaport:
     - megaport
   label: Megaport
   url: 'https://www.megaport.com'
-mintbit:
-  icons:
-    - mintbit
-  label: Mintbit
-  url: 'https://www.mintbit.com'
 mix:
   icons:
     - mix
@@ -1296,11 +1291,6 @@ uncharted:
     - uncharted
   label: Uncharted Software
   url: 'https://uncharted.software'
-undeco-cora:
-  icons:
-    - music-magnifying-glass
-  label: Undeco & Cora Music
-  url: 'https://undeco.se'
 uniregistry:
   icons:
     - uniregistry
