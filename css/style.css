@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #FAEEE7;
     font-family: 'Poppins', sans-serif;
 
 }
@@ -25,7 +25,7 @@ body {
     display: flex;
     align-items: center;
     min-height: 10vh;
-    background-color: #01ccff;
+    background-color: #24A19C;
 }
 
 .swiper-slide {
@@ -69,7 +69,7 @@ body {
     align-items: center;
     justify-content: space-between;
     z-index: 1100;
-    background-color: #01ccff;
+    background-color: #24A19C;
 }
 
 .logo {
@@ -185,12 +185,12 @@ th, td {
 
 .price-2 {
     font-size: 30px;
-    color: #237400 !important;
+    color: #D96098 !important;
 }
 
 .btn-1 {
     display: inline-block;
-    background-color: #009307;
+    background-color: #325288;
     color: #FEFFFF;
     font-size: 16px;
     padding: 10px 25px;
@@ -199,7 +199,7 @@ th, td {
 }
 
 .btn-1:hover {
-    background-color: #01ea10;
+    background-color: #4b78c7;
 }
 
 hr {
@@ -287,7 +287,7 @@ hr {
 }
 
 .precio {
-    color: #01ccff !important;
+    color: #D96098 !important;
 }
 
 .btn-3 {
@@ -295,19 +295,18 @@ hr {
     padding: 10px 25px;
     font-size: 14px;
     color: #ffffff;
-    border: 1px solid #237400;
-    background-color: #009307;
+    border: 1px solid #4b78c7;
+    background-color: #325288;
     border-radius: 25px;
     margin-top: 15px;
 }
 .btn-3:hover {
-    background-color: #01ea10;
+    background-color: #4b78c7;
 }
 
 .footer {
     display: flex;
     padding: 30px 0;
-    background-color: #01ccff;
 }
 
 .link {
