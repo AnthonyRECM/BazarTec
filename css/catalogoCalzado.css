@@ -14,9 +14,14 @@ h1{
     font-size: 4rem;
 }
 
+.letras1{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    color: #dbd7d5;
+}
 
 .fondoContainer{
-    background-color: #d988ae;
+    background-color: #24A19C;
 }
 
 .prices {
