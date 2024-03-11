@@ -2,15 +2,48 @@
     background-color: #FAEEE7;
 }
 
-h1, h2, h3, h4, h5 {
+.fondo1{
+    background-color: #d988ae;
+}
+
+.fondo1, h1, h2, h3, h4, h5 {
     color: #FAEEE7;
 }
 
-h1{    
+.fondo1, h1{    
     font-size: 4rem;
 }
 
+.fondo2{
+    font-size: 1rem;
+}
 
-.fondoContainer{
-    background-color: #d988ae;
+.miniFondo1{
+    background-color: white;
+    border-radius: 5px;
+}
+
+.letras1{
+    font-size: 1.5rem;
+    margin-bottom: 0
+}
+
+.letras2{
+    font-size: 2rem;
+}
+
+.letras3{
+    font-size: 1.3rem;
+}
+
+.letras4{
+    font-size: 1rem;
+}
+
+
+.borde1{
+    border: 1px solid red;
+}
+.borde2{
+    border: 1px solid green;
 }
