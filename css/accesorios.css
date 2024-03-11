@@ -30,16 +30,32 @@
 
 .letras2{
     font-size: 2rem;
+    text-align: start;
 }
 
 .letras3{
     font-size: 1.3rem;
+    text-align: start;
 }
 
 .letras4{
     font-size: 1rem;
+    text-align: right;
 }
 
+.etiqueta1{
+    background-color: #198754;
+    color: white;
+    font-weight: bold;
+    max-width: fit-content;
+    padding: 2px 10px 2px 10px;
+    border-radius: 5px;
+}
+
+.etiqueta12{
+    background-color: #198754;
+
+}
 
 .borde1{
     border: 1px solid red;
