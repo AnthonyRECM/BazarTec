@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: space-evenly;
     z-index: 1100;
-    background-color: #24A19C;
+    background-color: #F35588;
 }
 
 .logo {
@@ -35,7 +35,7 @@
 }
 
 .menu .navbar ul li a:hover {
-    color: #7270EC;
+    color: #b7b7b7;
 }
 
 #menu {

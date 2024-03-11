@@ -18,15 +18,15 @@
     <div class="container-fluid">
         <div class="row">
             <div class="menu">
-                <a href="#" class="logo"><img src="images/logo.png" width="60px" height="60px"></a>
+                <a href="./index.html" class="logo"><img src="images/logo.png" width="60px" height="60px"></a>
                 <input type="checkbox" id="menu" />
                 <label for="menu"><img src="images/menu.png" class="menu-icono" alt=""></label>
                 <nav class="navbar">
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">*******</a></li>
-                        <li><a href="#">*******</a></li>
-                        <li><a href="#">*******</a></li>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./trajesdeBaño.html">Traje de baño</a></li>
+                        <li><a href="./catalogoCalzado.html">Calzado</a></li>
+                        <li><a href="./catalogoAccesorios.html">Accesorios</a></li>
                     </ul>
                 </nav>
                 <div>
@@ -54,10 +54,10 @@
         </div>
     </div>
     
-    <div class="container-fluid fondo1 ">
+    <div class="container-fluid fondo1">
         <div class="row gx-0 text-center">
             <div class="col-12">
-                <h1 class="pt-5">Catalogo de Articulos</h1>
+                <h1 class="pt-5">Catálogo de Articulos</h1>
                 <h2 class="py-3">¡¡Todo lo que necesitas para la playa y más!! </h2>
             </div>
         </div>
@@ -81,24 +81,32 @@
                 </div>
            </div>
         </div>
-    </div>
-    <div class="container-fluid fondo2"> 
-        <div class="row gx-0 text-center">
+        <div class="row text-center desplazarMov">
             <div class="col-12 mt-3">
                 <p class="letras1">Ver mas</p>
             </div>
-            <div class="col-12">
-                <i class="fa-solid fa-chevron-down desplazarMov"></i>
+            <div class="col mb-2">
+                <i class="fa-solid fa-chevron-down fa-lg"></i>
             </div>
         </div>
+    </div>
+    <div class="container-fluid fondo2"> 
+        
+
+        <div id="desplazarDestino" class="row my-5">
+            <div class="col text-center">
+                <h2 class="subtitulo">Inflables para albercas</h2>
+            </div>
+        </div>
+
         <div class="row justify-content-evenly my-5">
             <div class="col-5 miniFondo1">
                 <div class="row align-items-center">
-                    <div class="col-6">
+                    <div class="col-6 text-end">
                         <p class="letras2">Inflable de cocodrilo</p>
                         <p class="letras3">$320</p>
-                        <p class="letras3">1.70 cm de largo</p>
-                        <p class="letras4 etiqueta1">12 en stock</p>
+                        <p class="letras3">1.70 mts de largo</p>
+                        <p class="letras4 badge text-bg-success">12 en stock</p>
                     </div>
                     <div class="col-6">
                         <img src="./images/cocodrilo.jpg" width="240" alt="">
@@ -110,7 +118,7 @@
                     <div class="col-6 text-end">
                         <p class="letras2">Inflable de tiburon</p>
                         <p class="letras3">$350</p>
-                        <p class="letras3">1.70 cm de largo</p>
+                        <p class="letras3">1.65 mts de largo</p>
                         <p class="letras4 badge text-bg-danger">sin stock</p>
                     </div>
                     <div class="col-6">
@@ -125,7 +133,7 @@
                     <div class="col-6 text-end">
                         <p class="letras2">Inflable de delfin</p>
                         <p class="letras3">$320</p>
-                        <p class="letras3">1.70 cm de largo</p>
+                        <p class="letras3">1.68 mts de largo</p>
                         <p class="letras4 badge text-bg-success">3 en stock</p>
                     </div>
                     <div class="col-6">
@@ -136,13 +144,41 @@
             <div class="col-5 miniFondo1">
                 <div class="row align-items-center">
                     <div class="col-6 text-end">
-                        <p class="letras2">Inflable de tiburon</p>
-                        <p class="letras3">$350</p>
-                        <p class="letras3">1.70 cm de largo</p>
-                        <p class="letras4 badge text-bg-danger">sin stock</p>
+                        <p class="letras2">Dona genérica</p>
+                        <p class="letras3">$100</p>
+                        <p class="letras3">90 cm de diametro</p>
+                        <p class="letras4 badge text-bg-success">5 en stock</p>
                     </div>
                     <div class="col-6">
-                        <img src="./images/tiburon.webp" width="240" alt="">
+                        <img src="./images/donaGenerica.png" width="240" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-evenly my-5">
+            <div class="col-5 miniFondo1">
+                <div class="row align-items-center">
+                    <div class="col-6 text-end">
+                        <p class="letras2">dona de chocolate</p>
+                        <p class="letras3">$180</p>
+                        <p class="letras3">120 cm de diametro</p>
+                        <p class="letras4 badge text-bg-success">3 en stock</p>
+                    </div>
+                    <div class="col-6">
+                        <img src="./images/dona.webp" width="240" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 miniFondo1">
+                <div class="row align-items-center">
+                    <div class="col-6 text-end">
+                        <p class="letras2">Dona de fresa</p>
+                        <p class="letras3">$180</p>
+                        <p class="letras3">120 cm de diametro</p>
+                        <p class="letras4 badge text-bg-success">5 en stock</p>
+                    </div>
+                    <div class="col-6">
+                        <img src="./images/dona2.webp" width="240" alt="">
                     </div>
                 </div>
             </div>
