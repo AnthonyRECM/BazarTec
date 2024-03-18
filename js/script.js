@@ -45,6 +45,8 @@ const elementos2 = document.getElementById('lista-2');
 const elementos3 = document.getElementById('lista-3');
 const lista = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
+const comprarCarritoBtn = document.getElementById('comprar-carrito');
+
 
 cargarEventListeners();
 
@@ -53,8 +55,12 @@ function cargarEventListeners() {
     elementos2.addEventListener('click', comprarElemento);
     elementos3.addEventListener('click', comprarElemento);
     carrito.addEventListener('click', eliminarElemento);
+    
 
     vaciarCarritoBtn.addEventListener('click',  vaciarCarrito);
+    comprarCarritoBtn.addEventListener('click', function() {
+        window.location.href = 'pago.html';
+    });
 
 }
 

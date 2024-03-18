@@ -298,6 +298,18 @@ hr {
     border-radius: 25px;
     margin-top: 15px;
 }
+
+.btn-4 {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 14px;
+    color: #ffffff;
+    border: 1px solid #4b78c7;
+    background-color: #325288;
+    border-radius: 25px;
+    margin-top: 15px;
+}
+
 .btn-3:hover {
     background-color: #4b78c7;
 }
