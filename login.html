@@ -16,10 +16,8 @@
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="shortcut icon" href="/images/logo.png" width="30" height="30" type="img">
     <link rel="stylesheet" type="text/css" href="css/login.css">
-
-
-
 </head>
+
 
 
 <body>
@@ -51,59 +49,61 @@
         </div>
     </div>
     <!--Main o contenido-->
-
-    <div class="row">
-        <div class="col-6">
-            <div class="container formatoLogin ">
-                <form class="form needs-validation" novalidate action="" method="post">
-
-                    <div class="row">
-                        <div class="col-12" style="padding: 2rem;">
-
-                            <h2> ENTRA A TU CUENTA</h2>
-                        </div>
-                        <div class="col-12">
-                            <input type="text" name="nombree" placeholder="Correo" id="nombrePaciente" required />
-                            <div class="invalid-feedback">Por favor, ingresa tu correo.
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <div class="container formatoLogin ">
+                    <form class="form needs-validation" novalidate action="" method="post">
+                        <div class="row">
+                            <div class="col-12" style="padding: 2rem;">
+    
+                                <h2> ENTRA A TU CUENTA</h2>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <input type="password" name="clave" placeholder="Contraseña" id="contraseñaPaciente"
-                                required />
-                            <div class="invalid-feedback">Por favor, ingresa tu contraseña.
+                            <div class="col-12">
+                                <input type="text" name="nombree" placeholder="Correo" id="nombrePaciente" required />
+                                <div class="invalid-feedback">Por favor, ingresa tu correo.
+                                </div>
                             </div>
+                            <div class="col-12">
+                                <input type="password" name="clave" placeholder="Contraseña" id="contraseñaPaciente"
+                                    required />
+                                <div class="invalid-feedback">Por favor, ingresa tu contraseña.
+                                </div>
+                            </div>
+    
+                            <div class="d-grid gap-2 col-6 mx-auto" style="padding: 1rem;">
+                                <button type="submit" value="Iniciar Sesión" type="button" name="btningresar"><i
+                                        class="fa-solid fa-arrow-up" style="color: #ffffff;"></i> Inicia
+                                    sesión</button>
+                            </div>
+    
                         </div>
-
-                        <div class="d-grid gap-2 col-6 mx-auto" style="padding: 1rem;">
-                            <button type="submit" value="Iniciar Sesión" type="button" name="btningresar"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i> Inicia
-                                sesión</button>
-                        </div>
-
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="col-6">
-            <div class="container formatoLogin ">
-                <form class="form needs-validation" novalidate action="" method="post">
-
-                    <div class="row">
-                        <div class="col-12" style="padding: 2rem; ">
-
-                            <h2> ¿NO TIENES CUENTA? REGISTRATE Y HAZ TUS COMPRAS MÁS RÁPIDO.</h2>
+            <div class="col-6">
+                <div class="container formatoLogin ">
+                    <form class="form needs-validation" novalidate action="" method="post">
+    
+                        <div class="row">
+                            <div class="col-12" style="padding: 2rem; ">
+    
+                                <h2> ¿NO TIENES CUENTA? REGISTRATE Y HAZ TUS COMPRAS MÁS RÁPIDO.</h2>
+                            </div>
+                            <div class="d-grid gap-2 col-6 mx-auto" style="padding: 1rem;">
+                                <button type="submit" value="Iniciar Sesión" type="button" name="btningresar"><i
+                                        class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i> Crear
+                                    cuenta</button>
+                            </div>
+    
                         </div>
-
-
-                        <div class="d-grid gap-2 col-6 mx-auto" style="padding: 1rem;">
-                            <button type="submit" value="Iniciar Sesión" type="button" name="btningresar"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i> Crear
-                                cuenta</button>
-                        </div>
-
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+
+    
 
 
     <!--footer-->
