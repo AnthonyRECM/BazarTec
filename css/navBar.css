@@ -30,6 +30,7 @@
 .menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
+    padding-bottom: 10px;
     color: #FEFFFF;
     display: block;
     text-decoration: none;

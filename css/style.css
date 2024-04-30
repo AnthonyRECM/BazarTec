@@ -82,10 +82,12 @@ body {
 }
 
 .menu .navbar ul li a {
+    content: '\f2d0';
     font-size: 18px;
     padding: 20px;
     color: #FEFFFF;
     display: block;
+    text-decoration: none;
 }
 
 .menu .navbar ul li a:hover {
