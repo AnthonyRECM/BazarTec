@@ -5,72 +5,35 @@ body{
     /*height: 100vh;
     overflow: hidden;*/
     font-family: "Poppins", sans-serif;
-    background-color: #EEEEEE
-    ;
+    background-color: #ffffff;
   
+} 
+.formatoRegistro{
+  
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: 0 auto;/* Esto centrará horizontalmente el formulario */
+  margin-top: 100px;
+  margin-bottom: 100px; /* Esto proporciona un espacio superior */
+  padding: 90px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: #ffffff; 
+  background-color: green;
 }
-.form-group {
-    margin-bottom: 30px; /* Espacio entre grupos de campos */
-  }
-
-input[type="text"],
-textarea {
-    width: 100%;  
-    padding: 10px;
-    border: 1px solid #f2f2f2;
-    border-radius: 5px;
-    font-size: 16px;
-    border-collapse: collapse;
-    background-color: #f2f2f2;
-    resize: none;
-}
-.area{
-        position: fixed;
-        top: 100px; /* Altura desde la parte superior de la página */
-        left: 100px; /* Distancia desde la izquierda de la página */
-        width: 300px; /* Ancho del textarea */
-        height: 150px; /* Altura del textarea */
-}
-
-
-.formato2 {
-    background: #f2f2f2;
-    /* width: 100%;*/
-    border: 0;
-    border-radius: 7px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-  }
-  .formato {
-    z-index: 1;
-    background: #E4E4E4 ;
-    
-    margin: 0 auto; /* max-width: 900px; Esto centrará horizontalmente el formulario */
-    margin-top: 75px;
-     /*  margin-bottom: 75px;Esto proporciona un espacio superior */
-    padding: 90px;
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: #C5C5C5; 
-  }
-
   .form input {
-    outline: 0;
-    background: #f2f2f2;
-    /* width: 100%;*/
-    border: 0;
+    background: #ffffff;
     border-radius: 7px;
     margin: 0 0 15px;
     padding: 20px;
     font-size: 14px;
+    outline: 0;
+    border: 2;
   }
   .form button {
     font-family: "Poppins", sans-serif;
     outline: 0;
-    background: #176B87;
-    
-    /* width: 100%;*/
+    background: #325288;
     border: 0;
     padding: 15px;
     color: #FFFFFF;
@@ -84,3 +47,4 @@ textarea {
   .form button:hover,.form button:active,.form button:focus {
     background: #0e2941;
   }
+ 
