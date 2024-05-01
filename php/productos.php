@@ -16,10 +16,15 @@ if ($resultado->num_rows > 0) {
         $productos[] = $row;
     }
 
-    // Convertir el array a formato JSON
+    // Establecer las cabeceras para indicar que el contenido es JSON
+    header('Content-Type: application/json');
+
+    // Convertir el array a formato JSON y devolverlo
     echo json_encode($productos);
 } else {
-    echo "No se encontraron productos";
+    // No se encontraron productos
+    // Devolver un mensaje de error en formato JSON
+    echo json_encode(array('error' => 'No se encontraron productos'));
 }
 
 // Cerrar la conexión a la base de datos

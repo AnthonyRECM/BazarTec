@@ -1,18 +1,13 @@
 <?php
-// Definir las constantes de la base de datos
-define('DB_HOST', 'localhost'); // Host de la base de datos
-define('DB_USER', 'root');      // Usuario de la base de datos
-define('DB_PASS', '');          // Contraseña de la base de datos
-define('DB_NAME', 'BazarTec');  // Nombre de la base de datos
+$db_hosting = 'Localhost';
+$db_name = 'root';
+$db_pass='';
+$db_database='BazarTec';
 
-// Intentar conectar a la base de datos
-$conexion = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-
-// Verificar si hay errores de conexión
-if ($conexion->connect_error) {
-    die("Error al conectar a la base de datos: " . $conexion->connect_error);
+$con = mysqli_connect($db_hosting,$db_name,$db_pass,$db_database);
+if(mysqli_connect_errno()){
+    echo 'No se pudo conectar a la base de datos : '.mysqli_connect_error();   
+}else{
+    echo 'exito en la conexion';
 }
-
-echo "Conexión exitosa a la base de datos!";
 ?>
-    
