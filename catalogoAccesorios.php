@@ -1,3 +1,7 @@
+<?php
+include './php/conexionDB.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,6 +104,26 @@
         </div>
 
         <div class="row justify-content-evenly my-5">
+
+            <?php
+                $query = mysqli_query($con, 'SELECT name,quantity,sale_price,media_id FROM products');
+                while ($consulta = mysqli_fetch_array($query)) {
+                    echo "
+                    <div class='col-4 miniFondo1 my-4 mx-4'>
+                        <div class='row align-items-center'>
+                            <div class='col-6 text-end'>
+                                <p class='letras2'>".$consulta['name']."</p>
+                                <p class='letras3'>".$consulta['quantity']."</p>
+                                <p class='letras3'>".$consulta['sale_price']."</p>
+                            </div>
+                            <div class='col-6'>
+                                <img src='".$consulta['media_id']."' width='240' alt=''>
+                            </div>
+                        </div>
+                    </div>";
+                }   
+            ?>
+
             <div class="col-5 miniFondo1">
                 <div class="row align-items-center">
                     <div class="col-6 text-end">
@@ -127,31 +151,29 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-evenly my-5">
-            <div class="col-5 miniFondo1">
-                <div class="row align-items-center">
-                    <div class="col-6 text-end">
-                        <p class="letras2">Inflable de delfin</p>
-                        <p class="letras3">$320</p>
-                        <p class="letras3">1.68 mts de largo</p>
-                        <p class="letras4 badge text-bg-success">3 en stock</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="./images/delfin.jpg" width="240" alt="">
-                    </div>
+        <div class="col-5 miniFondo1">
+            <div class="row align-items-center">
+                <div class="col-6 text-end">
+                    <p class="letras2">Inflable de delfin</p>
+                    <p class="letras3">$320</p>
+                    <p class="letras3">1.68 mts de largo</p>
+                    <p class="letras4 badge text-bg-success">3 en stock</p>
+                </div>
+                <div class="col-6">
+                    <img src="./images/delfin.jpg" width="240" alt="">
                 </div>
             </div>
-            <div class="col-5 miniFondo1">
-                <div class="row align-items-center">
-                    <div class="col-6 text-end">
-                        <p class="letras2">Dona genérica</p>
-                        <p class="letras3">$100</p>
-                        <p class="letras3">90 cm de diametro</p>
-                        <p class="letras4 badge text-bg-success">5 en stock</p>
-                    </div>
-                    <div class="col-6">
-                        <img src="./images/donaGenerica.png" width="240" alt="">
-                    </div>
+        </div>
+        <div class="col-5 miniFondo1">
+            <div class="row align-items-center">
+                <div class="col-6 text-end">
+                    <p class="letras2">Dona genérica</p>
+                    <p class="letras3">$100</p>
+                    <p class="letras3">90 cm de diametro</p>
+                    <p class="letras4 badge text-bg-success">5 en stock</p>
+                </div>
+                <div class="col-6">
+                    <img src="./images/donaGenerica.png" width="240" alt="">
                 </div>
             </div>
         </div>
