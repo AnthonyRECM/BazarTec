@@ -9,26 +9,24 @@ body{
   
 } 
 .formatoRegistro{
-  
   background-color: #ffffff;
   max-width: 500px;
   margin: 0 auto;/* Esto centrará horizontalmente el formulario */
   margin-top: 100px;
   margin-bottom: 100px; /* Esto proporciona un espacio superior */
-  padding: 90px;
+  padding: 70px;
   text-align: center;
   border-radius: 15px;
   box-shadow: #ffffff; 
-  background-color: green;
+  background-color: rgb(128, 0, 96);
 }
   .form input {
     background: #ffffff;
     border-radius: 7px;
-    margin: 0 0 15px;
     padding: 20px;
     font-size: 14px;
     outline: 0;
-    border: 2;
+    border: 0;
   }
   .form button {
     font-family: "Poppins", sans-serif;

@@ -56,15 +56,25 @@
                     <form class="form needs-validation" novalidate action="" method="post">
                         <div class="row">
                             <div class="col-12" style="padding: 2rem;">
-    
-                                <h2> ENTRA A TU CUENTA</h2>
+                                <h2> CREA TU CUENTA</h2>
                             </div>
-                            <div class="col-12">
-                                <input type="text" name="nombree" placeholder="Correo" id="nombrePaciente" required />
-                                <div class="invalid-feedback">Por favor, ingresa tu correo.
+                            <div class="col-6">
+                                <input type="text" name="nombree" placeholder="Nombre" id="nombreCliente" required />
+                                <div class="invalid-feedback">Por favor, ingresa tu nombre.
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-6">
+                                <input type="text" name="apellido" placeholder="Apellido" id="apellidoCliente" required />
+                                <div class="invalid-feedback">Por favor, ingresa tu apellido.
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <input type="text" name="email" placeholder="Email" id="emailCliente"
+                                    required />
+                                <div class="invalid-feedback">Por favor, ingresa tu email.
+                                </div>
+                            </div>
+                            <div class="col-6">
                                 <input type="password" name="clave" placeholder="Contraseña" id="contraseñaPaciente"
                                     required />
                                 <div class="invalid-feedback">Por favor, ingresa tu contraseña.
