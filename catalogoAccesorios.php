@@ -106,7 +106,7 @@ include './php/conexionDB.php';
         <div class="row justify-content-evenly my-5">
 
             <?php
-                $query = mysqli_query($con, 'SELECT name,quantity,sale_price,media_id FROM products WHERE categorie_id="2"');
+                $query = mysqli_query($con, 'SELECT name,quantity,sale_price,media_id FROM products WHERE categorie_id="3"');
                 while ($consulta = mysqli_fetch_array($query)) {
                     echo "
                     <div class='col-4 miniFondo1 my-4 mx-4'>
