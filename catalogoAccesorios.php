@@ -99,7 +99,7 @@ include './php/conexionDB.php';
     <div class="container-fluid fondo2"> 
         <div id="desplazarDestino" class="row my-5">
             <div class="col text-center">
-                <h2 class="subtitulo">Inflables para albercas</h2>
+                <h2 class="subtitulo">¡Inflables para albercas y mas!</h2>
             </div>
         </div>
 
@@ -109,15 +109,16 @@ include './php/conexionDB.php';
                 $query = mysqli_query($con, 'SELECT name,quantity,sale_price,media_id FROM products WHERE categorie_id="3"');
                 while ($consulta = mysqli_fetch_array($query)) {
                     echo "
-                    <div class='col-4 miniFondo1 my-4 mx-4'>
-                        <div class='row align-items-center'>
-                            <div class='col-6 text-end'>
+                    <div class='col-5 miniFondo1 my-4 mx-4 cardd'>
+                        <div class='row '>
+                            <div class='col-5 text-start'>
                                 <p class='letras2'>".$consulta['name']."</p>
-                                <p class='letras3'>".$consulta['quantity']."</p>
                                 <p class='letras3'>".$consulta['sale_price']."</p>
+                                <br><br><br>
+                                <button href='#' class=' styboton' data-id='1'><i class='fa-solid fa-cart-shopping' style='color: #ffffff;'></i></button>
                             </div>
-                            <div class='col-6'>
-                                <img src='".$consulta['media_id']."' width='240' alt=''>
+                            <div class='col-7 imagenes' >
+                                <img src='./images/dona.png' width='240' alt=''>
                             </div>
                         </div>
                     </div>";
