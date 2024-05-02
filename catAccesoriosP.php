@@ -26,21 +26,20 @@ include './php/conexionDB.php';
         </div>
         <!-- Aquí se mostrarán los productos -->
         <div id="productos">
+            
             <?php
-                $query = mysqli_query($con, 'SELECT * FROM products');
+                $query = mysqli_query($con, 'SELECT name,quantity,sale_price FROM products');
                 while ($consulta = mysqli_fetch_array($query)) {
                     echo "";
-                    echo "<div class='row align-items-center'>
-                    <div class='col-6 text-end'>
-                        <p class='letras2'>Inflable de cocodrilo</p>
-                        <p class='letras3'>$320</p>
-                        <p class='letras3'>1.70 mts de largo</p>
+                    echo "<div class='col-6 text-end'>
+                        <p class='letras2'>".$consulta['name']."</p>
+                        <p class='letras3'>".$consulta['quantity']."</p>
+                        <p class='letras3'>".$consulta['sale_price']."</p>
                         <p class='letras4 badge text-bg-success'>12 en stock</p>
                     </div>
                     <div class='col-6'>
                         <img src='./images/cocodrilo.jpg' width='240' alt=''>
-                    </div>
-                </div>";
+                    </div>";
                 }
             ?>
         </div>
