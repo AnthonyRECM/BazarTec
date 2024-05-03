@@ -48,20 +48,29 @@ h1{
 }
 
 .cardd{
-    border: .5rem solid #00d4cd;
     border-radius: 8px;
 }
 
-.imagenes{
+.texto-producto{
+    background-color: #00d4cd;
+    border-radius: 5px;
+}
+
+.imagenes-producto{
     display: flex;
     justify-content: center; /* Alinea horizontalmente en el centro */
     align-items: center; /* Alinea verticalmente en el centro */
-    background-color: #00d4cd;
+    width: 421.5px;
+    height: 235px;
+}
+.imagenes-producto img {
+    width: auto; 
+    height: 82%;
 }
 
 .etiqueta1{
     width: max-content;
-    background-color: #198754;
+    background-color: #198754;  
     color: white;
     font-weight: bold;
     text-align: end;
