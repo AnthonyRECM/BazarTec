@@ -142,22 +142,30 @@ if(isset($_SESSION['registrado'])) {
         }, 3000); // 3000 milisegundos = 3 segundos
     </script>
 
-    <script>
-        function validarFormulario() {
-            var correo = document.getElementById("nombreCliente").value;
-            var clave = document.getElementById("contraseñaCliente").value;
+<script>
+function validarFormulario() {
+    var correo = document.getElementById("nombreCliente").value;
+    var clave = document.getElementById("contraseñaCliente").value;
 
-            // Verificar si los campos están vacíos
-            if (correo.trim() === '' || clave.trim() === '') {
-                // Mostrar mensaje de error
-                var mensajeError = document.getElementById("mensajeError");
-                mensajeError.innerHTML = "Por favor, completa todos los campos.";
-                // Evitar que el formulario se envíe
-                return false;
-            }
-            return true; // Permitir el envío del formulario si los campos están completos
-        }
-    </script>
+    // Verificar si los campos están vacíos
+    if (correo.trim() === '' || clave.trim() === '') {
+        // Mostrar mensaje de error
+        var mensajeError = document.getElementById("mensajeError");
+        mensajeError.innerHTML = "Por favor, completa todos los campos.";
+        mensajeError.style.display = 'block'; // Mostrar el mensaje de error
+
+        // Ocultar el mensaje de error después de 3 segundos
+        setTimeout(function() {
+            mensajeError.style.display = 'none';
+        }, 3000);
+
+        // Evitar que el formulario se envíe
+        return false;
+    }
+    return true; // Permitir el envío del formulario si los campos están completos
+}
+</script>
+
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 
