@@ -29,7 +29,7 @@ body{
     outline: 1;
     border: 0;
   }
-  .form button {
+  .button {
     font-family: "Poppins", sans-serif;
     outline: 0;
     background: #325288;
@@ -42,8 +42,10 @@ body{
     transition: all 0.3 ease;
     cursor: pointer;
     font-weight: bold;
-  }
-  .form button:hover,.form button:active,.form button:focus {
+}
+
+.button:hover,.button:active,.button:focus {
     background: #0e2941;
-  }
+}
+
  
