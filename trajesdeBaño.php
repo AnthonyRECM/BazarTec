@@ -188,6 +188,26 @@
         </div>
     </div>
 
+    <?php
+                $query = mysqli_query($con, 'SELECT name,quantity,sale_price,media_id FROM products WHERE categorie_id="1"');
+                while ($consulta = mysqli_fetch_array($query)) {
+                    echo "
+                    <div class='col-5 miniFondo1 my-4 mx-4 cardd'>
+                        <div class='row '>
+                            <div class='col-5 text-start'>
+                                <p class='letras2'>".$consulta['name']."</p>
+                                <p class='letras3'>".$consulta['sale_price']."</p>
+                                <br><br><br>
+                                <button href='#' class=' styboton' data-id='1'><i class='fa-solid fa-cart-shopping' style='color: #ffffff;'></i></button>
+                            </div>
+                            <div class='col-7 imagenes' >
+                                <img src='./images/dona.png' width='240' alt=''>
+                            </div>
+                        </div>
+                    </div>";
+                }   
+            ?>
+
 
     <!--footer-->
     <div class="container-fluid-lg py-5">
