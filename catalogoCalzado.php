@@ -12,8 +12,8 @@ include './php/conexionDB.php';
     <link rel="stylesheet" href="./fontawesome/css/all.css">
     <link rel="stylesheet" href="./css/navBar.css">
     <link rel="stylesheet" href="./css/accesorios.css">
-    <title>Accesorios</title>
-    <link rel="shortcut icon" href="./images/logo.png"  width="30" height="30" type="img">
+    <title>Calzado</title>
+    <link rel="shortcut icon" href="./images/logo.png" width="30" height="30" type="img">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -58,45 +58,46 @@ include './php/conexionDB.php';
             </div>
         </div>
     </div>
-    
+
     <div class="container-fluid fondo1">
         <div class="row gx-0 text-center">
             <div class="col-12">
-                <h1 class="pt-5">Catálogo de Articulos</h1>
-                <h2 class="py-3">¡¡Todo lo que necesitas para la playa y más!! </h2>
+                <h1 class="pt-5" style="color: #dbd7d5;">Catálogo de calzado</h1>
+                <h2 class="py-4" style="color: #dbd7d5;">¡¡Todo lo que necesitas y más!! </h2>
             </div>
         </div>
         <div class="row py-3 justify-content-center">
             <div class="col-4 mt-5">
-                <h5 class="">Inflables para niños y niñas:</h5>
-                <h5 class="">Tiburon, cocodrilo, delfín y muchos más</h5>
+                <h4 class="" style="color: #dbd7d5;">Tenis de todas las tallas</h4>
+                <h4 class="" style="color: #dbd7d5;">Precio accesible ... </h4>
                 <h5 class=""> </h5>
             </div>
-           <div class="col-4">
+            <div class="col-4">
                 <div class="row">
                     <div class="col-3">
-                        <img src="./images/tortuga.png" width="300" alt="Imagen No Encontrada">
+                        <img src="./images/cat2.png" width="600" alt="Imagen No Encontrada">
                     </div>
                     <div class="col-3">
-                        <img src="./images/orca.png" width="300" alt="Imagen No Encontrada">
+                        <img src="./images/cat1.png" width="600" alt="Imagen No Encontrada">
                     </div>
-                    <div class="col-3">
-                        <img src="./images/flamingo.png" width="300" alt="Imagen No Encontrada">
+                    <div class="col-4">
+                        <img src="./images/cat3.png" width="600" alt="Imagen No Encontrada">
                     </div>
                 </div>
-           </div>
-        </div>
-        <div class="row text-center desplazarMov">
-            <div class="col-12 mt-3">
-                <p class="letras1">Ver mas</p>
             </div>
-            <div class="col mb-2">
-                <i class="fa-solid fa-chevron-down fa-lg"></i>
+
+            <div class="row text-center desplazarMov">
+                <div class="col-12 mt-3">
+                    <p class="letras1">Ver mas</p>
+                </div>
+                <div class="col mb-2">
+                    <i class="fa-solid fa-chevron-down fa-lg"></i>
+                </div>
             </div>
         </div>
     </div>
-    
-    <div class="container-fluid fondo2"> 
+
+    <div class="container-fluid fondo2">
         <div id="desplazarDestino" class="row my-5">
             <div class="col text-center">
                 <h2 class="subtitulo">¡Inflables para albercas y mas!</h2>
@@ -104,12 +105,12 @@ include './php/conexionDB.php';
         </div>
 
         <div class="row justify-content-evenly my-5">
-            
+
             <?php
             $contador = 2;
                 $query = mysqli_query($con, 'SELECT p.id,p.name,p.quantity,p.sale_price,p.media_id,c.name AS categorie,m.file_name AS image
                  FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
-                  WHERE categorie_id="3"');
+                  WHERE categorie_id="2"');
                 while ($consulta = mysqli_fetch_array($query)) {
                     if ($contador % 2 == 0){
                         echo "
@@ -117,7 +118,7 @@ include './php/conexionDB.php';
                         </div>";
                     }
                     echo "
-                        <div class='col-5 miniFondo1 my-4 cardd'>
+                        <div class='col-5 miniFondo1 py-4 cardd'>
                             <div class='row'>
                                 <div class='col-4 text-start texto-producto'>
                                     <p class='letras2'>".$consulta['name']."</p>
@@ -150,4 +151,5 @@ include './php/conexionDB.php';
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/pAccesorios.js"></script>
 </body>
+
 </html>

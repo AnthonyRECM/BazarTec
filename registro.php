@@ -12,9 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&family=DM+Serif+Display&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="shortcut icon" href="/images/logo.png" width="30" height="30" type="img">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <link rel="shortcut icon" href="./images/logo.png" width="30" height="30" type="img">
     <link rel="stylesheet" type="text/css" href="./css/registro.css">
 </head>
 
@@ -51,24 +51,34 @@
         <div class="row">
             <div class="col-7">
                 <div class="container formatoRegistro ">
-                    <form class="form needs-validation" novalidate action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <form class="form needs-validation" novalidate action="./php/archivoRegistro.php" method="post"  onsubmit="return validarFormulario()">
                         <div class="row">
                             <div class="col-12" style="padding: 2rem;">
                                 <h2> CREA TU CUENTA</h2>
                             </div>
+                            <?php
+session_start();
+// Verificar si hay un mensaje de error registrado
+if(isset($_SESSION['error_message'])) {
+    echo '<div id="error-message" class="alert alert-danger" role="alert">' . $_SESSION['error_message'] . '</div>';
+    unset($_SESSION['error_message']); // Limpiar la sesión para evitar mostrar el mensaje nuevamente
+}
+?>
+
+
                             <div class="col-6">
                                 <input type="text" name="nombree" placeholder="Nombre" id="nombreCliente" required />
                                 <div class="invalid-feedback">Por favor, ingresa tu nombre.
                                 </div>
                             </div>
                             <div class="col-6">
-                                <input type="text" name="apellido" placeholder="Apellidos" id="apellidoCliente" required />
+                                <input type="text" name="apellido" placeholder="Apellidos" id="apellidoCliente"
+                                    required />
                                 <div class="invalid-feedback">Por favor, ingresa tus apellidos.
                                 </div>
                             </div>
                             <div class="col-6">
-                                <input type="text" name="email" placeholder="Email" id="emailCliente"
-                                    required />
+                                <input type="text" name="email" placeholder="Email" id="emailCliente" required />
                                 <div class="invalid-feedback">Por favor, ingresa tu email.
                                 </div>
                             </div>
@@ -78,59 +88,70 @@
                                 <div class="invalid-feedback">Por favor, ingresa tu contraseña.
                                 </div>
                             </div>
-    
+                            <div id="mensajeError"  style="color: red;"></div>
+
                             <div class="d-grid gap-2 col-6 mx-auto" style="padding: 1rem;">
-                                <button type="submit" href="./login.html" value="Iniciar Sesión" type="button" name="btningresarRegistro"><i
-                                        class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i> Crear
+                                <button type="submit" href="./login.html" value="Iniciar Sesión" type="button"
+                                    name="crearCliente"><i class="fa-solid fa-pen-to-square"
+                                        style="color: #ffffff;"></i> Crear
                                     cuenta</button>
                             </div>
-    
+
                         </div>
                     </form>
                 </div>
             </div>
             <div class="col-3"></div>
 
-    <!--footer-->
-    <div class="container-fluid-lg ">
-        <footer class=" text-white text-center py-5 mt-5" style="background-color: #325288;">
-            <div class="row">
-                <p>&copy; 2024 BazarTec</p>
+            <!--footer-->
+            <div class="container-fluid-lg ">
+                <footer class=" text-white text-center py-5 mt-5" style="background-color: #325288;">
+                    <div class="row">
+                        <p>&copy; 2024 BazarTec</p>
+                    </div>
+                </footer>
             </div>
-        </footer>
+        </div>
     </div>
-    </div>
-    </div>
+
+
+<script>
+// Esperar 3 segundos y luego ocultar el mensaje de error
+setTimeout(function() {
+    var errorMessage = document.getElementById('error-message');
+    if (errorMessage) {
+        errorMessage.style.display = 'none';
+    }
+}, 3000); // 3000 milisegundos = 3 segundos
+</script>
+
+<script>
+function validarFormulario() {
+    var nombre = document.getElementById("nombreCliente").value;
+    var apellidos = document.getElementById("apellidoCliente").value;
+    var email = document.getElementById("emailCliente").value;
+    var contraseña = document.getElementById("contraseñaCliente").value;
+
+    // Verificar si los campos están vacíos
+    if (nombre.trim() === '' || apellidos.trim() === '' || email.trim() === '' || contraseña.trim() === '') {
+        // Mostrar mensaje de error
+        var mensajeError = document.getElementById("mensajeError");
+        mensajeError.innerHTML = "Por favor, completa todos los campos.";
+        mensajeError.style.display = 'block'; // Mostrar el mensaje de error
+
+        // Ocultar el mensaje de error después de 3 segundos
+        setTimeout(function() {
+            mensajeError.style.display = 'none';
+        }, 3000);
+
+        // Evitar que el formulario se envíe
+        return false;
+    }
+    return true; // Permitir el envío del formulario si los campos están completos
+}
+</script>
+
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
-
-<?php
-include './php/conexionDB.php';
-// Verificar la conexión
-if (mysqli_connect_errno()) {
-    echo 'No se pudo conectar a la base de datos : ' . mysqli_connect_error();
-} else {
-    // Verificar si se han enviado datos del formulario
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Procesar y limpiar los datos del formulario
-    
-        $nombre = mysqli_real_escape_string($con, $_POST['nombree']);
-        $apellido = mysqli_real_escape_string($con, $_POST['apellido']);
-        $email = mysqli_real_escape_string($con, $_POST['email']);
-        $clave = mysqli_real_escape_string($con, $_POST['clave']);
-
-        // Consulta SQL para insertar un nuevo cliente
-        $sql = "INSERT INTO clientes (nombre, apellido, email, clave) VALUES ('$nombre', '$apellido', '$email', '$clave')";
-
-        // Ejecutar la consulta y verificar si fue exitosa
-        if (mysqli_query($con, $sql)) {
-            echo 'Cliente insertado correctamente.';
-        } else {
-            echo 'Error al insertar el cliente: ' . mysqli_error($con);
-        }
-    }
-    mysqli_close($con); // Cerrar la conexión
-}
-?>
