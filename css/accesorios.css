@@ -48,12 +48,13 @@ h1{
 }
 
 .cardd{
-    border-radius: 8px;
+    border-radius: 12px;
+    background-color: #e1e1e1;
 }
 
 .texto-producto{
     background-color: #00d4cd;
-    border-radius: 5px;
+    border-radius: 12px 0px 0px 12px;
 }
 
 .imagenes-producto{
