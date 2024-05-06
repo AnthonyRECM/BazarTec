@@ -117,7 +117,7 @@ include './php/conexionDB.php';
                         </div>";
                     }
                     echo "
-                        <div class='col-5 miniFondo1 py-4 cardd'>
+                        <div class='col-5 miniFondo1 my-4 cardd'>
                             <div class='row'>
                                 <div class='col-4 text-start texto-producto'>
                                     <p class='letras2'>".$consulta['name']."</p>
