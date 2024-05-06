@@ -141,7 +141,6 @@ if(isset($_SESSION['registrado'])) {
             }
         }, 3000); // 3000 milisegundos = 3 segundos
     </script>
-
 <script>
 function validarFormulario() {
     var correo = document.getElementById("nombreCliente").value;
