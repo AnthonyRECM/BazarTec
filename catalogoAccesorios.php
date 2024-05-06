@@ -111,13 +111,9 @@ include './php/conexionDB.php';
                  FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
                   WHERE categorie_id="3"');
                 while ($consulta = mysqli_fetch_array($query)) {
-                    if ($contador % 2 == 0){
-                        echo "
-                        <div class='col-1'>
-                        </div>";
-                    }
+              
                     echo "
-                        <div class='col-5 miniFondo1 my-4 cardd'>
+                        <div class='col-5 miniFondo1 my-4 mx-1 cardd'>
                             <div class='row'>
                                 <div class='col-4 text-start texto-producto'>
                                     <p class='letras2'>".$consulta['name']."</p>
@@ -136,11 +132,6 @@ include './php/conexionDB.php';
                                 </div>
                             </div>
                         </div>";
-                    if ($contador % 2 == 1){
-                        echo "
-                        <div class='col-1'>
-                        </div>";
-                    }
                     $contador++;
                 }   
             ?>
