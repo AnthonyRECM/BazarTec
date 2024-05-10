@@ -76,6 +76,18 @@ include './php/conexionDB.php';
                 <h5 class=""> </h5>
             </div>
 
+            <div class="row text-center desplazarMov">
+                <div class="col-12 mt-3">
+                    <p class="letras1">Ver mas</p>
+                </div>
+                <div class="col mb-2">
+                    <i class="fa-solid fa-chevron-down fa-lg"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -269,6 +281,7 @@ include './php/conexionDB.php';
     </div>
     </div>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/pAccesorios.js"></script>
 </body>
 
 </html>
