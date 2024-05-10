@@ -21,33 +21,60 @@ include './php/conexionDB.php';
 
 </head>
 
-<body>
+<body class="fondo">
     <!--Header-->
-    <div class="container-fluid-lg mb-5">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
-                <nav class="navbar navbar-expand-lg " style="background-color:#325288;">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html" style="color: white;">
-                            <img src="/images/logo.png" alt="" width="50" height="50" class=" d-inline-block ">
-                            BazarTec
-                        </a>
-                        <div class="collapse navbar-collapse">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active"  style="color: white;" aria-current="page" href="#">Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active"  style="color: white;" aria-current="page" href="#">Contactanos</a>
-                                </li>
-                                
-                            </ul>
-                        </div>
-                    </div>
+            <div class="menu">
+                <a href="./index.html" class="logo"><img src="images/logo.png" width="60px" height="60px"></a>
+                <input type="checkbox" id="menu" />
+                <label for="menu"><img src="images/menu.png" class="menu-icono" alt=""></label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./trajesdeBaño.html">Traje de baño</a></li>
+                        <li><a href="./catalogoCalzado.html">Calzado</a></li>
+                        <li><a href="./catalogoAccesorios.html">Accesorios</a></li>
+                    </ul>
                 </nav>
+                <div>
+                    <ul>
+                        <li class="submenu">
+                            <a href="#" class="logo"></a><img src="images/car.svg" id="img-carrito" alt="">
+                            <div id="carrito">
+                                <table id="lista-carrito">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+    
+    <div class="container-fluid fondo1">
+        <div class="row gx-0 text-center">
+            <div class="col-12">
+                <h1 class="pt-5">Catálogo de Trajes de Baño</h1>
+                <h2 class="py-3">¡¡Todo lo que necesitas para la playa y más!! </h2>
+            </div>
+        </div>
+        <div class="row py-3 justify-content-center">
+            <div class="col-4 mt-5">
+                <h5 class="">Trajes de 2 piezas y completos para damas:</h5>
+                <h5 class="">Bermudas, short de playa, buzos y mucho mas!</h5>
+                <h5 class=""> </h5>
+            </div>
 
     <div class="container">
         <div class="row">
