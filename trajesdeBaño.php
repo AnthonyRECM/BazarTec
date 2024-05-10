@@ -2,18 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>BazarTec</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&family=DM+Serif+Display&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="shortcut icon" href="/images/logo.png" width="30" height="30" type="img">
-    <link rel="stylesheet" href="css/trajesdebaño.css">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <link rel="stylesheet" href="./css/navBar.css">
+    <link rel="stylesheet" href="./css/accesorios.css">
+    <title>Trajes de Baño</title>
+    <link rel="shortcut icon" href="./images/logo.png"  width="30" height="30" type="img">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 
