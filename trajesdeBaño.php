@@ -1,3 +1,7 @@
+<?php
+include './php/conexionDB.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
