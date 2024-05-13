@@ -11,7 +11,7 @@ include './php/conexionDB.php';
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./fontawesome/css/all.css">
     <link rel="stylesheet" href="./css/navBar.css">
-    <link rel="stylesheet" href="./css/accesorios.css">
+    <link rel="stylesheet" href="./css/catalogoCalzado.css">
     <title>Calzado</title>
     <link rel="shortcut icon" href="./images/logo.png" width="30" height="30" type="img">
 
@@ -88,7 +88,7 @@ include './php/conexionDB.php';
 
             <div class="row text-center desplazarMov">
                 <div class="col-12 mt-3">
-                    <p class="letras1">Ver mas</p>
+                    <p class="letras1">Ver más</p>
                 </div>
                 <div class="col mb-2">
                     <i class="fa-solid fa-chevron-down fa-lg"></i>
@@ -100,7 +100,7 @@ include './php/conexionDB.php';
     <div class="container-fluid fondo2">
         <div id="desplazarDestino" class="row my-5">
             <div class="col text-center">
-                <h2 class="subtitulo">¡Inflables para albercas y mas!</h2>
+                <h2 class="subtitulo">¡Calzado con precio accesible y más!</h2>
             </div>
         </div>
 
@@ -118,7 +118,7 @@ include './php/conexionDB.php';
                         </div>";
                     }
                     echo "
-                        <div class='col-5 miniFondo1 py-4 cardd'>
+                        <div class='col-5 miniFondo1  cardd'>
                             <div class='row'>
                                 <div class='col-4 text-start texto-producto'>
                                     <p class='letras2'>".$consulta['name']."</p>

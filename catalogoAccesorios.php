@@ -16,6 +16,42 @@ include './php/conexionDB.php';
     <link rel="shortcut icon" href="./images/logo.png"  width="30" height="30" type="img">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .mensaje {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+        }
+
+        #lista-carrito .borrar {
+    color: white; /* Color blanco para la "x" */
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la "x" */
+    transition: color 0.3s, background-color 0.3s; /* Transición suave para el cambio de color */
+    border: 2px solid white; /* Borde blanco para el círculo */
+    border-radius: 50%; /* Hace que el borde sea circular */
+    width: 25px; /* Ancho de la "x" */
+    height: 25px; /* Altura de la "x" */
+    background-color: purple; /* Fondo morado */
+    display: inline-flex; /* Hace que el contenido esté centrado verticalmente */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+#lista-carrito .borrar:hover {
+    background-color: darkpurple; /* Fondo morado más oscuro al pasar el cursor */
+}
+
+
+    </style>
 </head>
 
 
@@ -50,7 +86,8 @@ include './php/conexionDB.php';
                                     </thead>
                                     <tbody></tbody>
                                 </table>
-                                <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+                                <a href="#" id="vaciar-carrito" class="btn btn-danger">Vaciar Carrito</a>
+                                <a href="pago.html" id="comprar-carrito" class="btn btn-success">Comprar Carrito</a>
                             </div>
                         </li>
                     </ul>
@@ -118,8 +155,7 @@ include './php/conexionDB.php';
                                 <div class='col-4 text-start texto-producto'>
                                     <p class='letras2'>".$consulta['name']."</p>
                                     <p class='letras3'>".$consulta['sale_price']."</p>
-                                    <br><br><br>
-                                    <button class='styboton agregar-carrito' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #ffffff;'></i></button>
+                                    <button class='styboton agregar-carrito' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #00C0B9;'></i></button>
                                 </div>
                                 <div class='col-8 imagenes-producto style=''>";
                                 if($consulta['media_id'] === '0'):
