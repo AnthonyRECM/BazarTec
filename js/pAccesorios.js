@@ -1,4 +1,3 @@
-// Espera a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", function () {
     // Obtén el contenedor del carrito
     const carrito = document.getElementById('carrito');
@@ -63,4 +62,19 @@ document.addEventListener("DOMContentLoaded", function () {
             mensajeElemento.remove();
         }, 3000);
     }
+
+    // Evento de clic para el botón de vaciar carrito
+    document.getElementById("vaciar-carrito").addEventListener("click", function() {
+        // Eliminar todos los elementos de la lista del carrito
+        document.querySelector("#lista-carrito tbody").innerHTML = "";
+    });
+
+    // Evento de clic para eliminar un solo producto del carrito
+    document.querySelector("#lista-carrito").addEventListener("click", function(event) {
+        if (event.target.classList.contains("borrar")) {
+            const id = event.target.getAttribute("data-id");
+            const row = event.target.parentElement.parentElement;
+            row.remove();
+        }
+    });
 });

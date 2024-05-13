@@ -94,10 +94,11 @@ h1{
 .styboton{
     border: none;
     padding: 8px 12px 8px 12px;
-    background-color: #00d4cd;
+    background-color: #ffffff;
     border-radius: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
+
 
 .desplazarMov {
     cursor: pointer; /* Cambia el cursor a una mano */
@@ -107,3 +108,4 @@ h1{
 .desplazarMov:hover {
     background-color: #04c6bf; /* Cambia el color de fondo al pasar el cursor */
 }
+
