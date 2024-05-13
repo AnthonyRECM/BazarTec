@@ -9,7 +9,6 @@ body{
   
 } 
 .formatoRegistro{
-  background-color: #ffffff;
   max-width: 500px;
   margin: 0 auto;/* Esto centrará horizontalmente el formulario */
   margin-top: 100px;
@@ -18,7 +17,7 @@ body{
   text-align: center;
   border-radius: 15px;
   box-shadow: #ffffff; 
-  background-color: rgb(128, 0, 96);
+  background-color: #5F5D9C;
 }
   .form input {
     background: #ffffff;

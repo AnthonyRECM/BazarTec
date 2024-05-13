@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BazarTec</title>
+    <title>Registro</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
     <div class="container-fluid-lg">
         <div class="row">
             <div class="col-12">
-                <nav class="navbar navbar-expand-lg " style="background-color:#325288;">
+            <nav class="navbar navbar-expand-lg " style="background-color:#5F5D9C;">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="index.html" style="color: white;">
                             <img src="./images/logo.png" alt="" width="50" height="50" class=" d-inline-block ">
@@ -31,14 +31,7 @@
                         </a>
                         <div class="collapse navbar-collapse">
                             <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" style="color: white;" aria-current="page"
-                                        href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" style="color: white;" aria-current="page"
-                                        href="#">Contactanos</a>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -49,9 +42,9 @@
     <!--Main o contenido-->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-7">
+            <div class="col-12">
                 <div class="container formatoRegistro ">
-                    <form class="form needs-validation" novalidate action="./php/archivoRegistro.php" method="post"  onsubmit="return validarFormulario()">
+                    <form class="form needs-validation " novalidate action="./php/archivoRegistro.php" method="post"  onsubmit="return validarFormulario()">
                         <div class="row">
                             <div class="col-12" style="padding: 2rem;">
                                 <h2> CREA TU CUENTA</h2>
@@ -105,7 +98,7 @@ if(isset($_SESSION['error_message'])) {
 
             <!--footer-->
             <div class="container-fluid-lg ">
-                <footer class=" text-white text-center py-5 mt-5" style="background-color: #325288;">
+                <footer class=" text-white text-center py-5 mt-5" style="background-color: #5F5D9C;">
                     <div class="row">
                         <p>&copy; 2024 BazarTec</p>
                     </div>
