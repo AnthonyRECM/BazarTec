@@ -78,7 +78,7 @@ include './php/conexionDB.php';
             <div class="col-4">
                 <div class="row">
                     <div class="col-3">
-                        <img src="./images/bermudaAzul.png" width="300" alt="Imagen No Encontrada">
+                        <img src="./images/bermudaAzul.png" width="250" alt="Imagen No Encontrada">
                     </div>
                     <div class="col-3">
                         <img src="./images/shortlicraUnisex.png" width="300" alt="Imagen No Encontrada">
