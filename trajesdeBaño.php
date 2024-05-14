@@ -11,7 +11,7 @@ include './php/conexionDB.php';
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./fontawesome/css/all.css">
     <link rel="stylesheet" href="./css/navBar.css">
-    <link rel="stylesheet" href="./css/accesorios.css">
+    <link rel="stylesheet" href="./css/trajesdebaño.css">
     <title>Trajes de Baño</title>
     <link rel="shortcut icon" href="./images/logo.png"  width="30" height="30" type="img">
 
