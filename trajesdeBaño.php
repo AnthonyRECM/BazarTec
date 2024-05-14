@@ -99,12 +99,18 @@ include './php/conexionDB.php';
             </div>
         </div>
     </div>
+    <div class="container-fluid fondo2"> 
+        <div id="desplazarDestino" class="row my-5">
+            <div class="col text-center">
+                <h2 class="subtitulo">¡Trajes de baño para toda la familia!</h2>
+            </div>
+        </div>
 
+    
+        <div class="row justify-content-evenly my-5">
 
-
-
-    <?php
-            $contador = 2;
+         <?php
+             $contador = 2;
                 $query = mysqli_query($con, 'SELECT p.id,p.name,p.quantity,p.sale_price,p.media_id,c.name AS categorie,m.file_name AS image
                  FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
                   WHERE categorie_id="1"');
@@ -142,20 +148,16 @@ include './php/conexionDB.php';
                     $contador++;
                 }   
             ?>
-
-
+      </div>
+   </div>
     <!--footer-->
-    <div class="container-fluid-lg py-5">
-        <footer class=" text-white text-center py-5 mt-5" style="background-color: #325288;">
-            <div class="row">
-                <p>&copy; 2024 BazarTec</p>
-            </div>
-        </footer>
-    </div>
-    </div>
-    </div>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <footer style="background-color: #24A19C; color: #fff; padding: 20px; width: 100%; text-align: center;">
+        <p style="margin: 0;">&copy; 2024 BazarTec. Todos los derechos reservados. | <a href="#" style="color: #fff; text-decoration: none;">Política de privacidad</a> | <a href="#" style="color: #fff; text-decoration: none;">Términos y condiciones</a></p>
+    </footer>
+
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/pAccesorios.js"></script>
+    <script src="./js/cAccesorios.js"></script>
 </body>
 
 </html>
