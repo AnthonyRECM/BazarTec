@@ -75,6 +75,19 @@ include './php/conexionDB.php';
                 <h5 class="">Bermudas, short de playa, buzos y mucho mas!</h5>
                 <h5 class=""> </h5>
             </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./images/bikiniAma.jpeg" width="300" alt="Imagen No Encontrada">
+                    </div>
+                    <div class="col-3">
+                        <img src="./images/bermudaFloreada.png" width="300" alt="Imagen No Encontrada">
+                    </div>
+                    <div class="col-3">
+                        <img src="./images/damaCompleto.jpeg" width="300" alt="Imagen No Encontrada">
+                    </div>
+                </div>
+           </div>
 
             <div class="row text-center desplazarMov">
                 <div class="col-12 mt-3">
