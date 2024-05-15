@@ -119,37 +119,88 @@ include './php/conexionDB.php';
                 </div>
            </div>
         </div>
-        <div class="row text-center desplazarMov">
+        <!-- <div class="row text-center desplazarMov">
             <div class="col-12 mt-3">
                 <p class="letras1">Ver mas</p>
             </div>
             <div class="col mb-2">
                 <i class="fa-solid fa-chevron-down fa-lg"></i>
             </div>
-        </div>
-    </div>
-
-    <div class="container-fluid fondo22">
-        <div>
-            
-        </div>
-
+        </div> -->
     </div>
     
-    <div class="container-fluid fondo2"> 
-        <div id="desplazarDestino" class="row my-5">
-            <div class="col text-center">
-                <h2 class="subtitulo">¡Inflables para albercas y mas!</h2>
+    <br>
+    
+    <div class="container fondo3 my-5 py-3">
+        <?php
+            $query = mysqli_query($con, 'SELECT p.id,p.name,p.quantity,p.sale_price,p.media_id,c.name AS categorie,m.file_name AS image
+            FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
+             WHERE categorie_id=3 ORDER BY date DESC LIMIT 1');
+        ?>
+        <div class="row px-4"> 
+            <div class="col-12">
+                <p class="subtitulo3"> Lo ultimo de temporada </p>
             </div>
         </div>
-
-        <div class="row justify-content-evenly my-5">
-            
+        <div class="row ps-4">
+            <div class="col-6 text-center">
             <?php
-            $contador = 2;
+                while ($consulta = mysqli_fetch_array($query)) {
+                    echo '
+                        <p class="p1">! Compralo ya ! </p>
+                        <p class="p2">'.$consulta['name'].'</p>
+                        <p class="p1">A un increible precio de: </p>
+                        <p class="p2">¡¡¡ '.$consulta['sale_price'].' !!!</p>
+                    </div>
+                    <div class="col-6 text-center">';
+                        if($consulta['media_id'] === '0'):
+                            echo '<img style="width: auto; height: 100%" class="img-avatar img-circle" src="./admin/uploads/products/no_image.jpg" alt="">';
+                        else:
+                            echo "<img class='img-avatar img-circle imgNuevo' src='./admin/uploads/products/".$consulta['image'].    "' alt=''>";
+                        endif;
+                    echo '</div>
+                    ';
+                }
+            ?>
+           
+        </div>
+    </div>
+
+    <br>
+    
+    <div class="container fondo22 my-4 py-3">
+        <div class="row text-center d-flex justify-content-evenly"> 
+            <div class="col-3"> 
+                <img src="./images/shopping.png" style="width: 100px;" alt="no image">
+            </div>
+            <div class="col-6 align-self-center">
+                <p class="subtitulo2">¡Lo más nuevo en inflables solo para ti!</p>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var paragraph = document.querySelector('.subtitulo2');
+                    var text = paragraph.innerHTML;
+                    var newText = text.replace(/(inflables)/i, '<span class="highlight">$1</span>');
+                    paragraph.innerHTML = newText;
+                });
+            </script>
+            <div class="col-3"> 
+                <img src="./images/shopping.png" style="width: 100px;" alt="no image">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid fondo2"> 
+        <!-- <div id="desplazarDestino" class="row my-5">
+            <div class="col text-center">
+                <h2 class="subtitulo" style="font-weight: bold;">  ¡Inflables para albercas y mas!</h2>
+            </div>
+        </div> -->
+        <div class="row justify-content-evenly my-5">
+            <?php
+                $contador = 2;
                 $query = mysqli_query($con, 'SELECT p.id,p.name,p.quantity,p.sale_price,p.media_id,c.name AS categorie,m.file_name AS image
                  FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
-                  WHERE categorie_id="3"');
+                  WHERE categorie_id=3');
                 while ($consulta = mysqli_fetch_array($query)) {
               
                     echo "
@@ -157,7 +208,7 @@ include './php/conexionDB.php';
                             <div class='row'>
                                 <div class='col-4 text-start texto-producto'>
                                     <p class='letras2'>".$consulta['name']."</p>
-                                    <p class='letras3'>".$consulta['sale_price']."</p>
+                                    <p class='letras3'>$".$consulta['sale_price']."</p>
                                     <button class='styboton agregar-carrito' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #00C0B9;'></i></button>
                                 </div>
                                 <div class='col-8 imagenes-producto style=''>";
