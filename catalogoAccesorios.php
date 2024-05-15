@@ -206,11 +206,11 @@ include './php/conexionDB.php';
                     echo "
                         <div class='col-5 miniFondo1 my-4 mx-1 cardd'>
                             <div class='row'>
-                                <div class='col-4 text-start texto-producto'>
+                                <div class='col-4 text-start texto-producto d-flex align-items-start flex-column'>
                                     <p class='letras2'>".$consulta['name']."</p>
                                     <p class='letras3'>$".$consulta['sale_price']."</p>
                                     <br><br>
-                                    <button class='styboton agregar-carrito' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #00C0B9;'></i></button>
+                                    <button class='styboton agregar-carrito mt-auto mb-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #00C0B9;'></i></button>
                                 </div>
                                 <div class='col-8 imagenes-producto style=''>";
                                 if($consulta['media_id'] === '0'):
