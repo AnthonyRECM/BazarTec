@@ -30,11 +30,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_start();
         $_SESSION['loggedin'] = true;
         $_SESSION['correo'] = $correo;
-        // Redireccionar a la página de inicio o a donde desees
+        // Redireccionar a la página de inicio o a donde     desees
         header("Location: ../index.html");
     } else {
         // Credenciales incorrectas, mostrar mensaje de error
-        echo "Los campos estan vacios";
+        $_SESSION['error_message1'] = "*No existe este email registrado*";
+        header("Location: ../login.php");
+        exit();
     }
 
     // Cerrar conexión
