@@ -61,12 +61,12 @@ h1{
     display: flex;
     justify-content: center; /* Alinea horizontalmente en el centro */
     align-items: center; /* Alinea verticalmente en el centro */
-    width: 421.5px;
-    height: 235px;
+    width: 400px;
+    height: 230px;
 }
 .imagenes-producto img {
     width: auto; 
-    height: 95%;
+    height: 85%;
 }
 
 .etiqueta1{
