@@ -28,16 +28,15 @@ include './php/controlador.php';
     <!--Header-->
     <div class="container-fluid-lg">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mb-4">
                 <nav class="navbar navbar-expand-lg " style="background-color:#5F5D9C;">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html" style="color: white;">
+                        <a class="navbar-brand letra" href="index.html" style="color: white;">
                             <img src="./images/logo.png" alt="" width="50" height="50" class=" d-inline-block ">
                             BazarTec
                         </a>
                         <div class="collapse navbar-collapse">
-                            <ul class="navbar-nav">
-                                
+                            <ul class="navbar-nav">  
                             </ul>
                         </div>
                     </div>
@@ -54,17 +53,26 @@ include './php/controlador.php';
                         onsubmit="return validarFormulario()">
 
                         <div class="row">
-                            <div class="col-12" style="padding: 2rem;">
-
-                                <h2> ENTRA A TU CUENTA</h2>
+                            <div class="col-12 login" style="padding: 1rem;">
+                                <h1> ENTRA A TU CUENTA</h1>
                             </div>
+                            
+
                             <?php
-// Verificar si hay un mensaje de éxito registrado
-if(isset($_SESSION['registrado'])) {
-    echo '<div id="success-message" class="alert alert-success" role="alert">' . $_SESSION['registrado'] . '</div>';
-    unset($_SESSION['registrado']); // Limpiar la sesión para evitar mostrar el mensaje nuevamente
-}
-?>
+                                // Verificar si hay un mensaje de éxito registrado
+                                if(isset($_SESSION['registrado'])) {
+                                    echo '<div id="success-message" class="alert alert-success" role="alert">' . $_SESSION['registrado'] . '</div>';
+                                    unset($_SESSION['registrado']); // Limpiar la sesión para evitar mostrar el mensaje nuevamente
+                                }
+                                ?>
+                                 <?php
+                             
+                                // Verificar si hay un mensaje de error registrado
+                                if(isset($_SESSION['error_message1'])) {
+                                    echo '<div id="error-message1" class="alert alert-danger" role="alert">' . $_SESSION['error_message1'] . '</div>';
+                                    unset($_SESSION['error_message1']); // Limpiar la sesión para evitar mostrar el mensaje nuevamente
+                                }
+                            ?>
                             <div class="col-12">
                                 <input type="text" name="correo" placeholder="Correo" id="nombreCliente" required />
                                 <div class="invalid-feedback">Por favor, ingresa tu correo.
@@ -74,7 +82,8 @@ if(isset($_SESSION['registrado'])) {
                                 <input type="password" name="clave" placeholder="Contraseña" id="contraseñaCliente"
                                     required />
                                 <div class="invalid-feedback">Por favor, ingresa tu contraseña.
-                                </div>
+                            
+                            </div>
                             </div>
                             <!-- Aquí puedes mostrar el mensaje de error 
                         <div id="mensajeError" class="alert alert-danger" role="alert" ></div>-->
@@ -90,15 +99,16 @@ if(isset($_SESSION['registrado'])) {
 
                 </div>
                 </form>
-
             </div>
-            <div class="col-6">
-                <div class="container formatoLogin ">
+
+            <div class="col-6" style="border-left: 0.2rem solid #5F5D9C;">
+
+                <div class="container formatoLogin login ">
                     <form class="form needs-validation" novalidate action="" method="post">
                         <div class="row">
                             <div class="col-12" style="padding: 2rem; ">
 
-                                <h2> ¿NO TIENES CUENTA? REGISTRATE Y HAZ TUS COMPRAS MÁS RÁPIDO.</h2>
+                                <h1> ¿NO TIENES CUENTA? REGISTRATE Y HAZ TUS COMPRAS MÁS RÁPIDO.</h1>
                             </div>
                             <div class="d-grid gap-2 col-6 mx-auto" style="padding: 1rem;">
                                 <button type="button" onclick="window.location.href='./registro.php'"
@@ -115,15 +125,22 @@ if(isset($_SESSION['registrado'])) {
     </div>
     <!--footer-->
     <div class="container-fluid-lg ">
-        <footer class=" text-white text-center py-5 mt-5" style="background-color: #5F5D9C;">
-            <div class="row">
-                <p>&copy; 2024 BazarTec</p>
-            </div>
-        </footer>
-    </div>
-    </div>
-    </div>
 
+        <footer style="background-color: #5F5D9C; color: #fff; padding: 20px; width: 100%; text-align: center;" class="py-5 mt-4">
+        <p style="margin: 0;">&copy; 2024 BazarTec. Todos los derechos reservados. | <a href="#" style="color: #fff; text-decoration: none;">Política de privacidad</a> | <a href="#" style="color: #fff; text-decoration: none;">Términos y condiciones</a></p>
+    </footer>
+    </div>
+    </div>
+    </div>
+    <script>
+// Esperar 3 segundos y luego ocultar el mensaje de error
+setTimeout(function() {
+    var errorMessage = document.getElementById('error-message1');
+    if (errorMessage) {
+        errorMessage.style.display = 'none';
+    }
+}, 3000); // 3000 milisegundos = 3 segundos
+</script>
 
     <script>
         // Esperar 3 segundos y luego ocultar el mensaje de éxito

@@ -1,4 +1,19 @@
 <?php
+// Iniciar la sesión si no está iniciada
+session_start();
+
+// Verificar si se ha hecho clic en el botón de cerrar sesión
+if(isset($_GET['logout'])) {
+    // Destruir todas las variables de sesión
+    session_unset();
+    // Destruir la sesión
+    session_destroy();
+    // Redirigir al usuario a la página de inicio de sesión o a donde desees
+    header("Location: index.html");
+    exit;
+}
+?>
+<?php
 include './php/conexionDB.php';
 ?>
 
@@ -17,7 +32,25 @@ include './php/conexionDB.php';
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-
+<style>
+      .form button {
+    font-family: "Poppins", sans-serif;
+    outline: 0;
+    background: #325288;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    border-radius: 7px;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    font-weight: bold;
+}
+.form button:hover,.form button:active,.form button:focus {
+    background: #0e2941;
+}
+</style>
 
 <body class="fondo">
     <div class="container-fluid">
@@ -32,6 +65,16 @@ include './php/conexionDB.php';
                         <li><a href="./trajesdeBaño.php">Traje de baño</a></li>
                         <li><a href="./catalogoCalzado.php">Calzado</a></li>
                         <li><a href="./catalogoAccesorios.php">Accesorios</a></li>
+                        <li>
+                            <form class="form" action="" method="get">
+                                <div class="d-grid gap-2 mx-auto" >
+                                    <button type="submit" name="logout"><i
+                                            class="fa-solid fa-right-to-bracket " style="color: #ffffff;"></i> Cerrar
+                                        Sesión</button>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="submenu"></li>
                     </ul>
                 </nav>
                 <div>
@@ -50,7 +93,9 @@ include './php/conexionDB.php';
                                     </thead>
                                     <tbody></tbody>
                                 </table>
-                                <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+                                <a href="#" id="vaciar-carrito" class="btn btn-danger">
+                                    <i class="fa-solid fa-trash"></i> Vaciar Carrito</a>
+                                <a href="pago.html" id="comprar-carrito" class="btn btn-success">Comprar Carrito</a>
                             </div>
                         </li>
                     </ul>
@@ -62,7 +107,7 @@ include './php/conexionDB.php';
     <div class="container-fluid fondo1">
         <div class="row gx-0 text-center">
             <div class="col-12">
-                <h1 class="pt-5" style="color: #dbd7d5;">Catálogo de calzado</h1>
+                <h1 class="pt-5 catalogo" style="color: #dbd7d5;">Catálogo de calzado</h1>
                 <h2 class="py-4" style="color: #dbd7d5;">¡¡Todo lo que necesitas y más!! </h2>
             </div>
         </div>
@@ -85,7 +130,7 @@ include './php/conexionDB.php';
                     </div>
                 </div>
             </div>
-
+<!-- 
             <div class="row text-center desplazarMov">
                 <div class="col-12 mt-3">
                     <p class="letras1">Ver más</p>
@@ -93,16 +138,76 @@ include './php/conexionDB.php';
                 <div class="col mb-2">
                     <i class="fa-solid fa-chevron-down fa-lg"></i>
                 </div>
+            </div> -->
+        </div>
+    </div>
+
+    
+    <div class="container-fluid fondo3 my-5 py-3">
+        <?php
+            $query = mysqli_query($con, 'SELECT p.id,p.name,p.quantity,p.sale_price,p.media_id,c.name AS categorie,m.file_name AS image
+            FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
+             WHERE categorie_id=2 ORDER BY date DESC LIMIT 1');
+        ?>
+        <div class="row px-4"> 
+            <div class="col-12">
+                <p class="subtitulo3 text-center"> Lo ultimo en moda</p>
+            </div>
+        </div>
+        <div class="row ps-4">
+            <div class="col-6 text-center">
+            <?php
+                while ($consulta = mysqli_fetch_array($query)) {
+                    echo '
+                        <p class="p1"> Obten ya! </p>
+                        <p class="p2">'.$consulta['name'].'</p>
+                        <p class="p1">A un increible precio de: </p>
+                        <p class="p2">¡¡¡ '.$consulta['sale_price'].' !!!</p>
+                    </div>
+                    <div class="col-6 text-center">';
+                        if($consulta['media_id'] === '0'):
+                            echo '<img style="width: auto; height: 100%" class="img-avatar img-circle" src="./admin/uploads/products/no_image.jpg" alt="">';
+                        else:
+                            echo "<img class='img-avatar img-circle imgNuevo' src='./admin/uploads/products/".$consulta['image'].    "' alt=''>";
+                        endif;
+                    echo '</div>
+                    ';
+                }
+            ?>
+           
+        </div>
+    </div>
+
+    <br>
+    
+    <div class="container fondo22 my-4 py-3">
+        <div class="row text-center d-flex justify-content-evenly"> 
+            <div class="col-3"> 
+                <img src="./images/shopping.png" style="width: 100px;" alt="no image">
+            </div>
+            <div class="col-6 align-self-center">
+                <p class="subtitulo2">¡Lo más reciente en calzado solo para ti!</p>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var paragraph = document.querySelector('.subtitulo2');
+                    var text = paragraph.innerHTML;
+                    var newText = text.replace(/(calzado)/i, '<span class="highlight">$1</span>');
+                    paragraph.innerHTML = newText;
+                });
+            </script>
+            <div class="col-3"> 
+                <img src="./images/shopping.png" style="width: 100px;" alt="no image">
             </div>
         </div>
     </div>
 
     <div class="container-fluid fondo2">
-        <div id="desplazarDestino" class="row my-5">
+        <!-- <div id="desplazarDestino" class="row my-5">
             <div class="col text-center">
                 <h2 class="subtitulo">¡Calzado con precio accesible y más!</h2>
             </div>
-        </div>
+        </div> -->
 
         <div class="row justify-content-evenly my-5">
 
@@ -112,21 +217,17 @@ include './php/conexionDB.php';
                  FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
                   WHERE categorie_id="2"');
                 while ($consulta = mysqli_fetch_array($query)) {
-                    if ($contador % 2 == 0){
-                        echo "
-                        <div class='col-1'>
-                        </div>";
-                    }
+            
                     echo "
-                        <div class='col-5 miniFondo1  cardd'>
+                        <div class='col-5 miniFondo1 my-4 mx-1 cardd'>
                             <div class='row'>
                                 <div class='col-4 text-start texto-producto'>
                                     <p class='letras2'>".$consulta['name']."</p>
                                     <p class='letras3'>".$consulta['sale_price']."</p>
                                     <br><br><br>
-                                    <button href='#' class='styboton' data-id='1'><i class='fa-solid fa-cart-shopping' style='color: #ffffff;'></i></button>
+                                    <button class='styboton agregar-carrito' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #5F5D9C;'></i></button>
                                 </div>
-                                <div class='col-8 imagenes-producto style=''>";
+                                <div class='col-8 imagenes-producto' style=''>";
                                 if($consulta['media_id'] === '0'):
                                     echo "<img style='width: auto; height: 100%' class='img-avatar img-circle' src='./admin/uploads/products/no_image.jpg' alt=''>";
                                 else:
@@ -137,19 +238,96 @@ include './php/conexionDB.php';
                                 </div>
                             </div>
                         </div>";
-                    if ($contador % 2 == 1){
-                        echo "
-                        <div class='col-1'>
-                        </div>";
-                    }
+                  
                     $contador++;
                 }   
             ?>
         </div>
     </div>
 
+    <footer style="background-color: #24A19C; color: #fff; padding: 20px; width: 100%; text-align: center;">
+        <p style="margin: 0;">&copy; 2024 BazarTec. Todos los derechos reservados. | <a href="#"
+                style="color: #fff; text-decoration: none;">Política de privacidad</a> | <a href="#"
+                style="color: #fff; text-decoration: none;">Términos y condiciones</a></p>
+    </footer>
+
     <script src="./bootstrap/js/bootstrap.min.js"></script>
-    <script src="./js/pAccesorios.js"></script>
+    <script src="./js/cCalzado.js"></script>
+
+
+    <div id="mensajeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>¡Producto agregado al carrito!</p>
+        </div>
+    </div>
+
+    <style>
+        /* Estilos para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .borrar-producto {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            /* Para hacer un círculo */
+            background-color: #ff4444;
+            /* Color rojo */
+            text-align: center;
+            line-height: 30px;
+            /* Centra verticalmente el icono */
+            color: white;
+            /* Color del icono (blanco) */
+            text-decoration: none;
+            /* Quitar subrayado */
+        }
+
+        .borrar-producto:hover {
+            background-color: #cc0000;
+            /* Color rojo más oscuro al pasar el ratón */
+        }
+
+        .borrar-producto i {
+            font-size: 16px;
+            /* Tamaño del icono */
+        }
+    </style>
 </body>
 
 </html>

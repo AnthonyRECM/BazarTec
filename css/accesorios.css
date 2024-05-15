@@ -3,10 +3,14 @@
 }
 
 .fondo1{
-    background-color: #00d4cd;
+    background: linear-gradient(#05DFD7, white);
+    min-height: 650px;
 }
 
-.fondo1, h1, h2, h3, h4, h5 {
+.fondo1, h1, h2, h3, h4 {
+    color: #FAEEE7;
+}
+.fondo1, h5 {
     color: #FAEEE7;
 }
 
@@ -54,6 +58,8 @@ h1{
 
 .texto-producto{
     background-color: #00d4cd;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 
 }
 
@@ -109,3 +115,58 @@ h1{
     background-color: #04c6bf; /* Cambia el color de fondo al pasar el cursor */
 }
 
+.fondo22{
+    background: #05DFD7;
+}
+
+.subtitulo2{
+    font-size: 2.1rem;
+    color: #ffffff;
+}
+.highlight {
+    color: #5F5D9C; /* Color del texto "Inflables" */
+    font-weight: bold; /* Opcional: Para resaltar aún más la palabra */
+}
+.fondo3{
+    background: linear-gradient(to right,#05DFD7, white);
+    margin-top: 5rem;
+    
+}
+
+.subtitulo3{
+    font-size: 65px;
+    color: #5F5D9C;
+    font-weight: 600;
+}
+.p1{
+    color: #ffffff;
+    font-size: 55px;
+}
+.p2{
+    color: #5F5D9C;
+    font-weight: bold;
+    font-size: 50px;
+}
+.imgNuevo{
+    max-height: 450px;
+    
+}
+
+
+/* p {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  } */
+  

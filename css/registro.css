@@ -1,4 +1,5 @@
 @import url(https://fonts.google.com/specimen/DM+Serif+Display);
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
 /* Estilos generales */
 body{
     
@@ -9,23 +10,25 @@ body{
   
 } 
 .formatoRegistro{
-  max-width: 500px;
-  margin: 0 auto;/* Esto centrará horizontalmente el formulario */
-  margin-top: 100px;
-  margin-bottom: 100px; /* Esto proporciona un espacio superior */
-  padding: 70px;
+  max-width: 550px;
+  margin-top: 70px;
+  margin-bottom: 70px; /* Esto proporciona un espacio superior */
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
   border-radius: 15px;
   box-shadow: #ffffff; 
-  background-color: #5F5D9C;
+  border: 10px solid #5F5D9C;
+  
 }
   .form input {
+    margin-bottom: 18px;
     background: #ffffff;
     border-radius: 7px;
-    padding: 20px;
+    padding: 18px;
     font-size: 14px;
-    outline: 0;
-    border: 0;
+    border: 1px solid #5F5D9C;
   }
   .form button {
     font-family: "Poppins", sans-serif;
@@ -43,5 +46,13 @@ body{
   }
   .form button:hover,.form button:active,.form button:focus {
     background: #0e2941;
+  }
+
+  .registro{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 69px;
+  color: #5F5D9C;
   }
  

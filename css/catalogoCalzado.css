@@ -1,9 +1,13 @@
+@import url(https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Press+Start+2P&family=Rubik+Bubbles&display=swap');
 .fondo{
     background-color: #ffffff;
 }
 
 .fondo1{
-    background-color: #00d4cd;
+    
+    background: #05DFD7;
 }
 
 .fondo1, h1, h2, h3, h4, h5 {
@@ -100,7 +104,7 @@ h1{
 .styboton{
     border: none;
     padding: 8px 12px 8px 12px;
-    background-color: #5F5D9C;
+    background-color: #ffffff;
     border-radius: 5px;
     color: white;
 }
@@ -112,4 +116,45 @@ h1{
 }
 .desplazarMov:hover {
     background-color: #04c6bf; /* Cambia el color de fondo al pasar el cursor */
+}
+.catalogo{
+    font-family: "Bowlby One SC", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.fondo22{
+    background: #05DFD7;
+}
+
+.subtitulo2{
+    font-size: 2rem;
+    color: #ffffff;
+}
+.highlight {
+    color: #5F5D9C; /* Color del texto "Inflables" */
+    font-weight: bold; /* Opcional: Para resaltar aún más la palabra */
+}
+.fondo3{
+    background: linear-gradient(to right,#05DFD7, white);
+    margin-top: 5rem;
+    
+}
+
+.subtitulo3{
+    font-size: 65px;
+    color: #5F5D9C;
+    font-weight: 600;
+}
+.p1{
+    color: #ffffff;
+    font-size: 55px;
+}
+.p2{
+    color: #5F5D9C;
+    font-weight: bold;
+    font-size: 50px;
+}
+.imgNuevo{
+    max-height: 450px;
+    
 }

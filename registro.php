@@ -46,20 +46,23 @@
                 <div class="container formatoRegistro ">
                     <form class="form needs-validation " novalidate action="./php/archivoRegistro.php" method="post"  onsubmit="return validarFormulario()">
                         <div class="row">
-                            <div class="col-12" style="padding: 2rem;">
-                                <h2> CREA TU CUENTA</h2>
+                            <div class="col-12 registro" style="padding: 0.5rem;">
+                            <img src="./images/logo.png" alt="" width="200" height="200" class=" d-inline-block "><h1> CREA TU CUENTA</h1>
+                            </div>
+                            <div class="col-12 registro" style="padding:2rem;">
+                                <h3>Ingresa tus datos para que seas parte de BazarTec</h3>
                             </div>
                             <?php
-session_start();
-// Verificar si hay un mensaje de error registrado
-if(isset($_SESSION['error_message'])) {
-    echo '<div id="error-message" class="alert alert-danger" role="alert">' . $_SESSION['error_message'] . '</div>';
-    unset($_SESSION['error_message']); // Limpiar la sesión para evitar mostrar el mensaje nuevamente
-}
-?>
+                                session_start();
+                                // Verificar si hay un mensaje de error registrado
+                                if(isset($_SESSION['error_message'])) {
+                                    echo '<div id="error-message" class="alert alert-danger" role="alert">' . $_SESSION['error_message'] . '</div>';
+                                    unset($_SESSION['error_message']); // Limpiar la sesión para evitar mostrar el mensaje nuevamente
+                                }
+                            ?>
 
 
-                            <div class="col-6">
+                            <div class="col-6 ">
                                 <input type="text" name="nombree" placeholder="Nombre" id="nombreCliente" required />
                                 <div class="invalid-feedback">Por favor, ingresa tu nombre.
                                 </div>
@@ -83,7 +86,7 @@ if(isset($_SESSION['error_message'])) {
                             </div>
                             <div id="mensajeError"  style="color: red;"></div>
 
-                            <div class="d-grid gap-2 col-6 mx-auto" style="padding: 1rem;">
+                            <div class="d-grid gap-2 col-6 mx-auto " style="padding: 3rem;">
                                 <button type="submit" href="./login.html" value="Iniciar Sesión" type="button"
                                     name="crearCliente"><i class="fa-solid fa-pen-to-square"
                                         style="color: #ffffff;"></i> Crear
@@ -94,18 +97,14 @@ if(isset($_SESSION['error_message'])) {
                     </form>
                 </div>
             </div>
-            <div class="col-3"></div>
-
+            
             <!--footer-->
-            <div class="container-fluid-lg ">
-                <footer class=" text-white text-center py-5 mt-5" style="background-color: #5F5D9C;">
-                    <div class="row">
-                        <p>&copy; 2024 BazarTec</p>
-                    </div>
-                </footer>
-            </div>
+            
         </div>
     </div>
+    <footer style="background-color: #5F5D9C; color: #fff; padding: 20px; width: 100%; text-align: center;">
+        <p style="margin: 0;">&copy; 2024 BazarTec. Todos los derechos reservados. | <a href="#" style="color: #fff; text-decoration: none;">Política de privacidad</a> | <a href="#" style="color: #fff; text-decoration: none;">Términos y condiciones</a></p>
+    </footer>
 
 
 <script>
