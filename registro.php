@@ -50,16 +50,16 @@
                                 <h2> CREA TU CUENTA</h2>
                             </div>
                             <?php
-session_start();
-// Verificar si hay un mensaje de error registrado
-if(isset($_SESSION['error_message'])) {
-    echo '<div id="error-message" class="alert alert-danger" role="alert">' . $_SESSION['error_message'] . '</div>';
-    unset($_SESSION['error_message']); // Limpiar la sesión para evitar mostrar el mensaje nuevamente
-}
-?>
+                                session_start();
+                                // Verificar si hay un mensaje de error registrado
+                                if(isset($_SESSION['error_message'])) {
+                                    echo '<div id="error-message" class="alert alert-danger" role="alert">' . $_SESSION['error_message'] . '</div>';
+                                    unset($_SESSION['error_message']); // Limpiar la sesión para evitar mostrar el mensaje nuevamente
+                                }
+                            ?>
 
 
-                            <div class="col-6">
+                            <div class="col-6 ">
                                 <input type="text" name="nombree" placeholder="Nombre" id="nombreCliente" required />
                                 <div class="invalid-feedback">Por favor, ingresa tu nombre.
                                 </div>
@@ -94,8 +94,7 @@ if(isset($_SESSION['error_message'])) {
                     </form>
                 </div>
             </div>
-            <div class="col-3"></div>
-
+            
             <!--footer-->
             <div class="container-fluid-lg ">
                 <footer class=" text-white text-center py-5 mt-5" style="background-color: #5F5D9C;">

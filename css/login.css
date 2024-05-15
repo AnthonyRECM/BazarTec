@@ -19,6 +19,7 @@ body{
   text-align: center;
   border-radius: 15px;
   box-shadow: #ffffff; 
+  border: 10px solid #5F5D9C;
 }
   .form input {
     background: #ffffff;
@@ -26,8 +27,7 @@ body{
     margin: 0 0 15px;
     padding: 20px;
     font-size: 14px;
-    outline: 1;
-    border: 0;
+    border: 1px solid #5F5D9C;
   }
   .form button {
     font-family: "Poppins", sans-serif;
