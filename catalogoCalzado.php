@@ -32,6 +32,8 @@ include './php/conexionDB.php';
                         <li><a href="./trajesdeBaño.php">Traje de baño</a></li>
                         <li><a href="./catalogoCalzado.php">Calzado</a></li>
                         <li><a href="./catalogoAccesorios.php">Accesorios</a></li>
+                        <li><a href="./catalogoAccesorios.php"><i class="fa-solid fa-right-to-bracket " style="color: #ffffff;"></i> Cerrar sesión</a></li>
+                        <li class="submenu"></li>
                     </ul>
                 </nav>
                 <div>
@@ -64,7 +66,7 @@ include './php/conexionDB.php';
     <div class="container-fluid fondo1">
         <div class="row gx-0 text-center">
             <div class="col-12">
-                <h1 class="pt-5" style="color: #dbd7d5;">Catálogo de calzado</h1>
+                <h1 class="pt-5 catalogo" style="color: #dbd7d5;">Catálogo de calzado</h1>
                 <h2 class="py-4" style="color: #dbd7d5;">¡¡Todo lo que necesitas y más!! </h2>
             </div>
         </div>
@@ -130,7 +132,7 @@ include './php/conexionDB.php';
                                     <p class='letras2'>".$consulta['name']."</p>
                                     <p class='letras3'>".$consulta['sale_price']."</p>
                                     <br><br><br>
-                                    <button class='styboton agregar-carrito' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #ffffff;'></i></button>
+                                    <button class='styboton agregar-carrito' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #5F5D9C;'></i></button>
                                 </div>
                                 <div class='col-8 imagenes-producto' style=''>";
                                 if($consulta['media_id'] === '0'):

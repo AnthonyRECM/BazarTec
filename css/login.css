@@ -1,4 +1,5 @@
 @import url(https://fonts.google.com/specimen/DM+Serif+Display);
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
 /* Estilos generales */
 body{
     
@@ -16,6 +17,7 @@ body{
   margin-top: 100px;
   margin-bottom: 100px; /* Esto proporciona un espacio superior */
   padding: 70px;
+  height: 500px;
   text-align: center;
   border-radius: 15px;
   box-shadow: #ffffff; 
@@ -48,4 +50,17 @@ body{
     background: #0e2941;
 }
 
+.login{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 69px;
+  color: #5F5D9C;
+  }
+  .letra{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    }
  

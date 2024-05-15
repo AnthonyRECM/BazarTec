@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Press+Start+2P&family=Rubik+Bubbles&display=swap');
 .fondo{
     background-color: #ffffff;
 }
@@ -100,7 +103,7 @@ h1{
 .styboton{
     border: none;
     padding: 8px 12px 8px 12px;
-    background-color: #5F5D9C;
+    background-color: #ffffff;
     border-radius: 5px;
     color: white;
 }
@@ -112,4 +115,9 @@ h1{
 }
 .desplazarMov:hover {
     background-color: #04c6bf; /* Cambia el color de fondo al pasar el cursor */
+}
+.catalogo{
+    font-family: "Bowlby One SC", sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
