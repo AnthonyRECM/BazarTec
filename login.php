@@ -54,10 +54,11 @@ include './php/controlador.php';
                         onsubmit="return validarFormulario()">
 
                         <div class="row">
-                            <div class="col-12" style="padding: 2rem;">
-
-                                <h2> ENTRA A TU CUENTA</h2>
+                            <div class="col-12 login" style="padding: 2rem;">
+                                <h1> ENTRA A TU CUENTA</h1>
                             </div>
+                            
+
                             <?php
 // Verificar si hay un mensaje de éxito registrado
 if(isset($_SESSION['registrado'])) {
@@ -93,12 +94,12 @@ if(isset($_SESSION['registrado'])) {
 
             </div>
             <div class="col-6">
-                <div class="container formatoLogin ">
+                <div class="container formatoLogin login ">
                     <form class="form needs-validation" novalidate action="" method="post">
                         <div class="row">
                             <div class="col-12" style="padding: 2rem; ">
 
-                                <h2> ¿NO TIENES CUENTA? REGISTRATE Y HAZ TUS COMPRAS MÁS RÁPIDO.</h2>
+                                <h1> ¿NO TIENES CUENTA? REGISTRATE Y HAZ TUS COMPRAS MÁS RÁPIDO.</h1>
                             </div>
                             <div class="d-grid gap-2 col-6 mx-auto" style="padding: 1rem;">
                                 <button type="button" onclick="window.location.href='./registro.php'"
@@ -115,11 +116,10 @@ if(isset($_SESSION['registrado'])) {
     </div>
     <!--footer-->
     <div class="container-fluid-lg ">
-        <footer class=" text-white text-center py-5 mt-5" style="background-color: #5F5D9C;">
-            <div class="row">
-                <p>&copy; 2024 BazarTec</p>
-            </div>
-        </footer>
+
+        <footer style="background-color: #5F5D9C; color: #fff; padding: 20px; width: 100%; text-align: center;" class="py-5 mt-4">
+        <p style="margin: 0;">&copy; 2024 BazarTec. Todos los derechos reservados. | <a href="#" style="color: #fff; text-decoration: none;">Política de privacidad</a> | <a href="#" style="color: #fff; text-decoration: none;">Términos y condiciones</a></p>
+    </footer>
     </div>
     </div>
     </div>
