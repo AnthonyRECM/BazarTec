@@ -130,7 +130,7 @@ include './php/conexionDB.php';
                     </div>
                 </div>
             </div>
-
+<!-- 
             <div class="row text-center desplazarMov">
                 <div class="col-12 mt-3">
                     <p class="letras1">Ver más</p>
@@ -138,20 +138,76 @@ include './php/conexionDB.php';
                 <div class="col mb-2">
                     <i class="fa-solid fa-chevron-down fa-lg"></i>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
-    <div class="">
+    
+    <div class="container-fluid fondo3 my-5 py-3">
+        <?php
+            $query = mysqli_query($con, 'SELECT p.id,p.name,p.quantity,p.sale_price,p.media_id,c.name AS categorie,m.file_name AS image
+            FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
+             WHERE categorie_id=2 ORDER BY date DESC LIMIT 1');
+        ?>
+        <div class="row px-4"> 
+            <div class="col-12">
+                <p class="subtitulo3 text-center"> Lo ultimo en moda</p>
+            </div>
+        </div>
+        <div class="row ps-4">
+            <div class="col-6 text-center">
+            <?php
+                while ($consulta = mysqli_fetch_array($query)) {
+                    echo '
+                        <p class="p1"> Obten ya! </p>
+                        <p class="p2">'.$consulta['name'].'</p>
+                        <p class="p1">A un increible precio de: </p>
+                        <p class="p2">¡¡¡ '.$consulta['sale_price'].' !!!</p>
+                    </div>
+                    <div class="col-6 text-center">';
+                        if($consulta['media_id'] === '0'):
+                            echo '<img style="width: auto; height: 100%" class="img-avatar img-circle" src="./admin/uploads/products/no_image.jpg" alt="">';
+                        else:
+                            echo "<img class='img-avatar img-circle imgNuevo' src='./admin/uploads/products/".$consulta['image'].    "' alt=''>";
+                        endif;
+                    echo '</div>
+                    ';
+                }
+            ?>
+           
+        </div>
+    </div>
 
+    <br>
+    
+    <div class="container fondo22 my-4 py-3">
+        <div class="row text-center d-flex justify-content-evenly"> 
+            <div class="col-3"> 
+                <img src="./images/shopping.png" style="width: 100px;" alt="no image">
+            </div>
+            <div class="col-6 align-self-center">
+                <p class="subtitulo2">¡Lo más reciente en calzado solo para ti!</p>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var paragraph = document.querySelector('.subtitulo2');
+                    var text = paragraph.innerHTML;
+                    var newText = text.replace(/(calzado)/i, '<span class="highlight">$1</span>');
+                    paragraph.innerHTML = newText;
+                });
+            </script>
+            <div class="col-3"> 
+                <img src="./images/shopping.png" style="width: 100px;" alt="no image">
+            </div>
+        </div>
     </div>
 
     <div class="container-fluid fondo2">
-        <div id="desplazarDestino" class="row my-5">
+        <!-- <div id="desplazarDestino" class="row my-5">
             <div class="col text-center">
                 <h2 class="subtitulo">¡Calzado con precio accesible y más!</h2>
             </div>
-        </div>
+        </div> -->
 
         <div class="row justify-content-evenly my-5">
 
@@ -161,13 +217,9 @@ include './php/conexionDB.php';
                  FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
                   WHERE categorie_id="2"');
                 while ($consulta = mysqli_fetch_array($query)) {
-                    if ($contador % 2 == 0){
-                        echo "
-                        <div class='col-1'>
-                        </div>";
-                    }
+            
                     echo "
-                        <div class='col-5 miniFondo1  cardd'>
+                        <div class='col-5 miniFondo1 my-4 mx-1 cardd'>
                             <div class='row'>
                                 <div class='col-4 text-start texto-producto'>
                                     <p class='letras2'>".$consulta['name']."</p>
@@ -186,11 +238,7 @@ include './php/conexionDB.php';
                                 </div>
                             </div>
                         </div>";
-                    if ($contador % 2 == 1){
-                        echo "
-                        <div class='col-1'>
-                        </div>";
-                    }
+                  
                     $contador++;
                 }   
             ?>
