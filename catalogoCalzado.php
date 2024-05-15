@@ -132,11 +132,7 @@ include './php/conexionDB.php';
             </div>
 
             <div class="row text-center desplazarMov">
-                <div class="col-12 mt-3">
-                    <p class="letras1">Ver más</p>
-                </div>
                 <div class="col mb-2">
-                    <i class="fa-solid fa-chevron-down fa-lg"></i>
                 </div>
             </div>
         </div>
