@@ -150,6 +150,10 @@ include './php/conexionDB.php';
         </div>
     </div>
 
+    <footer style="background-color: #24A19C; color: #fff; padding: 20px; width: 100%; text-align: center;">
+        <p style="margin: 0;">&copy; 2024 BazarTec. Todos los derechos reservados. | <a href="#" style="color: #fff; text-decoration: none;">Política de privacidad</a> | <a href="#" style="color: #fff; text-decoration: none;">Términos y condiciones</a></p>
+    </footer>
+    
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/cCalzado.js"></script>
 
