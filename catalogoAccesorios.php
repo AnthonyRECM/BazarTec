@@ -179,7 +179,7 @@ include './php/conexionDB.php';
 
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/pAccesorios.js"></script>
-    <script src="./js/cAccesorios.js"></script>
+    <script src="./js/c Accesorios.js"></script>
 
 </body>
 </html>
