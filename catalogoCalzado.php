@@ -130,7 +130,7 @@ include './php/conexionDB.php';
                     </div>
                 </div>
             </div>
-<!-- 
+
             <div class="row text-center desplazarMov">
                 <div class="col-12 mt-3">
                     <p class="letras1">Ver más</p>
@@ -138,7 +138,7 @@ include './php/conexionDB.php';
                 <div class="col mb-2">
                     <i class="fa-solid fa-chevron-down fa-lg"></i>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 
@@ -183,7 +183,7 @@ include './php/conexionDB.php';
     <div class="container fondo22 my-4 py-3">
         <div class="row text-center d-flex justify-content-evenly"> 
             <div class="col-3"> 
-                <img src="./images/shopping.png" style="width: 100px;" alt="no image">
+                <img src="./images/fondoShoes.webp" style="width: 130px;" alt="no image">
             </div>
             <div class="col-6 align-self-center">
                 <p class="subtitulo2">¡Lo más reciente en calzado solo para ti!</p>
@@ -197,7 +197,7 @@ include './php/conexionDB.php';
                 });
             </script>
             <div class="col-3"> 
-                <img src="./images/shopping.png" style="width: 100px;" alt="no image">
+                <img src="./images/fondoShoes.webp" style="width: 130px; transform: scaleX(-1);" alt="no image">
             </div>
         </div>
     </div>
@@ -221,11 +221,11 @@ include './php/conexionDB.php';
                     echo "
                         <div class='col-5 miniFondo1 my-4 mx-1 cardd'>
                             <div class='row'>
-                                <div class='col-4 text-start texto-producto'>
+                                <div class='col-4 text-start texto-producto d-flex align-items-start flex-column'>
                                     <p class='letras2'>".$consulta['name']."</p>
                                     <p class='letras3'>".$consulta['sale_price']."</p>
                                     <br><br><br>
-                                    <button class='styboton agregar-carrito' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #5F5D9C;'></i></button>
+                                    <button class='styboton agregar-carrito mt-auto p-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #5F5D9C;'></i></button>
                                 </div>
                                 <div class='col-8 imagenes-producto' style=''>";
                                 if($consulta['media_id'] === '0'):
