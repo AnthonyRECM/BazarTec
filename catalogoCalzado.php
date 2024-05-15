@@ -87,7 +87,7 @@ include './php/conexionDB.php';
                     </div>
                 </div>
             </div>
-
+            
             <div class="row text-center desplazarMov">
                 <div class="col-12 mt-3">
                     <p class="letras1">Ver más</p>
@@ -97,6 +97,10 @@ include './php/conexionDB.php';
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="">
+
     </div>
 
     <div class="container-fluid fondo2">

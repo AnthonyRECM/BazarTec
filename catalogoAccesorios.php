@@ -128,6 +128,13 @@ include './php/conexionDB.php';
             </div>
         </div>
     </div>
+
+    <div class="container-fluid fondo22">
+        <div>
+            
+        </div>
+
+    </div>
     
     <div class="container-fluid fondo2"> 
         <div id="desplazarDestino" class="row my-5">
@@ -175,7 +182,7 @@ include './php/conexionDB.php';
 
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/pAccesorios.js"></script>
-    <script src="./js/c Accesorios.js"></script>
+    <script src="./js/cAccesorios.js"></script>
 
 </body>
 </html>
