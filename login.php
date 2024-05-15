@@ -53,7 +53,7 @@ include './php/controlador.php';
                         onsubmit="return validarFormulario()">
 
                         <div class="row">
-                            <div class="col-12 login" style="padding: 2rem;">
+                            <div class="col-12 login" style="padding: 1rem;">
                                 <h1> ENTRA A TU CUENTA</h1>
                             </div>
                             
@@ -65,6 +65,14 @@ include './php/controlador.php';
                                     unset($_SESSION['registrado']); // Limpiar la sesión para evitar mostrar el mensaje nuevamente
                                 }
                                 ?>
+                                 <?php
+                             
+                                // Verificar si hay un mensaje de error registrado
+                                if(isset($_SESSION['error_message1'])) {
+                                    echo '<div id="error-message1" class="alert alert-danger" role="alert">' . $_SESSION['error_message1'] . '</div>';
+                                    unset($_SESSION['error_message1']); // Limpiar la sesión para evitar mostrar el mensaje nuevamente
+                                }
+                            ?>
                             <div class="col-12">
                                 <input type="text" name="correo" placeholder="Correo" id="nombreCliente" required />
                                 <div class="invalid-feedback">Por favor, ingresa tu correo.
@@ -74,7 +82,8 @@ include './php/controlador.php';
                                 <input type="password" name="clave" placeholder="Contraseña" id="contraseñaCliente"
                                     required />
                                 <div class="invalid-feedback">Por favor, ingresa tu contraseña.
-                                </div>
+                            
+                            </div>
                             </div>
                             <!-- Aquí puedes mostrar el mensaje de error 
                         <div id="mensajeError" class="alert alert-danger" role="alert" ></div>-->
@@ -123,7 +132,15 @@ include './php/controlador.php';
     </div>
     </div>
     </div>
-
+    <script>
+// Esperar 3 segundos y luego ocultar el mensaje de error
+setTimeout(function() {
+    var errorMessage = document.getElementById('error-message1');
+    if (errorMessage) {
+        errorMessage.style.display = 'none';
+    }
+}, 3000); // 3000 milisegundos = 3 segundos
+</script>
 
     <script>
         // Esperar 3 segundos y luego ocultar el mensaje de éxito
