@@ -32,6 +32,8 @@ include './php/conexionDB.php';
                         <li><a href="./trajesdeBaño.php">Traje de baño</a></li>
                         <li><a href="./catalogoCalzado.php">Calzado</a></li>
                         <li><a href="./catalogoAccesorios.php">Accesorios</a></li>
+                        <li><a href="./catalogoAccesorios.php"><i class="fa-solid fa-right-to-bracket " style="color: #ffffff;"></i> Cerrar sesión</a></li>
+                        <li class="submenu"></li>
                     </ul>
                 </nav>
                 <div>

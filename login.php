@@ -28,16 +28,15 @@ include './php/controlador.php';
     <!--Header-->
     <div class="container-fluid-lg">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mb-4">
                 <nav class="navbar navbar-expand-lg " style="background-color:#5F5D9C;">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html" style="color: white;">
+                        <a class="navbar-brand letra" href="index.html" style="color: white;">
                             <img src="./images/logo.png" alt="" width="50" height="50" class=" d-inline-block ">
                             BazarTec
                         </a>
                         <div class="collapse navbar-collapse">
-                            <ul class="navbar-nav">
-                                
+                            <ul class="navbar-nav">  
                             </ul>
                         </div>
                     </div>
@@ -60,12 +59,12 @@ include './php/controlador.php';
                             
 
                             <?php
-// Verificar si hay un mensaje de éxito registrado
-if(isset($_SESSION['registrado'])) {
-    echo '<div id="success-message" class="alert alert-success" role="alert">' . $_SESSION['registrado'] . '</div>';
-    unset($_SESSION['registrado']); // Limpiar la sesión para evitar mostrar el mensaje nuevamente
-}
-?>
+                                // Verificar si hay un mensaje de éxito registrado
+                                if(isset($_SESSION['registrado'])) {
+                                    echo '<div id="success-message" class="alert alert-success" role="alert">' . $_SESSION['registrado'] . '</div>';
+                                    unset($_SESSION['registrado']); // Limpiar la sesión para evitar mostrar el mensaje nuevamente
+                                }
+                                ?>
                             <div class="col-12">
                                 <input type="text" name="correo" placeholder="Correo" id="nombreCliente" required />
                                 <div class="invalid-feedback">Por favor, ingresa tu correo.
@@ -91,9 +90,10 @@ if(isset($_SESSION['registrado'])) {
 
                 </div>
                 </form>
-
             </div>
-            <div class="col-6">
+
+            <div class="col-6" style="border-left: 0.2rem solid #5F5D9C;">
+
                 <div class="container formatoLogin login ">
                     <form class="form needs-validation" novalidate action="" method="post">
                         <div class="row">
