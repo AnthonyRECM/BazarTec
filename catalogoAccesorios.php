@@ -31,25 +31,20 @@ include './php/conexionDB.php';
         }
 
         #lista-carrito .borrar {
-    color: white; /* Color blanco para la "x" */
-    font-size: 1.2em; /* Tamaño de fuente más grande */
-    cursor: pointer; /* Cambia el cursor al pasar sobre la "x" */
-    transition: color 0.3s, background-color 0.3s; /* Transición suave para el cambio de color */
-    border: 2px solid white; /* Borde blanco para el círculo */
-    border-radius: 50%; /* Hace que el borde sea circular */
-    width: 25px; /* Ancho de la "x" */
-    height: 25px; /* Altura de la "x" */
-    background-color: purple; /* Fondo morado */
-    display: inline-flex; /* Hace que el contenido esté centrado verticalmente */
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    text-align: center; /* Centra el texto horizontalmente */
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Para hacer un círculo */
+    background-color: #ff4444; /* Color rojo */
+    text-align: center;
+    line-height: 30px; /* Centra verticalmente el icono */
+    color: white; /* Color del icono (blanco) */
+    text-decoration: none; /* Quitar subrayado */
 }
 
 #lista-carrito .borrar:hover {
-    background-color: darkpurple; /* Fondo morado más oscuro al pasar el cursor */
+    background-color: #cc0000; /* Color rojo más oscuro al pasar el ratón */
 }
-
 
     </style>
 </head>
@@ -86,7 +81,8 @@ include './php/conexionDB.php';
                                     </thead>
                                     <tbody></tbody>
                                 </table>
-                                <a href="#" id="vaciar-carrito" class="btn btn-danger">Vaciar Carrito</a>
+                                <a href="#" id="vaciar-carrito" class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i> Vaciar Carrito</a>
                                 <a href="pago.html" id="comprar-carrito" class="btn btn-success">Comprar Carrito</a>
                             </div>
                         </li>

@@ -50,7 +50,9 @@ include './php/conexionDB.php';
                                     </thead>
                                     <tbody></tbody>
                                 </table>
-                                <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+                                <a href="#" id="vaciar-carrito" class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i> Vaciar Carrito</a>
+                                <a href="pago.html" id="comprar-carrito" class="btn btn-success">Comprar Carrito</a>
                             </div>
                         </li>
                     </ul>
@@ -124,9 +126,9 @@ include './php/conexionDB.php';
                                     <p class='letras2'>".$consulta['name']."</p>
                                     <p class='letras3'>".$consulta['sale_price']."</p>
                                     <br><br><br>
-                                    <button href='#' class='styboton' data-id='1'><i class='fa-solid fa-cart-shopping' style='color: #ffffff;'></i></button>
+                                    <button class='styboton agregar-carrito' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #ffffff;'></i></button>
                                 </div>
-                                <div class='col-8 imagenes-producto style=''>";
+                                <div class='col-8 imagenes-producto' style=''>";
                                 if($consulta['media_id'] === '0'):
                                     echo "<img style='width: auto; height: 100%' class='img-avatar img-circle' src='./admin/uploads/products/no_image.jpg' alt=''>";
                                 else:
@@ -150,6 +152,74 @@ include './php/conexionDB.php';
 
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/cCalzado.js"></script>
+
+
+    <div id="mensajeModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>¡Producto agregado al carrito!</p>
+    </div>
+</div>
+
+<style>
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.borrar-producto {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Para hacer un círculo */
+    background-color: #ff4444; /* Color rojo */
+    text-align: center;
+    line-height: 30px; /* Centra verticalmente el icono */
+    color: white; /* Color del icono (blanco) */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+.borrar-producto:hover {
+    background-color: #cc0000; /* Color rojo más oscuro al pasar el ratón */
+}
+
+.borrar-producto i {
+    font-size: 16px; /* Tamaño del icono */
+}
+
+</style>
 </body>
 
 </html>
