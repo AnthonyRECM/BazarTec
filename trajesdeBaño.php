@@ -47,6 +47,35 @@ include './php/conexionDB.php';
     background-color: #cc0000; /* Color rojo más oscuro al pasar el ratón */
 }
 
+#carrito {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#carrito th, #carrito td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#carrito td img {
+    display: block;
+    margin: auto;
+}
+
+#carrito td button {
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#carrito td button:hover {
+    background-color: #cc0000;
+}
+
     </style>
 </head>
 
