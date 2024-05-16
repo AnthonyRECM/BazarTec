@@ -6,7 +6,7 @@
 }
 
 .fondo1{
-    background: linear-gradient(#05DFD7, white);
+    background: linear-gradient(#fc45c5, white);
 }
 
 .fondo1, h1, h2, h3, h4, h5 {
@@ -39,11 +39,14 @@ h1{
 .letras2{
     font-size: 2.5rem;
     text-align: start;
+    Color: #ffffff;
+    
 }
 
 .letras3{
     font-size: 1.1rem;
     text-align: start;
+    Color: #ffffff;
 }
 
 .letras4{
@@ -52,18 +55,17 @@ h1{
 
 .cardd{
     border-radius: 8px;
-    border: 15px solid #00d4cd;
+    border: 15px solid #8e86fd;
     width: max-content;
     height:max-content;
 }
 
 .texto-producto{
-    background-color: #00d4cd;
+    background-color: #8e86fd;
     width: 300px;
     height: 250px;
     padding-top: 1rem;
-    
-    
+    border: 1px solid red;  
 }
 
 .imagenes-producto{
@@ -114,7 +116,7 @@ h1{
     transition: background-color 0.3s ease; /* Agrega una transición suave */
 }
 .desplazarMov:hover {
-    background-color: #04c6bf; /* Cambia el color de fondo al pasar el cursor */
+    background-color: #ffffff; /* Cambia el color de fondo al pasar el cursor */
 }
 .catalogo{
     font-family: "Bowlby One SC", sans-serif;
@@ -122,7 +124,7 @@ h1{
   font-style: normal;
 }
 .fondo22{
-    background: #05DFD7;
+    background: #c27ef0;
 }
 
 .subtitulo2{
@@ -130,18 +132,18 @@ h1{
     color: #ffffff;
 }
 .highlight {
-    color: #5F5D9C; /* Color del texto "Inflables" */
+    color: #8900e4; /* Color del texto "Inflables" */
     font-weight: bold; /* Opcional: Para resaltar aún más la palabra */
 }
 .fondo3{
-    background: linear-gradient(to right,#05DFD7, white);
+    background: linear-gradient(to right,#e655f3, white);
     margin-top: 5rem;
     
 }
 
 .subtitulo3{
     font-size: 65px;
-    color: #5F5D9C;
+    color: #ff00bf;
     font-weight: 600;
 }
 .p1{
@@ -149,7 +151,7 @@ h1{
     font-size: 55px;
 }
 .p2{
-    color: #5F5D9C;
+    color: #ff00bf;
     font-weight: bold;
     font-size: 50px;
 }
