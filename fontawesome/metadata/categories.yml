@@ -1787,6 +1787,10 @@ maps:
     - location-pin-lock
     - magnet
     - magnifying-glass
+<<<<<<< Updated upstream
+=======
+    - magnifying-glass-location
+>>>>>>> Stashed changes
     - magnifying-glass-minus
     - magnifying-glass-plus
     - map
@@ -1991,6 +1995,11 @@ medical-health:
     - crutch
     - disease
     - dna
+<<<<<<< Updated upstream
+=======
+    - droplet
+    - droplet-slash
+>>>>>>> Stashed changes
     - eye
     - eye-dropper
     - file-medical
@@ -2000,6 +2009,10 @@ medical-health:
     - flask
     - flask-vial
     - hand-dots
+<<<<<<< Updated upstream
+=======
+    - hand-holding-droplet
+>>>>>>> Stashed changes
     - hand-holding-medical
     - head-side-cough
     - head-side-cough-slash
@@ -2063,6 +2076,10 @@ medical-health:
     - teeth-open
     - thermometer
     - tooth
+<<<<<<< Updated upstream
+=======
+    - truck-droplet
+>>>>>>> Stashed changes
     - truck-medical
     - user-doctor
     - user-nurse
@@ -2199,6 +2216,10 @@ music-audio:
     - volume-low
     - volume-off
     - volume-xmark
+<<<<<<< Updated upstream
+=======
+    - wave-square
+>>>>>>> Stashed changes
   label: Music + Audio
 nature:
   icons:
@@ -2593,6 +2614,12 @@ social:
   label: Social
 spinners:
   icons:
+<<<<<<< Updated upstream
+=======
+    - arrow-rotate-left
+    - arrow-rotate-right
+    - arrows-rotate
+>>>>>>> Stashed changes
     - arrows-spin
     - asterisk
     - atom
@@ -2610,6 +2637,11 @@ spinners:
     - palette
     - ring
     - rotate
+<<<<<<< Updated upstream
+=======
+    - rotate-left
+    - rotate-right
+>>>>>>> Stashed changes
     - slash
     - snowflake
     - spinner
