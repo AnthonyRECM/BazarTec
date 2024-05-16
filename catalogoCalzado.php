@@ -66,13 +66,13 @@ include './php/conexionDB.php';
                         <li><a href="./catalogoCalzado.php">Calzado</a></li>
                         <li><a href="./catalogoAccesorios.php">Accesorios</a></li>
                         <li>
-                            <form class="form" action="" method="get">
-                                <div class="d-grid gap-2 mx-auto" >
-                                    <button type="submit" name="logout"><i
-                                            class="fa-solid fa-right-to-bracket " style="color: #ffffff;"></i> Cerrar
-                                        Sesión</button>
-                                </div>
-                            </form>
+                        <!-- <form class="form" action="" method="get">
+                            <div class="d-grid gap-2 mx-auto" >
+                                <button type="submit" name="logout"><i
+                                        class="fa-solid fa-right-to-bracket " style="color: #ffffff;"></i> Cerrar
+                                    Sesión</button>
+                            </div>
+                        </form> -->
                         </li>
                         <li class="submenu"></li>
                     </ul>
@@ -107,14 +107,14 @@ include './php/conexionDB.php';
     <div class="container-fluid fondo1">
         <div class="row gx-0 text-center">
             <div class="col-12">
-                <h1 class="pt-5 catalogo" style="color: #dbd7d5;">Catálogo de calzado</h1>
-                <h2 class="py-4" style="color: #dbd7d5;">¡¡Todo lo que necesitas y más!! </h2>
+                <h1 class="pt-5 catalogo" style="color: #FFFFFF;">Catálogo de calzado</h1>
+                <h2 class="py-4" style="color: #FFFFFF;">¡¡Todo lo que necesitas y más!! </h2>
             </div>
         </div>
         <div class="row py-3 justify-content-center">
             <div class="col-4 mt-5">
-                <h4 class="" style="color: #dbd7d5;">Tenis de todas las tallas</h4>
-                <h4 class="" style="color: #dbd7d5;">Precio accesible ... </h4>
+                <h4 class="" style="color: #FFFFFF;">Tenis de todas las tallas</h4>
+                <h4 class="" style="color: #FFFFFF;">Precio accesible ... </h4>
                 <h5 class=""> </h5>
             </div>
             <div class="col-4">
@@ -155,10 +155,10 @@ include './php/conexionDB.php';
             <?php
                 while ($consulta = mysqli_fetch_array($query)) {
                     echo '
-                        <p class="p1"> Obten ya! </p>
+                        <p class="p1" style="color: #FFFFFF;"> Obten ya! </p>
                         <p class="p2">'.$consulta['name'].'</p>
-                        <p class="p1">A un increible precio de: </p>
-                        <p class="p2">¡¡¡ '.$consulta['sale_price'].' !!!</p>
+                        <p class="p1" style="color: #FFFFFF;">A un increible precio de: </p>
+                        <p class="p2" >¡¡¡ '.$consulta['sale_price'].' !!!</p>
                     </div>
                     <div class="col-6 text-center">';
                         if($consulta['media_id'] === '0'):
@@ -217,11 +217,11 @@ include './php/conexionDB.php';
                     echo "
                         <div class='col-5 miniFondo1 my-4 mx-1 cardd'>
                             <div class='row'>
-                                <div class='col-4 text-start texto-producto d-flex align-items-start flex-column'>
+                                <div class='col-4 text-start texto-producto d-flex align-items-start flex-column pb-1'>
                                     <p class='letras2'>".$consulta['name']."</p>
                                     <p class='letras3'>".$consulta['sale_price']."</p>
                                     <br><br><br>
-                                    <button class='styboton agregar-carrito mt-auto p-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #5F5D9C;'></i></button>
+                                    <button class='styboton agregar-carrito mt-auto ' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping ' style='color: #5F5D9C;'></i></button>
                                 </div>
                                 <div class='col-8 imagenes-producto' style=''>";
                                 if($consulta['media_id'] === '0'):

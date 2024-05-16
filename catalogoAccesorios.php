@@ -164,7 +164,6 @@ include './php/conexionDB.php';
            
         </div>
     </div>
-
     <br>
     
     <div class="container fondo22 my-4 py-3">
