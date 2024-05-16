@@ -17,8 +17,37 @@ include './php/conexionDB.php';
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <style>
+        .mensaje {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+        }
 
+        #lista-carrito .borrar {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Para hacer un círculo */
+    background-color: #ff4444; /* Color rojo */
+    text-align: center;
+    line-height: 30px; /* Centra verticalmente el icono */
+    color: white; /* Color del icono (blanco) */
+    text-decoration: none; /* Quitar subrayado */
+}
 
+#lista-carrito .borrar:hover {
+    background-color: #cc0000; /* Color rojo más oscuro al pasar el ratón */
+}
+
+    </style>
 </head>
 
 <body class="fondo">
