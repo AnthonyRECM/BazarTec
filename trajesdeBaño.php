@@ -83,7 +83,7 @@ include './php/conexionDB.php';
     <!--Header-->
     <div class="container-fluid">
         <div class="row">
-            <div class="menu">
+            <div class="menu " style="background-color: rgb(255, 100, 10);">
                 <a href="./index.html" class="logo"><img src="images/logo.png" width="60px" height="60px"></a>
                 <input type="checkbox" id="menu" />
                 <label for="menu"><img src="images/menu.png" class="menu-icono" alt=""></label>
