@@ -62,7 +62,6 @@ include './php/conexionDB.php';
                         <li><a href="./index.html">Inicio</a></li>
                         <li><a href="./trajesdeBaño.php">Traje de baño</a></li>
                         <li><a href="./catalogoCalzado.php">Calzado</a></li>
-                        <li><a href="./catalogoAccesorios.php">Accesorios</a></li>
                     </ul>
                 </nav>
                 <div>
@@ -101,8 +100,8 @@ include './php/conexionDB.php';
         </div>
         <div class="row py-3 justify-content-center">
             <div class="col-4 mt-5">
-                <h5 class="">Inflables para niños y niñas:</h5>
-                <h5 class="">Tiburon, cocodrilo, delfín y muchos más</h5>
+                <h5 class="" style="color: rgb(248, 147, 163); font-weight: bold;">Inflables para niños y niñas:</h5>
+                <h5 class="" style="color: rgb(248, 147, 163); font-weight: bold;">Tiburon, cocodrilo, delfín y muchos más</h5>
                 <h5 class=""> </h5>
             </div>
            <div class="col-4">
