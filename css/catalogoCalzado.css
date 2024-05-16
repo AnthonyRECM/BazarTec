@@ -47,6 +47,7 @@ h1{
     font-size: 1.1rem;
     text-align: start;
     Color: #ffffff;
+
 }
 
 .letras4{
@@ -55,17 +56,16 @@ h1{
 
 .cardd{
     border-radius: 8px;
-    border: 15px solid #8e86fd;
+    border: 18px solid #8e86fd;
     width: max-content;
     height:max-content;
 }
 
 .texto-producto{
     background-color: #8e86fd;
-    width: 300px;
+    width: 250px;
     height: 250px;
     padding-top: 1rem;
-    border: 1px solid red;  
 }
 
 .imagenes-producto{
