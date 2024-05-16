@@ -155,7 +155,7 @@ include './php/conexionDB.php';
                         if($consulta['media_id'] === '0'):
                             echo '<img style="width: auto; height: 100%" class="img-avatar img-circle" src="./admin/uploads/products/no_image.jpg" alt="">';
                         else:
-                            echo "<img class='img-avatar img-circle imgNuevo' src='./admin/uploads/products/".$consulta['image'].    "' alt=''>";
+                            echo "<img class='img-avatar img-circle imgNuevo ' src='./admin/uploads/products/".$consulta['image'].    "' alt=''>";
                         endif;
                     echo '</div>
                     ';
@@ -214,7 +214,7 @@ include './php/conexionDB.php';
                                 if($consulta['media_id'] === '0'):
                                     echo "<img style='width: auto; height: 100%' class='img-avatar img-circle' src='./admin/uploads/products/no_image.jpg' alt=''>";
                                 else:
-                                    echo "<img class='img-avatar img-circle' src='./admin/uploads/products/".$consulta['image']."' alt=''>";
+                                    echo "<img class='img-avatar img-circle imagen' src='./admin/uploads/products/".$consulta['image']."' alt=''>";
                                 endif;
 
                     echo "
