@@ -129,7 +129,7 @@ include './php/conexionDB.php';
                                     <p class='letras2'>".$consulta['name']."</p>
                                     <p class='letras3'>".$consulta['sale_price']."</p>
                                     <br><br><br>
-                                    <button href='#' class='styboton' data-id='1'><i class='fa-solid fa-cart-shopping' style='color: #ffffff;'></i></button>
+                                    <button class='styboton agregar-carrito mt-auto p-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #6334ae;'></i></button>
                                 </div>
                                 <div class='col-8 imagenes-producto style=''>";
                                 if($consulta['media_id'] === '0'):
