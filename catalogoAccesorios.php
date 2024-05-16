@@ -62,7 +62,6 @@ include './php/conexionDB.php';
                         <li><a href="./index.html">Inicio</a></li>
                         <li><a href="./trajesdeBaño.php">Traje de baño</a></li>
                         <li><a href="./catalogoCalzado.php">Calzado</a></li>
-                        <li><a href="./catalogoAccesorios.php">Accesorios</a></li>
                     </ul>
                 </nav>
                 <div>
