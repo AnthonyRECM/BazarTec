@@ -55,7 +55,7 @@ include './php/conexionDB.php';
 <body class="fondo">
     <div class="container-fluid">
         <div class="row">
-            <div class="menu">
+            <div class="menu" style="background-color: #8126cc;">
                 <a href="./index.html" class="logo"><img src="images/logo.png" width="60px" height="60px"></a>
                 <input type="checkbox" id="menu" />
                 <label for="menu"><img src="images/menu.png" class="menu-icono" alt=""></label>
