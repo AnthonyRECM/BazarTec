@@ -148,18 +148,18 @@ include './php/conexionDB.php';
                 </div>
            </div>
 
-<<<<<<< HEAD
+
            
-=======
+
              <div class="row text-center desplazarMov">
->>>>>>> fe9f78661b846d544bd3d8c8c69569e7684f0fe4
+
                 <div class="col-12 mt-3">
                     <p class="letras1">Ver mas</p>
                 </div>
                 <div class="col mb-2">
                     <i class="fa-solid fa-chevron-down fa-lg"></i>
                 </div>
-<<<<<<< HEAD
+
             </div>
         </div>
     </div>
@@ -174,7 +174,7 @@ include './php/conexionDB.php';
                 <h2 class="subtitulo">¡Trajes de baño para toda la familia!</h2>
             </div>
         </div>
-=======
+
             </div> 
         </div>
     </div>
@@ -244,7 +244,7 @@ include './php/conexionDB.php';
                 <h2 class="subtitulo">¡Trajes de baño para toda la familia!</h2>
             </div>
         </div> -->
->>>>>>> fe9f78661b846d544bd3d8c8c69569e7684f0fe4
+
 
         
         <div class="row justify-content-evenly my-5">
