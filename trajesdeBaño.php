@@ -160,7 +160,7 @@ include './php/conexionDB.php';
                     <i class="fa-solid fa-chevron-down fa-lg"></i>
                 </div>
 <<<<<<< HEAD
-            </div>-->
+            </div>
         </div>
     </div>
 
@@ -173,9 +173,9 @@ include './php/conexionDB.php';
             <div class="col text-center">
                 <h2 class="subtitulo">¡Trajes de baño para toda la familia!</h2>
             </div>
-        </div>-->
+        </div>
 =======
-            </div> -->
+            </div> 
         </div>
     </div>
 
