@@ -129,7 +129,7 @@ include './php/conexionDB.php';
             </div>
         </div>
         <div class="row py-3 justify-content-center letrasCatalogo">
-            <div class="col-4 mt-4">
+            <div class="col-4 mt-5">
                 <h2 class="" >Inflables para niños y niñas:</h2>
                 <h2 class="" >Tiburon, cocodrilo, delfín y muchos más</h2>
                 <h5 class=""> </h5>

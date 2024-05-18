@@ -7,7 +7,7 @@
 }
 
 .fondo1{
-    background: linear-gradient(#fc45c5, white);
+    background: linear-gradient(#fc45c5 50%, white 100%);
 }
 
 .fondo1, h1, h2, h3, h4, h5 {

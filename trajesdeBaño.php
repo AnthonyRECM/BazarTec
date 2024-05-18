@@ -83,7 +83,7 @@ include './php/conexionDB.php';
     <!--Header-->
     <div class="container-fluid">
         <div class="row">
-            <div class="menu " style="background-color: rgb(255, 100, 10);">
+            <div class="menu " style="background-color: #DDD201;">
                 <a href="./index.html" class="logo"><img src="images/logo.png" width="60px" height="60px"></a>
                 <input type="checkbox" id="menu" />
                 <label for="menu"><img src="images/menu.png" class="menu-icono" alt=""></label>
@@ -124,14 +124,14 @@ include './php/conexionDB.php';
     <div class="container-fluid fondo1">
         <div class="row gx-0 text-center">
             <div class="col-12">
-                <h1 class="pt-5">Catálogo de Trajes de Baño</h1>
-                <h2 class="py-3">¡¡Todo lo que necesitas para la playa y más!! </h2>
+                <h1 class="pt-5 catalogo">Catálogo de Trajes de Baño</h1>
+                <h2 class="py-3 letrasCatalogo">¡¡Todo lo que necesitas para la playa y más!! </h2>
             </div>
         </div>
-        <div class="row py-3 justify-content-center">
-            <div class="col-4 mt-5">
-                <h5 class="">Trajes de 2 piezas y completos para damas:</h5>
-                <h5 class="">Bermudas, short de playa, buzos y mucho mas!</h5>
+        <div class="row py-3 justify-content-center letrasCatalogo">
+            <div class="col-4 mt-4">
+                <h2 class="">Trajes de 2 piezas y completos para damas:</h2>
+                <h2 class="">Bermudas, short de playa, buzos y mucho mas!</h2>
                 <h5 class=""> </h5>
             </div>
             <div class="col-4">
@@ -148,14 +148,14 @@ include './php/conexionDB.php';
                 </div>
            </div>
 
-            <div class="row text-center desplazarMov">
+            <!-- <div class="row text-center desplazarMov">
                 <div class="col-12 mt-3">
                     <p class="letras1">Ver mas</p>
                 </div>
                 <div class="col mb-2">
                     <i class="fa-solid fa-chevron-down fa-lg"></i>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -167,7 +167,7 @@ include './php/conexionDB.php';
         ?>
         <div class="row px-4"> 
             <div class="col-12">
-                <p class="subtitulo3 text-center"> Lo Ultimo De Temporada</p>
+                <p class="subtitulo3 text-center letrasCatalogo"> Lo Ultimo De Temporada</p>
             </div>
         </div>
         <div class="row ps-4">
@@ -175,10 +175,10 @@ include './php/conexionDB.php';
             <?php
                 while ($consulta = mysqli_fetch_array($query)) {
                     echo '
-                        <p class="p1"> Obten ya! </p>
-                        <p class="p2">'.$consulta['name'].'</p>
-                        <p class="p1">A un increible precio de: </p>
-                        <p class="p2">¡¡¡ '.$consulta['sale_price'].' !!!</p>
+                        <p class="p1 letrasCatalogo"> Obten ya! </p>
+                        <p class="p2 letrasCatalogo">'.$consulta['name'].'</p>
+                        <p class="p1 letrasCatalogo">A un increible precio de: </p>
+                        <p class="p2 letrasCatalogo">¡¡¡ '.$consulta['sale_price'].' !!!</p>
                     </div>
                     <div class="col-6 text-center">';
                         if($consulta['media_id'] === '0'):
@@ -202,7 +202,7 @@ include './php/conexionDB.php';
                 <img src="./images/trajeIcono2.png" style="width: 130px;" alt="no image">
             </div>
             <div class="col-6 align-self-center">
-                <p class="subtitulo2">¡Lo mas nuevo en traje de baños!</p>
+                <p class="subtitulo2 letrasCatalogo">¡Lo mas nuevo en traje de baños!</p>
             </div>
             <script>
                 document.addEventListener("DOMContentLoaded", function() {
@@ -241,7 +241,7 @@ include './php/conexionDB.php';
                                     <p class='letras2'>".$consulta['name']."</p>
                                     <p class='letras3'>".$consulta['sale_price']."</p>
                                     <br><br><br>
-                                    <button class='styboton agregar-carrito mt-auto mb-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #6334ae;'></i></button>
+                                    <button class='styboton agregar-carrito mt-auto mb-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #DDD201;'></i></button>
                                 </div>
                                 <div class='col-8 imagenes-producto align-self-center' style=''>";
                                 if($consulta['media_id'] === '0'):
