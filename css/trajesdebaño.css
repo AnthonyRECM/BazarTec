@@ -1,12 +1,21 @@
+@import url(https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Press+Start+2P&family=Rubik+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 .fondo{
     background-color: #ffffff;
 }
 
 .fondo1{
-    background-color: #00d4cd;
+    /* background: linear-gradient(#df6705, white); */
+    background: linear-gradient( #df6705 50%, white 100%);
+    min-height: 650px;
 }
 
-.fondo1, h1, h2, h3, h4, h5 {
+.fondo1, h1, h2, h3, h4 {
+    color: #FAEEE7;
+}
+.fondo1, h5 {
     color: #FAEEE7;
 }
 
@@ -36,15 +45,39 @@ h1{
 .letras2{
     font-size: 2.5rem;
     text-align: start;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;   
 }
 
 .letras3{
-    font-size: 1.1rem;
+    font-size: 23px;
     text-align: start;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;  
+
 }
 
 .letras4{
     font-size: 1rem;
+}
+.catalogo{
+    font-family: "Bowlby One SC", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.letrasCatalogo{
+    font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50px;
 }
 
 .cardd{
@@ -53,7 +86,9 @@ h1{
 }
 
 .texto-producto{
-    background-color: #00d4cd;
+    background-color: #DDD201;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 
 }
 
@@ -61,17 +96,17 @@ h1{
     display: flex;
     justify-content: center; /* Alinea horizontalmente en el centro */
     align-items: center; /* Alinea verticalmente en el centro */
-    width: 400px;
-    height: 200px;
+    width: 421.5px;
+    height: 235px;
 }
 .imagenes-producto img {
     width: auto; 
-    height: 80%;
+    height: 82%;
 }
 
 .etiqueta1{
     width: max-content;
-    background-color: #198754;  
+    background-color: #DDD201;  
     color: white;
     font-weight: bold;
     text-align: end;
@@ -108,3 +143,42 @@ h1{
 .desplazarMov:hover {
     background-color: #04c6bf; /* Cambia el color de fondo al pasar el cursor */
 }
+
+.fondo22{
+    background: #DDD201;
+}
+
+.subtitulo2{
+    font-size: 2.1rem;
+    color: #ffffff;
+}
+.highlight {
+    color: #df6705; /* Color del texto "Inflables" */
+    font-weight: bold; /* Opcional: Para resaltar aún más la palabra */
+}
+.fondo3{
+    background: linear-gradient(to right,#df6705,    white);
+    margin-top: 5rem;
+    
+}
+
+.subtitulo3{
+    font-size: 65px;
+    color: #fff200;
+    font-weight: 600;
+}
+.p1{
+    color: #ffffff;
+    font-size: 55px;
+}
+.p2{
+    color: #fff200;
+    font-weight: bold;
+    font-size: 50px;
+}
+.imgNuevo{
+    max-height: 450px;
+    
+}
+
+  

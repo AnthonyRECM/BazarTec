@@ -17,22 +17,79 @@ include './php/conexionDB.php';
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <style>
+        .mensaje {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+        }
 
+        #lista-carrito .borrar {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Para hacer un círculo */
+    background-color: #ff4444; /* Color rojo */
+    text-align: center;
+    line-height: 30px; /* Centra verticalmente el icono */
+    color: white; /* Color del icono (blanco) */
+    text-decoration: none; /* Quitar subrayado */
+}
 
+#lista-carrito .borrar:hover {
+    background-color: #cc0000; /* Color rojo más oscuro al pasar el ratón */
+}
+
+#carrito {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#carrito th, #carrito td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#carrito td img {
+    display: block;
+    margin: auto;
+}
+
+#carrito td button {
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#carrito td button:hover {
+    background-color: #cc0000;
+}
+
+    </style>
 </head>
 
 <body class="fondo">
     <!--Header-->
     <div class="container-fluid">
         <div class="row">
-            <div class="menu">
+            <div class="menu " style="background-color: #DDD201;">
                 <a href="./index.html" class="logo"><img src="images/logo.png" width="60px" height="60px"></a>
                 <input type="checkbox" id="menu" />
                 <label for="menu"><img src="images/menu.png" class="menu-icono" alt=""></label>
                 <nav class="navbar">
                     <ul>
                         <li><a href="./index.html">Inicio</a></li>
-                        <li><a href="./trajesdeBaño.php">Traje de baño</a></li>
                         <li><a href="./catalogoCalzado.php">Calzado</a></li>
                         <li><a href="./catalogoAccesorios.php">Accesorios</a></li>
                     </ul>
@@ -67,14 +124,14 @@ include './php/conexionDB.php';
     <div class="container-fluid fondo1">
         <div class="row gx-0 text-center">
             <div class="col-12">
-                <h1 class="pt-5">Catálogo de Trajes de Baño</h1>
-                <h2 class="py-3">¡¡Todo lo que necesitas para la playa y más!! </h2>
+                <h1 class="pt-5 catalogo">Catálogo de Trajes de Baño</h1>
+                <h2 class="py-3 letrasCatalogo">¡¡Todo lo que necesitas para la playa y más!! </h2>
             </div>
         </div>
-        <div class="row py-3 justify-content-center">
-            <div class="col-4 mt-5">
-                <h5 class="">Trajes de 2 piezas y completos para damas:</h5>
-                <h5 class="">Bermudas, short de playa, buzos y mucho mas!</h5>
+        <div class="row py-3 justify-content-center letrasCatalogo">
+            <div class="col-4 mt-4">
+                <h2 class="">Trajes de 2 piezas y completos para damas:</h2>
+                <h2 class="">Bermudas, short de playa, buzos y mucho mas!</h2>
                 <h5 class=""> </h5>
             </div>
             <div class="col-4">
@@ -91,19 +148,37 @@ include './php/conexionDB.php';
                 </div>
            </div>
 
-           <!-- <div class="row text-center desplazarMov">
+<<<<<<< HEAD
+           
+=======
+             <div class="row text-center desplazarMov">
+>>>>>>> fe9f78661b846d544bd3d8c8c69569e7684f0fe4
                 <div class="col-12 mt-3">
                     <p class="letras1">Ver mas</p>
                 </div>
                 <div class="col mb-2">
                     <i class="fa-solid fa-chevron-down fa-lg"></i>
                 </div>
+<<<<<<< HEAD
             </div>-->
         </div>
     </div>
 
-    <br>
+   
     
+
+
+    <div class="container-fluid fondo2"> 
+     <div id="desplazarDestino" class="row my-5">
+            <div class="col text-center">
+                <h2 class="subtitulo">¡Trajes de baño para toda la familia!</h2>
+            </div>
+        </div>-->
+=======
+            </div> -->
+        </div>
+    </div>
+
     <div class="container fondo3 my-5 py-3">
         <?php
             $query = mysqli_query($con, 'SELECT p.id,p.name,p.quantity,p.sale_price,p.media_id,c.name AS categorie,m.file_name AS image
@@ -112,7 +187,7 @@ include './php/conexionDB.php';
         ?>
         <div class="row px-4"> 
             <div class="col-12">
-                <p class="subtitulo3"> Lo mas nuevo en tendecias </p>
+                <p class="subtitulo3 text-center letrasCatalogo"> Lo Ultimo De Temporada</p>
             </div>
         </div>
         <div class="row ps-4">
@@ -120,16 +195,16 @@ include './php/conexionDB.php';
             <?php
                 while ($consulta = mysqli_fetch_array($query)) {
                     echo '
-                        <p class="p1">! Compralo ya ! </p>
-                        <p class="p2">'.$consulta['name'].'</p>
-                        <p class="p1">A un increible precio de: </p>
-                        <p class="p2">¡¡¡ '.$consulta['sale_price'].' !!!</p>
+                        <p class="p1 letrasCatalogo"> Obten ya! </p>
+                        <p class="p2 letrasCatalogo">'.$consulta['name'].'</p>
+                        <p class="p1 letrasCatalogo">A un increible precio de: </p>
+                        <p class="p2 letrasCatalogo">¡¡¡ '.$consulta['sale_price'].' !!!</p>
                     </div>
                     <div class="col-6 text-center">';
                         if($consulta['media_id'] === '0'):
                             echo '<img style="width: auto; height: 100%" class="img-avatar img-circle" src="./admin/uploads/products/no_image.jpg" alt="">';
                         else:
-                            echo "<img class='img-avatar img-circle imgNuevo' src='./admin/uploads/products/".$consulta['image'].    "' alt=''>";
+                            echo "<img class='img-avatar img-circle imgNuevo' src='./admin/uploads/products/".$consulta['image']."' alt=''>";
                         endif;
                     echo '</div>
                     ';
@@ -141,14 +216,35 @@ include './php/conexionDB.php';
 
     <br>
     
-
+    <div class="container fondo22 my-4 py-3">
+        <div class="row text-center d-flex justify-content-evenly"> 
+            <div class="col-3"> 
+                <img src="./images/trajeIcono2.png" style="width: 130px;" alt="no image">
+            </div>
+            <div class="col-6 align-self-center">
+                <p class="subtitulo2 letrasCatalogo">¡Lo mas nuevo en traje de baños!</p>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var paragraph = document.querySelector('.subtitulo2');
+                    var text = paragraph.innerHTML;
+                    var newText = text.replace(/(nuevo)/i, '<span class="highlight">$1</span>');
+                    paragraph.innerHTML = newText;
+                });
+            </script>
+            <div class="col-3"> 
+                <img src="./images/trajeIcono.webp" style="width: 130px; transform: scaleX(-1);" alt="no image">
+            </div>
+        </div>
+    </div>
 
     <div class="container-fluid fondo2"> 
-       <!-- <div id="desplazarDestino" class="row my-5">
+        <!-- <div id="desplazarDestino" class="row my-5">
             <div class="col text-center">
                 <h2 class="subtitulo">¡Trajes de baño para toda la familia!</h2>
             </div>
-        </div>-->
+        </div> -->
+>>>>>>> fe9f78661b846d544bd3d8c8c69569e7684f0fe4
 
         
         <div class="row justify-content-evenly my-5">
@@ -159,36 +255,26 @@ include './php/conexionDB.php';
                  FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
                   WHERE categorie_id="1"');
                 while ($consulta = mysqli_fetch_array($query)) {
-                    if ($contador % 2 == 0){
-                        echo "
-                        <div class='col-1'>
-                        </div>";
-                    }
                     echo "
-                        <div class='col-5 miniFondo1 my-4 cardd'>
+                        <div class='col-5 miniFondo1 my-4 mx-1 cardd'>
                             <div class='row'>
-                                <div class='col-4 text-start texto-producto'>
+                                <div class='col-4 text-start texto-producto d-flex align-items-start flex-column'>
                                     <p class='letras2'>".$consulta['name']."</p>
                                     <p class='letras3'>".$consulta['sale_price']."</p>
                                     <br><br><br>
-                                    <button class='styboton agregar-carrito mt-auto p-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #6334ae;'></i></button>
+                                    <button class='styboton agregar-carrito mt-auto mb-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #DDD201;'></i></button>
                                 </div>
-                                <div class='col-8 imagenes-producto style=''>";
+                                <div class='col-8 imagenes-producto align-self-center' style=''>";
                                 if($consulta['media_id'] === '0'):
                                     echo "<img style='width: auto; height: 100%' class='img-avatar img-circle' src='./admin/uploads/products/no_image.jpg' alt=''>";
                                 else:
-                                    echo "<img class='img-avatar img-circle' src='./admin/uploads/products/".$consulta['image']."' alt=''>";
+                                    echo "<img class='img-avatar img-circle ' src='./admin/uploads/products/".$consulta['image']."' alt=''>";
                                 endif;
 
                     echo "
                                 </div>
                             </div>
                         </div>";
-                    if ($contador % 2 == 1){
-                        echo "
-                        <div class='col-1'>
-                        </div>";
-                    }
                     $contador++;
                 }   
             ?>
@@ -202,7 +288,7 @@ include './php/conexionDB.php';
     </footer>
 
     <script src="./bootstrap/js/bootstrap.min.js"></script>
-    <script src="./js/pAccesorios.js"></script>
+    <script src="./js/cTrajeBaño.js"></script>
     
 </body>
 

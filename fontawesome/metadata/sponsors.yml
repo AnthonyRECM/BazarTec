@@ -552,6 +552,14 @@ megaport:
     - megaport
   label: Megaport
   url: 'https://www.megaport.com'
+<<<<<<< Updated upstream
+=======
+mintbit:
+  icons:
+    - mintbit
+  label: Mintbit
+  url: 'https://www.mintbit.com'
+>>>>>>> Stashed changes
 mix:
   icons:
     - mix
@@ -1291,6 +1299,14 @@ uncharted:
     - uncharted
   label: Uncharted Software
   url: 'https://uncharted.software'
+<<<<<<< Updated upstream
+=======
+undeco-cora:
+  icons:
+    - music-magnifying-glass
+  label: Undeco & Cora Music
+  url: 'https://undeco.se'
+>>>>>>> Stashed changes
 uniregistry:
   icons:
     - uniregistry

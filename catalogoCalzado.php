@@ -33,29 +33,72 @@ include './php/conexionDB.php';
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <style>
-      .form button {
-    font-family: "Poppins", sans-serif;
-    outline: 0;
-    background: #325288;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    border-radius: 7px;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
+    .mensaje {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+        }
+
+        #lista-carrito .borrar {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Para hacer un círculo */
+    background-color: #ff4444; /* Color rojo */
+    text-align: center;
+    line-height: 30px; /* Centra verticalmente el icono */
+    color: white; /* Color del icono (blanco) */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+#lista-carrito .borrar:hover {
+    background-color: #cc0000; /* Color rojo más oscuro al pasar el ratón */
+}
+
+#carrito {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#carrito th, #carrito td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#carrito td img {
+    display: block;
+    margin: auto;
+}
+
+#carrito td button {
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
     cursor: pointer;
-    font-weight: bold;
 }
-.form button:hover,.form button:active,.form button:focus {
-    background: #0e2941;
+
+#carrito td button:hover {
+    background-color: #cc0000;
 }
+
+
+    </style>
 </style>
 
 <body class="fondo">
     <div class="container-fluid">
         <div class="row">
-            <div class="menu">
+            <div class="menu" style="background-color: #8126cc;">
                 <a href="./index.html" class="logo"><img src="images/logo.png" width="60px" height="60px"></a>
                 <input type="checkbox" id="menu" />
                 <label for="menu"><img src="images/menu.png" class="menu-icono" alt=""></label>
@@ -63,16 +106,15 @@ include './php/conexionDB.php';
                     <ul>
                         <li><a href="./index.html">Inicio</a></li>
                         <li><a href="./trajesdeBaño.php">Traje de baño</a></li>
-                        <li><a href="./catalogoCalzado.php">Calzado</a></li>
                         <li><a href="./catalogoAccesorios.php">Accesorios</a></li>
                         <li>
-                            <form class="form" action="" method="get">
-                                <div class="d-grid gap-2 mx-auto" >
-                                    <button type="submit" name="logout"><i
-                                            class="fa-solid fa-right-to-bracket " style="color: #ffffff;"></i> Cerrar
-                                        Sesión</button>
-                                </div>
-                            </form>
+                        <!-- <form class="form" action="" method="get">
+                            <div class="d-grid gap-2 mx-auto" >
+                                <button type="submit" name="logout"><i
+                                        class="fa-solid fa-right-to-bracket " style="color: #ffffff;"></i> Cerrar
+                                    Sesión</button>
+                            </div>
+                        </form> -->
                         </li>
                         <li class="submenu"></li>
                     </ul>
@@ -107,14 +149,14 @@ include './php/conexionDB.php';
     <div class="container-fluid fondo1">
         <div class="row gx-0 text-center">
             <div class="col-12">
-                <h1 class="pt-5 catalogo" style="color: #dbd7d5;">Catálogo de calzado</h1>
-                <h2 class="py-4" style="color: #dbd7d5;">¡¡Todo lo que necesitas y más!! </h2>
+                <h1 class="pt-5 catalogo" style="color: #FFFFFF;">Catálogo de calzado</h1>
+                <h2 class="py-4 letrasCatalogo" style="color: #FFFFFF;">¡¡Todo lo que necesitas y más!! </h2>
             </div>
         </div>
-        <div class="row py-3 justify-content-center">
+        <div class="row py-3 justify-content-center letrasCatalogo">
             <div class="col-4 mt-5">
-                <h4 class="" style="color: #dbd7d5;">Tenis de todas las tallas</h4>
-                <h4 class="" style="color: #dbd7d5;">Precio accesible ... </h4>
+                <h2 class="" style="color: #FFFFFF;">Tenis de todas las tallas</h2>
+                <h2 class="" style="color: #FFFFFF;">Precio accesible ... </h2>
                 <h5 class=""> </h5>
             </div>
             <div class="col-4">
@@ -147,7 +189,7 @@ include './php/conexionDB.php';
         ?>
         <div class="row px-4"> 
             <div class="col-12">
-                <p class="subtitulo3 text-center"> Lo ultimo en moda</p>
+                <p class="subtitulo3 text-center letrasCatalogo"> Lo ultimo en moda</p>
             </div>
         </div>
         <div class="row ps-4">
@@ -155,10 +197,10 @@ include './php/conexionDB.php';
             <?php
                 while ($consulta = mysqli_fetch_array($query)) {
                     echo '
-                        <p class="p1"> Obten ya! </p>
-                        <p class="p2">'.$consulta['name'].'</p>
-                        <p class="p1">A un increible precio de: </p>
-                        <p class="p2">¡¡¡ '.$consulta['sale_price'].' !!!</p>
+                        <p class="p1 letrasCatalogo" style="color: #FFFFFF;"> Obten ya! </p>
+                        <p class="p2 letrasCatalogo">'.$consulta['name'].'</p>
+                        <p class="p1 letrasCatalogo" style="color: #FFFFFF;">A un increible precio de: </p>
+                        <p class="p2 letrasCatalogo" >¡¡¡ '.$consulta['sale_price'].' !!!</p>
                     </div>
                     <div class="col-6 text-center">';
                         if($consulta['media_id'] === '0'):
@@ -182,7 +224,7 @@ include './php/conexionDB.php';
                 <img src="./images/fondoShoes.webp" style="width: 130px;" alt="no image">
             </div>
             <div class="col-6 align-self-center">
-                <p class="subtitulo2">¡Lo más reciente en calzado solo para ti!</p>
+                <p class="subtitulo2 letrasCatalogo">¡Lo más reciente en calzado solo para ti!</p>
             </div>
             <script>
                 document.addEventListener("DOMContentLoaded", function() {
@@ -217,11 +259,11 @@ include './php/conexionDB.php';
                     echo "
                         <div class='col-5 miniFondo1 my-4 mx-1 cardd'>
                             <div class='row'>
-                                <div class='col-4 text-start texto-producto d-flex align-items-start flex-column'>
-                                    <p class='letras2'>".$consulta['name']."</p>
-                                    <p class='letras3'>".$consulta['sale_price']."</p>
+                                <div class='col-4 text-start texto-producto d-flex align-items-start flex-column pb-1'>
+                                    <p class='letras2 '>".$consulta['name']."</p>
+                                    <p class='letras3 '>$".$consulta['sale_price']."</p>
                                     <br><br><br>
-                                    <button class='styboton agregar-carrito mt-auto p-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #5F5D9C;'></i></button>
+                                    <button class='styboton agregar-carrito mt-auto ' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping ' style='color: #c27ef0;'></i></button>
                                 </div>
                                 <div class='col-8 imagenes-producto' style=''>";
                                 if($consulta['media_id'] === '0'):
