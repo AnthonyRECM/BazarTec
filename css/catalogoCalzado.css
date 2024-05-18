@@ -56,13 +56,13 @@ h1{
 
 .cardd{
     border-radius: 8px;
-    border: 18px solid #8e86fd;
+    border: 18px solid #c27ef0;
     width: max-content;
     height:max-content;
 }
 
 .texto-producto{
-    background-color: #8e86fd;
+    background-color: #c27ef0;
     width: 250px;
     height: 250px;
     padding-top: 1rem;
