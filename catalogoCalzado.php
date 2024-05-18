@@ -33,23 +33,66 @@ include './php/conexionDB.php';
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <style>
-      .form button {
-    font-family: "Poppins", sans-serif;
-    outline: 0;
-    background: #325288;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    border-radius: 7px;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
+    .mensaje {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+        }
+
+        #lista-carrito .borrar {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Para hacer un círculo */
+    background-color: #ff4444; /* Color rojo */
+    text-align: center;
+    line-height: 30px; /* Centra verticalmente el icono */
+    color: white; /* Color del icono (blanco) */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+#lista-carrito .borrar:hover {
+    background-color: #cc0000; /* Color rojo más oscuro al pasar el ratón */
+}
+
+#carrito {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#carrito th, #carrito td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#carrito td img {
+    display: block;
+    margin: auto;
+}
+
+#carrito td button {
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
     cursor: pointer;
-    font-weight: bold;
 }
-.form button:hover,.form button:active,.form button:focus {
-    background: #0e2941;
+
+#carrito td button:hover {
+    background-color: #cc0000;
 }
+
+
+    </style>
 </style>
 
 <body class="fondo">

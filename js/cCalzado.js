@@ -1,75 +1,80 @@
-// Obtén el elemento del icono de flecha
-const arrowIcon = document.querySelector(".desplazarMov");
+document.addEventListener("DOMContentLoaded", function () {
+    // Obtén el contenedor del carrito
+    const carrito = document.getElementById('carrito');
+    // Obtén la lista de productos
+    const listaProductos = document.querySelector('.row.justify-content-evenly.my-5');
+    // Agrega un evento de clic a la lista de productos
+    listaProductos.addEventListener('click', agregarAlCarrito);
 
-// Agrega un evento de clic al icono
-arrowIcon.addEventListener("click", () => {
-    // Desplázate hacia el div de destino
-    const divDestino = document.querySelector("#desplazarDestino");
-    if (divDestino) {
-        divDestino.scrollIntoView({
-            behavior: "smooth"
-        });
-    }1
-});
-
-$(document).ready(function () {
-    $('.agregar-carrito').on('click', function () {
-        // Obtener datos del producto
-        var id = $(this).data('id');
-        var nombre = $(this).closest('.texto-producto').find('.letras2').text();
-        var precio = $(this).closest('.texto-producto').find('.letras3').text();
-        var imagen = $(this).closest('.cardd').find('img').attr('src');
-        
-        // Crear el HTML para el producto en el carrito
-        var productoCarrito = `
-            <tr>
-                <td><img src="${imagen}" width="100"></td>
-                <td>${nombre}</td>
-                <td>${precio}</td>
-                <td><a href="#" class="borrar-producto" data-id="${id}">X</a></td>
-            </tr>
-        `;
-        
-        // Agregar el producto al carrito
-        $('#lista-carrito tbody').append(productoCarrito);
-        
-        // Mostrar el mensaje modal
-        mostrarMensajeModal();
-    });
-
-    // Vaciar el carrito
-    $('#vaciar-carrito').on('click', function (e) {
+    // Función para agregar un producto al carrito
+    function agregarAlCarrito(e) {
         e.preventDefault();
-        $('#lista-carrito tbody').empty();
-    });
+        if (e.target.classList.contains('agregar-carrito')) {
+            // Obtén el ID del producto
+            const idProducto = e.target.getAttribute('data-id');
+            // Obtén los detalles del producto
+            const nombre = e.target.parentElement.querySelector('.letras2').textContent;
+            const precio = e.target.parentElement.querySelector('.letras3').textContent;
+            const imagen = e.target.parentElement.parentElement.querySelector('.img-avatar').src;
 
-    // Borrar un producto del carrito
-    $('#lista-carrito').on('click', '.borrar-producto', function (e) {
-        e.preventDefault();
-        $(this).closest('tr').remove();
-    });
-
-    // Función para mostrar el mensaje modal
-    function mostrarMensajeModal() {
-        var modal = $('#mensajeModal');
-        modal.css('display', 'block');
-        
-        // Ocultar el mensaje después de 2 segundos
-        setTimeout(function() {
-            modal.css('display', 'none');
-        }, 2000);
+            // Agrega el producto al carrito
+            insertarCarrito(idProducto, nombre, precio, imagen);
+            // Muestra un mensaje de éxito
+            mostrarMensaje('El producto se ha agregado al carrito');
+        }
     }
 
-    // Cerrar el mensaje modal al hacer clic en la 'x'
-    $('.close').on('click', function() {
-        $('#mensajeModal').css('display', 'none');
+    // Función para insertar un producto en el carrito
+    function insertarCarrito(id, nombre, precio, imagen) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>
+                <img src="${imagen}" width="50" >
+            </td>
+            <td>
+                ${nombre}
+            </td>
+            <td>
+                ${precio}
+            </td>
+            <td>
+                <a href="#" class="borrar" data-id="${id}">X</a>
+            </td>
+        `;
+
+        // Inserta la fila en la lista de carrito
+        const listaCarrito = document.querySelector('#lista-carrito tbody');
+        listaCarrito.appendChild(row);
+    }
+
+    // Función para mostrar un mensaje en la página
+    function mostrarMensaje(mensaje) {
+        // Crea un elemento para el mensaje
+        const mensajeElemento = document.createElement('div');
+        mensajeElemento.classList.add('mensaje');
+        mensajeElemento.textContent = mensaje;
+
+        // Inserta el mensaje en el DOM
+        document.body.insertBefore(mensajeElemento, document.body.firstChild);
+
+        // Desaparece el mensaje después de 3 segundos
+        setTimeout(function () {
+            mensajeElemento.remove();
+        }, 3000);
+    }
+
+    // Evento de clic para el botón de vaciar carrito
+    document.getElementById("vaciar-carrito").addEventListener("click", function() {
+        // Eliminar todos los elementos de la lista del carrito
+        document.querySelector("#lista-carrito tbody").innerHTML = "";
     });
 
-    // Cerrar el mensaje modal al hacer clic fuera del contenido del modal
-    $(window).on('click', function(event) {
-        var modal = $('#mensajeModal');
-        if ($(event.target).is(modal)) {
-            modal.css('display', 'none');
+    // Evento de clic para eliminar un solo producto del carrito
+    document.querySelector("#lista-carrito").addEventListener("click", function(event) {
+        if (event.target.classList.contains("borrar")) {
+            const id = event.target.getAttribute("data-id");
+            const row = event.target.parentElement.parentElement;
+            row.remove();
         }
     });
 });

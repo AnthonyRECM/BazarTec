@@ -60,6 +60,7 @@ h1{
     background-color: #00d4cd;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+
 }
 
 .imagenes-producto{
@@ -69,7 +70,7 @@ h1{
     width: 421.5px;
     height: 235px;
 }
-.imagen {
+.imagenes-producto img {
     width: auto; 
     height: 82%;
 }
