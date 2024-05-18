@@ -83,7 +83,7 @@ include './php/conexionDB.php';
 <body class="fondo">
     <div class="container-fluid">
         <div class="row">
-            <div class="menu">
+            <div class="menu" style="background-color: #047885;">
                 <a href="./index.html" class="logo"><img src="images/logo.png" width="60px" height="60px"></a>
                 <input type="checkbox" id="menu" />
                 <label for="menu"><img src="images/menu.png" class="menu-icono" alt=""></label>
@@ -124,14 +124,14 @@ include './php/conexionDB.php';
     <div class="container-fluid fondo1">
         <div class="row gx-0 text-center">
             <div class="col-12">
-                <h1 class="pt-5">Catálogo de Articulos</h1>
-                <h2 class="py-3">¡¡Todo lo que necesitas para la playa y más!! </h2>
+                <h1 class="pt-5 catalogo">Catálogo de Articulos</h1>
+                <h2 class="py-3 letrasCatalogo">¡¡Todo lo que necesitas para la playa y más!! </h2>
             </div>
         </div>
-        <div class="row py-3 justify-content-center">
-            <div class="col-4 mt-5">
-                <h5 class="" style="color: rgb(248, 147, 163); font-weight: bold;">Inflables para niños y niñas:</h5>
-                <h5 class="" style="color: rgb(248, 147, 163); font-weight: bold;">Tiburon, cocodrilo, delfín y muchos más</h5>
+        <div class="row py-3 justify-content-center letrasCatalogo">
+            <div class="col-4 mt-4">
+                <h2 class="" >Inflables para niños y niñas:</h2>
+                <h2 class="" >Tiburon, cocodrilo, delfín y muchos más</h2>
                 <h5 class=""> </h5>
             </div>
            <div class="col-4">
@@ -168,7 +168,7 @@ include './php/conexionDB.php';
         ?>
         <div class="row px-4"> 
             <div class="col-12">
-                <p class="subtitulo3"> Lo ultimo de temporada </p>
+                <p class="subtitulo3 letrasCatalogo"> Lo ultimo de temporada </p>
             </div>
         </div>
         <div class="row ps-4">
@@ -176,10 +176,10 @@ include './php/conexionDB.php';
             <?php
                 while ($consulta = mysqli_fetch_array($query)) {
                     echo '
-                        <p class="p1">! Compralo ya ! </p>
-                        <p class="p2">'.$consulta['name'].'</p>
-                        <p class="p1">A un increible precio de: </p>
-                        <p class="p2">¡¡¡ '.$consulta['sale_price'].' !!!</p>
+                        <p class="p1 letrasCatalogo">! Compralo ya ! </p>
+                        <p class="p2 letrasCatalogo">'.$consulta['name'].'</p>
+                        <p class="p1 letrasCatalogo">A un increible precio de: </p>
+                        <p class="p2 letrasCatalogo">¡¡¡ '.$consulta['sale_price'].' !!!</p>
                     </div>
                     <div class="col-6 text-center">';
                         if($consulta['media_id'] === '0'):
@@ -202,7 +202,7 @@ include './php/conexionDB.php';
                 <img src="./images/shopping.png" style="width: 100px;" alt="no image">
             </div>
             <div class="col-6 align-self-center">
-                <p class="subtitulo2">¡Lo más nuevo en inflables solo para ti!</p>
+                <p class="subtitulo2 letrasCatalogo">¡Lo más nuevo en inflables solo para ti!</p>
             </div>
             <script>
                 document.addEventListener("DOMContentLoaded", function() {
@@ -238,7 +238,7 @@ include './php/conexionDB.php';
                                     <p class='letras2'>".$consulta['name']."</p>
                                     <p class='letras3'>$".$consulta['sale_price']."</p>
                                     <br><br>
-                                    <button class='styboton agregar-carrito mt-auto mb-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #00C0B9;'></i></button>
+                                    <button class='styboton agregar-carrito mt-auto mb-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #047885;'></i></button>
                                 </div>
                                 <div class='col-8 imagenes-producto style=''>";
                                 if($consulta['media_id'] === '0'):
