@@ -263,13 +263,13 @@ include './php/conexionDB.php';
                             <div class='row'>
                                 <div class='col-4 text-start texto-producto d-flex align-items-start flex-column pb-1'>
                                     <p class='letras2 '>".$consulta['name']."</p>
-                                    <p class='letras3 '>$".$consulta['sale_price']."</p>
+                                    <p class='letras3'>Desde $".$consulta['sale_price']."</p>
                                     <br><br><br>
                                     <button class='styboton agregar-carrito mt-auto'
                                     data-bs-toggle='mensajeC' data-bs-custom-class='custom-tooltip' 
                                     data-bs-placement='right' data-bs-title='Comprar' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping ' style='color: #c27ef0;'></i></button>
                                 </div>
-                                <div class='col-8 imagenes-producto' style=''>";
+                                <div class='col-8 imagenes-producto'>";
                                 if($consulta['media_id'] === '0'):
                                     echo "<img style='width: auto; height: 100%' class='img-avatar img-circle' src='./admin/uploads/products/no_image.jpg' alt=''>";
                                 else:
