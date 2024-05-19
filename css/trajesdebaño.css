@@ -8,7 +8,7 @@
 
 .fondo1{
     /* background: linear-gradient(#df6705, white); */
-    background: linear-gradient( #df6705 50%, white 100%);
+    background: linear-gradient( #f0862f 50%, white 100%);
     min-height: 650px;
 }
 
@@ -60,6 +60,9 @@ h1{
     font-weight: 700;
     font-style: normal;
     color: white;  
+    background-color: red;
+    border-radius: 10px;
+    padding: 3px 5px 3px 5px;
 
 }
 
@@ -86,7 +89,7 @@ h1{
 }
 
 .texto-producto{
-    background-color: #DDD201;
+    background-color: #e6dd35;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 
@@ -145,7 +148,7 @@ h1{
 }
 
 .fondo22{
-    background: #DDD201;
+    background: #e6dd35;
 }
 
 .subtitulo2{
@@ -153,11 +156,11 @@ h1{
     color: #ffffff;
 }
 .highlight {
-    color: #df6705; /* Color del texto "Inflables" */
+    color: #ff7300; /* Color del texto "Inflables" */
     font-weight: bold; /* Opcional: Para resaltar aún más la palabra */
 }
 .fondo3{
-    background: linear-gradient(to right,#df6705,    white);
+    background: linear-gradient(to right,#fb9847 100%,    white);
     margin-top: 5rem;
     
 }

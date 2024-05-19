@@ -83,7 +83,7 @@ include './php/conexionDB.php';
     <!--Header-->
     <div class="container-fluid">
         <div class="row">
-            <div class="menu " style="background-color: #DDD201;">
+            <div class="menu " style="background-color: #ddd318;">
                 <a href="./index.html" class="logo"><img src="images/logo.png" width="60px" height="60px"></a>
                 <input type="checkbox" id="menu" />
                 <label for="menu"><img src="images/menu.png" class="menu-icono" alt=""></label>
@@ -153,12 +153,12 @@ include './php/conexionDB.php';
 
              <div class="row text-center desplazarMov">
 
-                <div class="col-12 mt-3">
+                <!-- <div class="col-12 mt-3">
                     <p class="letras1">Ver mas</p>
                 </div>
                 <div class="col mb-2">
                     <i class="fa-solid fa-chevron-down fa-lg"></i>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -170,11 +170,10 @@ include './php/conexionDB.php';
 
     <div class="container-fluid fondo2"> 
      <div id="desplazarDestino" class="row my-5">
-            <div class="col text-center">
+            <!-- <div class="col text-center">
                 <h2 class="subtitulo">¡Trajes de baño para toda la familia!</h2>
-            </div>
+            </div> -->
         </div>
-
             </div> 
         </div>
     </div>
@@ -260,7 +259,7 @@ include './php/conexionDB.php';
                             <div class='row'>
                                 <div class='col-4 text-start texto-producto d-flex align-items-start flex-column'>
                                     <p class='letras2'>".$consulta['name']."</p>
-                                    <p class='letras3'>".$consulta['sale_price']."</p>
+                                    <p class='letras3'>Desde ".$consulta['sale_price']."</p>
                                     <br><br><br>
                                     <button class='styboton agregar-carrito mt-auto mb-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #DDD201;'></i></button>
                                 </div>

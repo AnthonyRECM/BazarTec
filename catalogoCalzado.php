@@ -181,7 +181,7 @@ include './php/conexionDB.php';
     </div>
 
     
-    <div class="container-fluid fondo3 my-5 py-3">
+    <div class="container fondo3 my-5 py-3">
         <?php
             $query = mysqli_query($con, 'SELECT p.id,p.name,p.quantity,p.sale_price,p.media_id,c.name AS categorie,m.file_name AS image
             FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
