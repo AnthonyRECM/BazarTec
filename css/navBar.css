@@ -37,8 +37,9 @@
     text-decoration: none;
 }
 
-.menu .navbar ul li a:hover {
-    color: #b7b7b7;
+.desactivado{
+    pointer-events: none; 
+    cursor: not-allowed;
 }
 
 #menu {

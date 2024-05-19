@@ -14,6 +14,12 @@
 .fondo1, h1, h2, h3, h4 {
     color: #FAEEE7;
 }
+
+.menu ul li a:hover {
+    color: #4bfff9;
+    font-size: 19px;
+}
+
 .fondo1, h5 {
     color: #FAEEE7;
 }

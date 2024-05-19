@@ -14,6 +14,11 @@
     color: #FAEEE7;
 }
 
+.menu ul li a:hover {
+    color: #ff81d9;
+    font-size: 19px;
+}
+
 h1{    
     font-size: 4rem;
 }

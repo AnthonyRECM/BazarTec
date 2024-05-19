@@ -12,6 +12,11 @@
     min-height: 650px;
 }
 
+.menu ul li a:hover {
+    color: #f1e94b;
+    font-size: 19px;
+}
+
 .fondo1, h1, h2, h3, h4 {
     color: #FAEEE7;
 }
@@ -80,6 +85,7 @@ h1{
   font-weight: 700;
   font-style: normal;
   font-size: 50px;
+
 }
 
 .cardd{

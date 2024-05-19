@@ -88,6 +88,7 @@ include './php/conexionDB.php';
                 <nav class="navbar">
                     <ul>
                         <li><a href="./index.html">Inicio</a></li>
+                        <li><a class="desactivado" href="./trajesdeBaño.php">Traje de baño</a></li>
                         <li><a href="./catalogoCalzado.php">Calzado</a></li>
                         <li><a href="./catalogoAccesorios.php">Accesorios</a></li>
                     </ul>
