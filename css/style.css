@@ -97,10 +97,7 @@ body {
     text-decoration: none;
 }
 
-.menu .navbar ul li a:hover {
-    color: #38dad5;
-    font-size: 20px;
-}
+ 
 
 #menu {
     display: none;
@@ -215,7 +212,7 @@ hr {
 }
 
 .promos {
-    padding: 50px 0;
+    padding: 50px 0px 0px 0px;
     text-align: center;
 }
 
@@ -307,6 +304,24 @@ hr {
     background-color: #325288;
     border-radius: 25px;
     margin-top: 15px;
+}
+
+.btn-33 {
+    display: grid;
+    width: 128px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+    padding: 10px 25px;
+    font-size: 18px;
+    color: #ffffff;
+    border: 1px solid #07265b;
+    background-color: #183970;
+    border-radius: 25px;
+    margin-top: 15px;
+}
+.btn-33:hover {
+    background-color: #001f55;
 }
 
 .btn-4 {
