@@ -90,7 +90,9 @@ include './php/conexionDB.php';
 #carrito td button:hover {
     background-color: #cc0000;
 }
-
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-success);
+}
 
     </style>
 </style>
@@ -263,7 +265,9 @@ include './php/conexionDB.php';
                                     <p class='letras2 '>".$consulta['name']."</p>
                                     <p class='letras3 '>$".$consulta['sale_price']."</p>
                                     <br><br><br>
-                                    <button class='styboton agregar-carrito mt-auto ' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping ' style='color: #c27ef0;'></i></button>
+                                    <button class='styboton agregar-carrito mt-auto'
+                                    data-bs-toggle='mensajeC' data-bs-custom-class='custom-tooltip' 
+                                    data-bs-placement='right' data-bs-title='Comprar' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping ' style='color: #c27ef0;'></i></button>
                                 </div>
                                 <div class='col-8 imagenes-producto' style=''>";
                                 if($consulta['media_id'] === '0'):
@@ -291,6 +295,12 @@ include './php/conexionDB.php';
 
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/cCalzado.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script>
+            const tooltipTriggerLis = document.querySelectorAll('[data-bs-toggle="mensajeC"]')
+            const tooltipList2 = [...tooltipTriggerLis].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
+
 
 
     <div id="mensajeModal" class="modal">
@@ -366,6 +376,7 @@ include './php/conexionDB.php';
             /* Tamaño del icono */
         }
     </style>
+        
 </body>
 
 </html>

@@ -267,7 +267,10 @@ include './php/conexionDB.php';
                                     <p class='letras2'>".$consulta['name']."</p>
                                     <p class='letras3'>Desde $".$consulta['sale_price']."</p>
                                     <br><br><br>
-                                    <button class='styboton agregar-carrito mt-auto mb-2' data-bs-toggle='mensajeCarrito' data-bs-custom-class='custom-tooltip' data-bs-placement='right' data-bs-title='Comprar' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #DDD201;'></i></button>
+                                    <button class='styboton agregar-carrito mt-auto mb-2'
+                                        data-bs-toggle='mensajeCarrito' data-bs-custom-class='custom-tooltip' 
+                                        data-bs-placement='right' data-bs-title='Comprar' 
+                                        data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #DDD201;'></i></button>
                                 </div>
                                 <div class='col-8 imagenes-producto align-self-center' style=''>";
                                 if($consulta['media_id'] === '0'):
