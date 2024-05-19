@@ -87,10 +87,9 @@ h1{
 }
 
 .texto-producto{
-    background-color: #047885;
+    background-color: #05DFD7;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
-
 }
 
 .imagenes-producto{
@@ -98,7 +97,7 @@ h1{
     justify-content: center; /* Alinea horizontalmente en el centro */
     align-items: center; /* Alinea verticalmente en el centro */
     width: 421.5px;
-    height: 235px;
+    height: 255px;
 }
 .imagenes-producto img {
     width: auto; 
@@ -146,7 +145,8 @@ h1{
 }
 
 .fondo22{
-    background: #047885;
+    background: #00cde4;
+    border-radius: 25px;
 }
 
 .subtitulo2{
@@ -154,11 +154,12 @@ h1{
     color: #ffffff;
 }
 .highlight {
-    color: #05DFD7; /* Color del texto "Inflables" */
+    color: #ff0000; /* Color del texto "Inflables" */
     font-weight: bold; /* Opcional: Para resaltar aún más la palabra */
 }
 .fondo3{
     background: linear-gradient(to right,#05DFD7, white);
+    background-image: radial-gradient(circle at -20.71% 50%, #00bec5 0, #00bece 7.14%, #00bdd6 14.29%, #00bcdd 21.43%, #00bbe4 28.57%, #00b9ea 35.71%, #20b7ee 42.86%, #3cb5f2 50%, #51b3f5 57.14%, #64b0f6 64.29%, #76adf6 71.43%, #86aaf5 78.57%, #95a7f3 85.71%, #a3a3f0 92.86%, #b0a0ec 100%);
     margin-top: 5rem;
     
 }
@@ -182,6 +183,52 @@ h1{
     
 }
 
+.texto-producto2{
+    background-color: #05DFD7;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    min-height: 400px;
+}
+
+.letras22{
+    font-size: 85px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;   
+}
+
+.letras33{
+    font-size: 38px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;  
+    background-color: rgb(255, 24, 24);
+    border-radius: 10px;
+    padding: 3px 10px 3px 10px;
+}
+.styboton2{
+    border: none;
+    padding: 14px 14px 14px 14px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.imagenes-producto2{
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente en el centro */
+    align-items: center; /* Alinea verticalmente en el centro */
+    width: 725px;
+    height: 400px;
+}
+.imagenes-producto2 img {
+    width: auto; 
+    height: 82%;
+}
 
 /* p {
     animation-duration: 3s;

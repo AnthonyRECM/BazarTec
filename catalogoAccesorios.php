@@ -76,6 +76,7 @@ include './php/conexionDB.php';
 }
 .custom-tooltip {
   --bs-tooltip-bg: var(--bs-warning);
+  
 }
 
     </style>
@@ -227,14 +228,37 @@ include './php/conexionDB.php';
         </div> -->
         <div class="row justify-content-evenly my-5">
             <?php
-                $contador = 2;
+                $contador = 1;
                 $query = mysqli_query($con, 'SELECT p.id,p.name,p.quantity,p.sale_price,p.media_id,c.name AS categorie,m.file_name AS image
                  FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
                   WHERE categorie_id=3');
                 while ($consulta = mysqli_fetch_array($query)) {
-              
-                    echo "
-                        <div class='col-5 miniFondo1 my-4 mx-1 cardd'>
+                    
+                    if ($contador%3 == 0){
+                        echo "
+                        <div class='col-10 miniFondo1 my-4 mx-1 cardd'>
+                            <div class='row'>
+                                <div class='col-5 texto-producto2 d-flex align-items-end flex-column '>
+                                    <p class='letras2 letras22'>".$consulta['name']."</p>
+                                    <p class='letras3 letras33'>Desde $".$consulta['sale_price']."</p>
+                                    <br><br>
+                                    <button class='styboton2 agregar-carrito mt-auto mb-3 me-1'
+                                    data-bs-toggle='mensajeCarrito' data-bs-custom-class='custom-tooltip' 
+                                    data-bs-placement='left' data-bs-title='Comprar' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping fa-xl' style='color: #047885;'></i></button>
+                                </div>
+                                <div class='col-7 imagenes-producto2'>";
+                                if($consulta['media_id'] === '0'):
+                                    echo "<img style='width: auto; height: 100%' class='img-avatar img-circle' src='./admin/uploads/products/no_image.jpg' alt=''>";
+                                else:
+                                    echo "<img class='img-avatar img-circle imagen' src='./admin/uploads/products/".$consulta['image']."' alt=''>";
+                                endif;
+                        echo "
+                                    </div>
+                                </div>
+                            </div>";
+                    } else {
+                        echo "
+                        <div class='col-5 miniFondo1 my-4 cardd'>
                             <div class='row'>
                                 <div class='col-4 text-start texto-producto d-flex align-items-start flex-column'>
                                     <p class='letras2'>".$consulta['name']."</p>
@@ -244,17 +268,17 @@ include './php/conexionDB.php';
                                     data-bs-toggle='mensajeCarrito' data-bs-custom-class='custom-tooltip' 
                                     data-bs-placement='right' data-bs-title='Comprar' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #047885;'></i></button>
                                 </div>
-                                <div class='col-8 imagenes-producto style=''>";
+                                <div class='col-8 imagenes-producto'>";
                                 if($consulta['media_id'] === '0'):
                                     echo "<img style='width: auto; height: 100%' class='img-avatar img-circle' src='./admin/uploads/products/no_image.jpg' alt=''>";
                                 else:
                                     echo "<img class='img-avatar img-circle imagen' src='./admin/uploads/products/".$consulta['image']."' alt=''>";
                                 endif;
-
-                    echo "
+                        echo "
                                 </div>
                             </div>
                         </div>";
+                    }
                     $contador++;
                 }   
             ?>
