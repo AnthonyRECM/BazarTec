@@ -75,6 +75,10 @@ include './php/conexionDB.php';
 #carrito td button:hover {
     background-color: #cc0000;
 }
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-success);
+}
+
 
     </style>
 </head>
@@ -83,7 +87,7 @@ include './php/conexionDB.php';
     <!--Header-->
     <div class="container-fluid">
         <div class="row">
-            <div class="menu " style="background-color: #ddd318;">
+            <div class="menu " style="background-color: #E46700;">
                 <a href="./index.html" class="logo"><img src="images/logo.png" width="60px" height="60px"></a>
                 <input type="checkbox" id="menu" />
                 <label for="menu"><img src="images/menu.png" class="menu-icono" alt=""></label>
@@ -247,8 +251,10 @@ include './php/conexionDB.php';
 
         
         <div class="row justify-content-evenly my-5">
+            
 
          <?php
+         
              $contador = 2;
                 $query = mysqli_query($con, 'SELECT p.id,p.name,p.quantity,p.sale_price,p.media_id,c.name AS categorie,m.file_name AS image
                  FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
@@ -259,9 +265,9 @@ include './php/conexionDB.php';
                             <div class='row'>
                                 <div class='col-4 text-start texto-producto d-flex align-items-start flex-column'>
                                     <p class='letras2'>".$consulta['name']."</p>
-                                    <p class='letras3'>Desde ".$consulta['sale_price']."</p>
+                                    <p class='letras3'>Desde $".$consulta['sale_price']."</p>
                                     <br><br><br>
-                                    <button class='styboton agregar-carrito mt-auto mb-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #DDD201;'></i></button>
+                                    <button class='styboton agregar-carrito mt-auto mb-2' data-bs-toggle='mensajeCarrito' data-bs-custom-class='custom-tooltip' data-bs-placement='right' data-bs-title='Comprar' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #DDD201;'></i></button>
                                 </div>
                                 <div class='col-8 imagenes-producto align-self-center' style=''>";
                                 if($consulta['media_id'] === '0'):
@@ -287,7 +293,12 @@ include './php/conexionDB.php';
     </footer>
 
     <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./js/cTrajeBaño.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="mensajeCarrito"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
     
 </body>
 

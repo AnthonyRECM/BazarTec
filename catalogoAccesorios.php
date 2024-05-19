@@ -199,7 +199,7 @@ include './php/conexionDB.php';
     <div class="container fondo22 my-4 py-3">
         <div class="row text-center d-flex justify-content-evenly"> 
             <div class="col-3"> 
-                <img src="./images/shopping.png" style="width: 100px;" alt="no image">
+                <img src="./images/donaFondo.png" style="width: 130px;" alt="no image">
             </div>
             <div class="col-6 align-self-center">
                 <p class="subtitulo2 letrasCatalogo">¡Lo más nuevo en inflables solo para ti!</p>
@@ -213,7 +213,7 @@ include './php/conexionDB.php';
                 });
             </script>
             <div class="col-3"> 
-                <img src="./images/shopping.png" style="width: 100px;" alt="no image">
+                <img src="./images/donaFondo.png" style="width: 130px;" alt="no image">
             </div>
         </div>
     </div>
@@ -236,7 +236,7 @@ include './php/conexionDB.php';
                             <div class='row'>
                                 <div class='col-4 text-start texto-producto d-flex align-items-start flex-column'>
                                     <p class='letras2'>".$consulta['name']."</p>
-                                    <p class='letras3'>$".$consulta['sale_price']."</p>
+                                    <p class='letras3'>Desde $".$consulta['sale_price']."</p>
                                     <br><br>
                                     <button class='styboton agregar-carrito mt-auto mb-2' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping' style='color: #047885;'></i></button>
                                 </div>

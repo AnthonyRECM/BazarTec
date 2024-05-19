@@ -62,7 +62,7 @@ h1{
     color: white;  
     background-color: red;
     border-radius: 10px;
-    padding: 3px 5px 3px 5px;
+    padding: 3px 10px 3px 10px;
 
 }
 
@@ -156,7 +156,7 @@ h1{
     color: #ffffff;
 }
 .highlight {
-    color: #ff7300; /* Color del texto "Inflables" */
+    color: #ff0000; /* Color del texto "Inflables" */
     font-weight: bold; /* Opcional: Para resaltar aún más la palabra */
 }
 .fondo3{
