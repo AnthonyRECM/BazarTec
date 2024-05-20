@@ -135,7 +135,7 @@ include './php/conexionDB.php';
                                 </table>
                                 <a href="#" id="vaciar-carrito" class="btn btn-danger">
                                     <i class="fa-solid fa-trash"></i> Vaciar Carrito</a>
-                                <a href="pago.html" id="comprar-carrito" class="btn btn-success">Comprar Carrito</a>
+                                <a href="pago.php" id="comprar-carrito" class="btn btn-success">Comprar Carrito</a>
                             </div>
                         </li>
                     </ul>

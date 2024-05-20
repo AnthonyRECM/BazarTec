@@ -68,9 +68,39 @@
             <input type="text" id="cvv" name="cvv" pattern="[0-9]{3,4}" required>
             <label for="telefono">Teléfono de contacto:</label>
             <input type="tel" id="telefono" name="telefono" required>
-            <form action="procesar_pago.html" method="get">
+            <form action="procesar_pago.html" novalidate method="get"
+                        onsubmit="return validar()">
                 <input type="submit" value="Pagar">
         </form>
+        <br>
+        <div id="mensajeError" style="color: red;"></div>
     </div>
+
+    <script>
+function validar() {
+    var nombre = document.getElementById("nombre").value;
+    var numero = document.getElementById("numero").value;
+    var expiracion = document.getElementById("expiracion").value;
+    var telefono = document.getElementById("telefono").value;
+
+    // Verificar si los campos están vacíos
+    if (nombre.trim() === '' || numero.trim() === '' || expiracion.trim() === '' || telefono.trim() === '') {
+        // Mostrar mensaje de error
+        var mensajeError = document.getElementById("mensajeError");
+        mensajeError.innerHTML = "Por favor, completa todos los campos.";
+        mensajeError.style.display = 'block'; // Mostrar el mensaje de error
+
+        // Ocultar el mensaje de error después de 3 segundos
+        setTimeout(function() {
+            mensajeError.style.display = 'none';
+        }, 3000);
+
+        // Evitar que el formulario se envíe
+        return false;
+    }
+    return true; // Permitir el envío del formulario si los campos están completos
+}
+</script>
+    
 </body>
 </html>
