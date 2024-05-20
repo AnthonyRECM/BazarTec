@@ -252,7 +252,7 @@ include './php/conexionDB.php';
              $contador = 1;
                 $query = mysqli_query($con, 'SELECT p.id,p.name,p.quantity,p.sale_price,p.media_id,c.name AS categorie,m.file_name AS image
                  FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
-                  WHERE categorie_id="1"');
+                  WHERE categorie_id="1" ORDER BY date DESC');
                 while ($consulta = mysqli_fetch_array($query)) {
                     if ($contador%3 == 0){
                         echo "
