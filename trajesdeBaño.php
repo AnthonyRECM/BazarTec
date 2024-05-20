@@ -264,7 +264,7 @@ include './php/conexionDB.php';
                                     <br><br>
                                     <button class='styboton2 agregar-carrito mt-auto mb-3 me-1'
                                     data-bs-toggle='mensajeCarrito' data-bs-custom-class='custom-tooltip' 
-                                    data-bs-placement='left ' data-bs-title='Comprar' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping fa-xl' style='color: #DDD201;'></i></button>
+                                    data-bs-placement='left' data-bs-title='Comprar' data-id='".$consulta['id']."'><i class='fa-solid fa-cart-shopping fa-xl' style='color: #DDD201;'></i></button>
                                 </div>
                                 <div class='col-7 imagenes-producto2'>";
                                 if($consulta['media_id'] === '0'):
