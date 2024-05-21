@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Arreglo para almacenar los productos en el carrito
+    let productosEnCarrito = [];
     // Obtén el contenedor del carrito
     const carrito = document.getElementById('carrito');
     // Obtén la lista de productos
@@ -19,7 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Agrega el producto al carrito
             insertarCarrito(idProducto, nombre, precio, imagen);
+            
+            // Agrega los detalles del producto al arreglo
+            productosEnCarrito.push({ id: idProducto, nombre: nombre, precio: precio, imagen: imagen });
             // Muestra un mensaje de éxito
+             // Imprime el arreglo en la consola para verificar que se está actualizando correctamente
+            console.log('Productos en carrito:', productosEnCarrito);
+
             mostrarMensaje('El producto se ha agregado al carrito');
         }
     }
@@ -76,5 +84,42 @@ document.addEventListener("DOMContentLoaded", function () {
             const row = event.target.parentElement.parentElement;
             row.remove();
         }
+    });
+    
+    // Evento de clic para el botón de comprar carrito
+    document.getElementById("comprar-carrito").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+        
+        // Convertir el arreglo a JSON
+        const productosJSON = JSON.stringify(productosEnCarrito);
+
+        // Log para verificar el contenido de los datos enviados
+        console.log('Datos enviados al servidor:', productosJSON);
+        
+        // Enviar el arreglo al archivo PHP
+        fetch('./php/procesar_compra.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: productosJSON,
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al procesar la compra');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Respuesta del servidor:', data); // Puedes hacer algo con la respuesta del servidor si es necesario
+            // Vaciar el carrito después de la compra
+            document.querySelector("#lista-carrito tbody").innerHTML = "";
+            productosEnCarrito.length = 0;
+            mostrarMensaje('La compra se ha realizado con éxito');
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            mostrarMensaje('Error al procesar la compra');
+        });
     });
 });
