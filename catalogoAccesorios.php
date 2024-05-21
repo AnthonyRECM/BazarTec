@@ -235,8 +235,7 @@ include './php/conexionDB.php';
                             <div class='row'>
                                 <div class='col-5 texto-producto2 d-flex align-items-end flex-column '>
                                     <p class='letras2 letras22'>".$consulta['name']."</p>
-                                    <p class='letras331'>Desde:</p>
-                                    <p class='letras3 letras33'>".$consulta['sale_price']."</p>
+                                    <p class='letras3 letras33'>$".$consulta['sale_price']."</p>
                                     <br><br>
                                     <button class='styboton2 agregar-carrito mt-auto mb-3 me-1'
                                     data-bs-toggle='mensajeCarrito' data-bs-custom-class='custom-tooltip' 
@@ -258,8 +257,7 @@ include './php/conexionDB.php';
                             <div class='row'>
                                 <div class='col-4 text-start texto-producto d-flex align-items-start flex-column'>
                                     <p class='letras2'>".$consulta['name']."</p>
-                                    <p class='letras31'>Desde:</p>
-                                    <p class='letras3'>".$consulta['sale_price']."</p>
+                                    <p class='letras3'>$".$consulta['sale_price']."</p>
                                     <br><br>
                                     <button class='styboton agregar-carrito mt-auto mb-2'
                                     data-bs-toggle='mensajeCarrito' data-bs-custom-class='custom-tooltip' 

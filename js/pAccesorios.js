@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const idProducto = e.target.getAttribute('data-id');
             // Obtén los detalles del producto
             const nombre = e.target.parentElement.querySelector('.letras2').textContent;
-            const precio = e.target.parentElement.querySelector('.letras3').textContent;
+            let precio = e.target.parentElement.querySelector('.letras3').textContent;
+            precio = precio.substring(1);
             const imagen = e.target.parentElement.parentElement.querySelector('.img-avatar').src;
  
             // Agrega el producto al carrito
@@ -22,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // Agrega los detalles del producto al arreglo
             productosEnCarrito.push({ id: idProducto, nombre: nombre, precio: precio});
             // Muestra un mensaje de éxito
+            console.log('Productos en carrito:', productosEnCarrito);
+            
             mostrarMensaje('El producto se ha agregado al carrito');
 
         }
