@@ -228,7 +228,7 @@ include './php/conexionDB.php';
                  FROM products p LEFT JOIN categories c ON c.id = p.categorie_id LEFT JOIN media m ON m.id = p.media_id
                   WHERE categorie_id=3 ORDER BY date DESC');
                 while ($consulta = mysqli_fetch_array($query)) {
-                    
+
                     if ($contador%3 == 0){
                         echo "
                         <div class='col-10 miniFondo1 my-4 mx-1 cardd'>

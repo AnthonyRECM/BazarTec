@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Agrega un evento de clic a la lista de productos
     listaProductos.addEventListener('click', agregarAlCarrito);
 
+    const productosEnCarrito = [];
     // Función para agregar un producto al carrito
     function agregarAlCarrito(e) {
         e.preventDefault();
@@ -17,10 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
             const precio = e.target.parentElement.querySelector('.letras3').textContent;
             const imagen = e.target.parentElement.parentElement.querySelector('.img-avatar').src;
 
+            // Guardar los detalles del producto en el arreglo
+            productosEnCarrito.push({ id: idProducto, nombre: nombre, precio: precio, imagen: imagen });
+
             // Agrega el producto al carrito
             insertarCarrito(idProducto, nombre, precio, imagen);
             // Muestra un mensaje de éxito
             mostrarMensaje('El producto se ha agregado al carrito');
+
         }
     }
 
