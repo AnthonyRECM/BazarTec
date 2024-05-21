@@ -62,6 +62,14 @@ h1{
     border-radius: 10px;
     padding: 3px 10px 3px 10px;
 }
+.letras31{
+    font-size: 2rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;   
+}
 
 .letras4{
     font-size: 1rem;
@@ -209,6 +217,7 @@ h1{
     border-radius: 10px;
     padding: 3px 10px 3px 10px;
 }
+
 .styboton2{
     border: none;
     padding: 14px 14px 14px 14px;
@@ -234,4 +243,21 @@ h1{
     border-radius: 8px;
     border: 18px solid #c27ef0;
 }
-  
+
+.letras31{
+    font-size: 2rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;   
+}
+
+.letras331{
+    font-size: 70px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;   
+}

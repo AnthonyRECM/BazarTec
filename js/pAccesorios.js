@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+    let productosEnCarrito = [];
     // Obtén el contenedor del carrito
     const carrito = document.getElementById('carrito');
     // Obtén la lista de productos
     const listaProductos = document.querySelector('.row.justify-content-evenly.my-5');
     // Agrega un evento de clic a la lista de productos
     listaProductos.addEventListener('click', agregarAlCarrito);
-
-    const productosEnCarrito = [];
     // Función para agregar un producto al carrito
     function agregarAlCarrito(e) {
         e.preventDefault();
@@ -17,12 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const nombre = e.target.parentElement.querySelector('.letras2').textContent;
             const precio = e.target.parentElement.querySelector('.letras3').textContent;
             const imagen = e.target.parentElement.parentElement.querySelector('.img-avatar').src;
-
-            // Guardar los detalles del producto en el arreglo
-            productosEnCarrito.push({ id: idProducto, nombre: nombre, precio: precio, imagen: imagen });
-
+ 
             // Agrega el producto al carrito
             insertarCarrito(idProducto, nombre, precio, imagen);
+            // Agrega los detalles del producto al arreglo
+            productosEnCarrito.push({ id: idProducto, nombre: nombre, precio: precio});
             // Muestra un mensaje de éxito
             mostrarMensaje('El producto se ha agregado al carrito');
 
@@ -81,5 +79,49 @@ document.addEventListener("DOMContentLoaded", function () {
             const row = event.target.parentElement.parentElement;
             row.remove();
         }
+    });
+
+    // Evento de clic para el botón de comprar carrito
+    document.getElementById("comprar-carrito").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+        
+        // Convertir el arreglo a JSON
+        const productosJSON = JSON.stringify(productosEnCarrito);
+
+        // Log para verificar el contenido de los datos enviados
+        console.log('Datos enviados al servidor:', productosJSON);
+        
+        // Enviar el arreglo al archivo PHP
+        fetch('./php/procesar_compra.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: productosJSON,
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al procesar la compra');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Respuesta del servidor:', data); // Puedes hacer algo con la respuesta del servidor si es necesario
+            if (data.status === 'success') {
+                // Vaciar el carrito después de la compra
+                document.querySelector("#lista-carrito tbody").innerHTML = "";
+                productosEnCarrito.length = 0;
+                mostrarMensaje('La compra se ha realizado con éxito');
+                
+                // Redirigir a la página de pago
+                window.location.href = './pago.php';
+            } else {
+                mostrarMensaje('Error al procesar la compra: ' + data.errors.join(', '));
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            mostrarMensaje('Error al procesar la compra');
+        });
     });
 });

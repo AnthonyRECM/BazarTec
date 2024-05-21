@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             insertarCarrito(idProducto, nombre, precio, imagen);
             
             // Agrega los detalles del producto al arreglo
-            productosEnCarrito.push({ id: idProducto, nombre: nombre, precio: precio, imagen: imagen });
+            productosEnCarrito.push({ id: idProducto, nombre: nombre, precio: precio});
             // Muestra un mensaje de éxito
              // Imprime el arreglo en la consola para verificar que se está actualizando correctamente
             console.log('Productos en carrito:', productosEnCarrito);
@@ -112,10 +112,17 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(data => {
             console.log('Respuesta del servidor:', data); // Puedes hacer algo con la respuesta del servidor si es necesario
-            // Vaciar el carrito después de la compra
-            document.querySelector("#lista-carrito tbody").innerHTML = "";
-            productosEnCarrito.length = 0;
-            mostrarMensaje('La compra se ha realizado con éxito');
+            if (data.status === 'success') {
+                // Vaciar el carrito después de la compra
+                document.querySelector("#lista-carrito tbody").innerHTML = "";
+                productosEnCarrito.length = 0;
+                mostrarMensaje('La compra se ha realizado con éxito');
+                
+                // Redirigir a la página de pago
+                window.location.href = './pago.php';
+            } else {
+                mostrarMensaje('Error al procesar la compra: ' + data.errors.join(', '));
+            }
         })
         .catch(error => {
             console.error('Error:', error);
