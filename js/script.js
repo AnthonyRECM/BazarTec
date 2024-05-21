@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito.addEventListener('click', eliminarElemento);
         vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
         comprarCarritoBtn.addEventListener('click', () => {
-            window.location.href = 'pago.html';
+            window.location.href = 'pago.php';
         });
         cerrarBtn.addEventListener('click', cerrarModal);
         window.addEventListener('click', fueraDelModal);
